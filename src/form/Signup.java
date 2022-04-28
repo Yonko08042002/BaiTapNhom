@@ -53,8 +53,6 @@ public class Signup extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        kGradientPanel1 = new keeptoo.KGradientPanel();
-        btn_Back118 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -84,6 +82,7 @@ public class Signup extends javax.swing.JFrame {
         jSeparator6 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
         jSeparator8 = new javax.swing.JSeparator();
+        btn_Back118 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -107,16 +106,6 @@ public class Signup extends javax.swing.JFrame {
         jLabel4.setText("Created By  Error Sever Team");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 538, 245, 53));
-
-        kGradientPanel1.setkEndColor(new java.awt.Color(102, 255, 255));
-        kGradientPanel1.setkStartColor(new java.awt.Color(153, 0, 255));
-
-        btn_Back118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Logout_w_30px.png"))); // NOI18N
-        btn_Back118.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_Back118MouseClicked(evt);
-            }
-        });
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -285,178 +274,20 @@ public class Signup extends javax.swing.JFrame {
         jPanel3.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 280, -1));
         jPanel3.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 280, 10));
 
-        javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
-        kGradientPanel1.setLayout(kGradientPanel1Layout);
-        kGradientPanel1Layout.setHorizontalGroup(
-            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel1Layout.createSequentialGroup()
-                .addContainerGap(461, Short.MAX_VALUE)
-                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
-                        .addComponent(btn_Back118, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(58, 58, 58))))
-        );
-        kGradientPanel1Layout.setVerticalGroup(
-            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btn_Back118, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
-        );
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 60, 360, 530));
 
-        jPanel2.add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 670));
+        btn_Back118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Logout_w_30px.png"))); // NOI18N
+        btn_Back118.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_Back118MouseClicked(evt);
+            }
+        });
+        jPanel2.add(btn_Back118, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, -1, -1));
 
         getContentPane().add(jPanel2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void bttdangki118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttdangki118ActionPerformed
-        // TODO add your handling code here:
-        Signin signin =new Signin();
-        signin.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_bttdangki118ActionPerformed
-
-    private void txtname118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtname118ActionPerformed
-        // TODO add your handling code here:
-       
-    }//GEN-LAST:event_txtname118ActionPerformed
-
-    private void txtname118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtname118FocusGained
-        // TODO add your handling code here:
-        if(txtname118.getText().equals("Name")){
-            txtname118.setText(null);
-            txtname118.requestFocus();
-            removePlaceholderStyle(txtname118);
-        }
-    }//GEN-LAST:event_txtname118FocusGained
-
-    private void txtname118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtname118FocusLost
-        // TODO add your handling code here:
-        if(txtname118.getText().length()==0){
-            addPlaceholderStyle(txtname118);
-            txtname118.setText(("Name"));
-        }
-    }//GEN-LAST:event_txtname118FocusLost
-
-    private void txtaddress118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtaddress118FocusGained
-        // TODO add your handling code here:
-        if(txtaddress118.getText().equals("Address")){
-            txtaddress118.setText(null);
-            txtaddress118.requestFocus();
-            removePlaceholderStyle(txtaddress118);
-        }
-    }//GEN-LAST:event_txtaddress118FocusGained
-
-    private void txtphone118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtphone118FocusGained
-        // TODO add your handling code here:
-        if(txtphone118.getText().equals("Phone")){
-            txtphone118.setText(null);
-            txtphone118.requestFocus();
-            removePlaceholderStyle(txtphone118);
-        }
-    }//GEN-LAST:event_txtphone118FocusGained
-
-    private void txtemail118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtemail118FocusGained
-        // TODO add your handling code here:
-        if(txtemail118.getText().equals("Email")){
-            txtemail118.setText(null);
-            txtemail118.requestFocus();
-            removePlaceholderStyle(txtemail118);
-        }
-    }//GEN-LAST:event_txtemail118FocusGained
-
-    private void txtaddress118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtaddress118FocusLost
-        // TODO add your handling code here:
-        if(txtaddress118.getText().length()==0){
-            addPlaceholderStyle(txtaddress118);
-            txtaddress118.setText(("Address"));
-        }
-    }//GEN-LAST:event_txtaddress118FocusLost
-
-    private void txtphone118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtphone118FocusLost
-        // TODO add your handling code here:
-        if(txtphone118.getText().length()==0){
-            addPlaceholderStyle(txtphone118);
-            txtphone118.setText(("Phone"));
-        }
-    }//GEN-LAST:event_txtphone118FocusLost
-
-    private void txtemail118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtemail118FocusLost
-        // TODO add your handling code here:
-        if(txtname118.getText().length()==0){
-            addPlaceholderStyle(txtname118);
-            txtname118.setText(("Email"));
-        }
-    }//GEN-LAST:event_txtemail118FocusLost
-
-    private void txtusername118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtusername118FocusGained
-        // TODO add your handling code here:
-        if(txtusername118.getText().equals("Username")){
-            txtusername118.setText(null);
-            txtusername118.requestFocus();
-            removePlaceholderStyle(txtusername118);
-        }
-    }//GEN-LAST:event_txtusername118FocusGained
-
-    private void txtusername118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtusername118FocusLost
-        // TODO add your handling code here:
-        if(txtusername118.getText().length()==0){
-            addPlaceholderStyle(txtusername118);
-            txtusername118.setText(("Username"));
-        }
-    }//GEN-LAST:event_txtusername118FocusLost
-
-    private void txtpass118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtpass118FocusGained
-        // TODO add your handling code here:
-        if(txtpass118.getText().equals("Password")){
-            txtpass118.setText(null);
-            txtpass118.requestFocus();
-            txtpass118.setEchoChar('*');
-            removePlaceholderStyle(txtpass118);
-        }
-    }//GEN-LAST:event_txtpass118FocusGained
-
-    private void txtpass118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtpass118FocusLost
-        // TODO add your handling code here:
-        if(txtpass118.getText().length()==0){
-            addPlaceholderStyle(txtpass118);
-            txtpass118.setText(("Password"));
-            txtpass118.setEchoChar('\u0000');
-        }
-    }//GEN-LAST:event_txtpass118FocusLost
-
-    private void txtconfirmpass118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtconfirmpass118FocusGained
-        // TODO add your handling code here:
-        if(txtconfirmpass118.getText().equals("ConfirmPassword")){
-            txtconfirmpass118.setText(null);
-            txtconfirmpass118.requestFocus();
-            txtconfirmpass118.setEchoChar('*');
-            removePlaceholderStyle(txtconfirmpass118);
-        }
-    }//GEN-LAST:event_txtconfirmpass118FocusGained
-
-    private void txtconfirmpass118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtconfirmpass118FocusLost
-        // TODO add your handling code here:
-        if(txtconfirmpass118.getText().length()==0){
-            addPlaceholderStyle(txtconfirmpass118);
-            txtconfirmpass118.setText(("ConfirmPassword"));
-            txtconfirmpass118.setEchoChar('\u0000');
-        }
-    }//GEN-LAST:event_txtconfirmpass118FocusLost
-
-    private void btn_Back118MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Back118MouseClicked
-        // TODO add your handling code here:
-       
-       setVisible(false);
-       
-    }//GEN-LAST:event_btn_Back118MouseClicked
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
@@ -471,6 +302,148 @@ public class Signup extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_formWindowOpened
+
+    private void txtconfirmpass118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtconfirmpass118FocusLost
+        // TODO add your handling code here:
+        if(txtconfirmpass118.getText().length()==0){
+            addPlaceholderStyle(txtconfirmpass118);
+            txtconfirmpass118.setText(("ConfirmPassword"));
+            txtconfirmpass118.setEchoChar('\u0000');
+        }
+    }//GEN-LAST:event_txtconfirmpass118FocusLost
+
+    private void txtconfirmpass118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtconfirmpass118FocusGained
+        // TODO add your handling code here:
+        if(txtconfirmpass118.getText().equals("ConfirmPassword")){
+            txtconfirmpass118.setText(null);
+            txtconfirmpass118.requestFocus();
+            txtconfirmpass118.setEchoChar('*');
+            removePlaceholderStyle(txtconfirmpass118);
+        }
+    }//GEN-LAST:event_txtconfirmpass118FocusGained
+
+    private void txtpass118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtpass118FocusLost
+        // TODO add your handling code here:
+        if(txtpass118.getText().length()==0){
+            addPlaceholderStyle(txtpass118);
+            txtpass118.setText(("Password"));
+            txtpass118.setEchoChar('\u0000');
+        }
+    }//GEN-LAST:event_txtpass118FocusLost
+
+    private void txtpass118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtpass118FocusGained
+        // TODO add your handling code here:
+        if(txtpass118.getText().equals("Password")){
+            txtpass118.setText(null);
+            txtpass118.requestFocus();
+            txtpass118.setEchoChar('*');
+            removePlaceholderStyle(txtpass118);
+        }
+    }//GEN-LAST:event_txtpass118FocusGained
+
+    private void txtusername118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtusername118FocusLost
+        // TODO add your handling code here:
+        if(txtusername118.getText().length()==0){
+            addPlaceholderStyle(txtusername118);
+            txtusername118.setText(("Username"));
+        }
+    }//GEN-LAST:event_txtusername118FocusLost
+
+    private void txtusername118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtusername118FocusGained
+        // TODO add your handling code here:
+        if(txtusername118.getText().equals("Username")){
+            txtusername118.setText(null);
+            txtusername118.requestFocus();
+            removePlaceholderStyle(txtusername118);
+        }
+    }//GEN-LAST:event_txtusername118FocusGained
+
+    private void txtemail118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtemail118FocusLost
+        // TODO add your handling code here:
+        if(txtname118.getText().length()==0){
+            addPlaceholderStyle(txtname118);
+            txtname118.setText(("Email"));
+        }
+    }//GEN-LAST:event_txtemail118FocusLost
+
+    private void txtemail118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtemail118FocusGained
+        // TODO add your handling code here:
+        if(txtemail118.getText().equals("Email")){
+            txtemail118.setText(null);
+            txtemail118.requestFocus();
+            removePlaceholderStyle(txtemail118);
+        }
+    }//GEN-LAST:event_txtemail118FocusGained
+
+    private void txtphone118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtphone118FocusLost
+        // TODO add your handling code here:
+        if(txtphone118.getText().length()==0){
+            addPlaceholderStyle(txtphone118);
+            txtphone118.setText(("Phone"));
+        }
+    }//GEN-LAST:event_txtphone118FocusLost
+
+    private void txtphone118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtphone118FocusGained
+        // TODO add your handling code here:
+        if(txtphone118.getText().equals("Phone")){
+            txtphone118.setText(null);
+            txtphone118.requestFocus();
+            removePlaceholderStyle(txtphone118);
+        }
+    }//GEN-LAST:event_txtphone118FocusGained
+
+    private void txtaddress118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtaddress118FocusLost
+        // TODO add your handling code here:
+        if(txtaddress118.getText().length()==0){
+            addPlaceholderStyle(txtaddress118);
+            txtaddress118.setText(("Address"));
+        }
+    }//GEN-LAST:event_txtaddress118FocusLost
+
+    private void txtaddress118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtaddress118FocusGained
+        // TODO add your handling code here:
+        if(txtaddress118.getText().equals("Address")){
+            txtaddress118.setText(null);
+            txtaddress118.requestFocus();
+            removePlaceholderStyle(txtaddress118);
+        }
+    }//GEN-LAST:event_txtaddress118FocusGained
+
+    private void txtname118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtname118ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_txtname118ActionPerformed
+
+    private void txtname118FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtname118FocusLost
+        // TODO add your handling code here:
+        if(txtname118.getText().length()==0){
+            addPlaceholderStyle(txtname118);
+            txtname118.setText(("Name"));
+        }
+    }//GEN-LAST:event_txtname118FocusLost
+
+    private void txtname118FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtname118FocusGained
+        // TODO add your handling code here:
+        if(txtname118.getText().equals("Name")){
+            txtname118.setText(null);
+            txtname118.requestFocus();
+            removePlaceholderStyle(txtname118);
+        }
+    }//GEN-LAST:event_txtname118FocusGained
+
+    private void bttdangki118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttdangki118ActionPerformed
+        // TODO add your handling code here:
+        Signin signin =new Signin();
+        signin.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_bttdangki118ActionPerformed
+
+    private void btn_Back118MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Back118MouseClicked
+        // TODO add your handling code here:
+
+        setVisible(false);
+
+    }//GEN-LAST:event_btn_Back118MouseClicked
 
     /**
      * @param args the command line arguments
@@ -536,7 +509,6 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
-    private keeptoo.KGradientPanel kGradientPanel1;
     private javax.swing.JComboBox<String> month118;
     private javax.swing.JTextField txtaddress118;
     private javax.swing.JPasswordField txtconfirmpass118;

@@ -52,7 +52,6 @@ public class Signin extends javax.swing.JFrame {
         jlb_SignUp = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel_back_312 = new javax.swing.JLabel();
-        kGradientPanel_312 = new keeptoo.KGradientPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -64,7 +63,7 @@ public class Signin extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -207,10 +206,6 @@ public class Signin extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel_back_312, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 0, 50, 50));
 
-        kGradientPanel_312.setkEndColor(new java.awt.Color(102, 255, 255));
-        kGradientPanel_312.setkStartColor(new java.awt.Color(153, 0, 255));
-        jPanel1.add(kGradientPanel_312, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 570));
-
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 570));
 
         setSize(new java.awt.Dimension(916, 571));
@@ -323,7 +318,6 @@ public class Signin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_Signin101;
     private javax.swing.JLabel jlbLogin_312;
     private javax.swing.JLabel jlb_SignUp;
-    private keeptoo.KGradientPanel kGradientPanel_312;
     private javax.swing.JLabel show_101;
     private javax.swing.JPasswordField txtPassword_101;
     private javax.swing.JTextField txtUsername_101;
