@@ -119,7 +119,7 @@ public class Signup extends javax.swing.JFrame {
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 50, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setText("Ngày sinh :");
+        jLabel5.setText("Date of birth");
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
 
         bttdangki118.setBackground(new java.awt.Color(255, 255, 255));
@@ -200,19 +200,19 @@ public class Signup extends javax.swing.JFrame {
         jPanel3.add(year118, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 287, 50, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel9.setText("Ngày");
+        jLabel9.setText("Date");
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 260, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel10.setText("Tháng");
+        jLabel10.setText("Month");
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 260, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel11.setText("Năm");
+        jLabel11.setText("Year");
         jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel12.setText("Male/Female :");
+        jLabel12.setText("Male/Female ");
         jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 231, -1, 23));
 
         txtusername118.setText("Username");
@@ -274,7 +274,7 @@ public class Signup extends javax.swing.JFrame {
         jPanel3.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 280, -1));
         jPanel3.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 280, 10));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 60, 360, 530));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 40, 360, 550));
 
         btn_Back118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Logout_w_30px.png"))); // NOI18N
         btn_Back118.addMouseListener(new java.awt.event.MouseAdapter() {
