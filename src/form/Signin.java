@@ -93,7 +93,7 @@ public class Signin extends javax.swing.JFrame {
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jLabel5.setText("Username");
+        jLabel5.setText("Username:");
         jPanel_Signin101.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 123, 341, -1));
 
         txtUsername_101.setFont(txtUsername_101.getFont().deriveFont(txtUsername_101.getFont().getSize()+2f));
@@ -110,7 +110,7 @@ public class Signin extends javax.swing.JFrame {
 
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jLabel8.setText("Password");
+        jLabel8.setText("Password:");
         jPanel_Signin101.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 192, 341, -1));
 
         txtPassword_101.setFont(txtPassword_101.getFont().deriveFont(txtPassword_101.getFont().getSize()+2f));
@@ -153,7 +153,7 @@ public class Signin extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(102, 102, 102));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel11.setText("Forget Password?");
+        jLabel11.setText("Forget Password ?");
         jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel_Signin101.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 261, 121, 27));
 
