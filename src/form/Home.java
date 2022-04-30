@@ -42,6 +42,14 @@ public class Home extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        formtrangchu = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        jTextField_msv = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        bangsv = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
         slidebar = new javax.swing.JPanel();
         trangchu = new javax.swing.JPanel();
         g1 = new javax.swing.JPanel();
@@ -80,14 +88,6 @@ public class Home extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel22 = new javax.swing.JLabel();
-        formtrangchu = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
-        jTextField_msv = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        bangsv = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
         formcaidat = new javax.swing.JPanel();
         formhotro = new javax.swing.JPanel();
         formQuanLy = new javax.swing.JPanel();
@@ -108,6 +108,85 @@ public class Home extends javax.swing.JFrame {
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1032, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        formtrangchu.setBackground(new java.awt.Color(255, 255, 255));
+        formtrangchu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel23.setText("Mã Nhân Viên");
+
+        jTextField_msv.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jTextField_msv.setForeground(new java.awt.Color(0, 0, 204));
+
+        jButton2.setText("search");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(86, 86, 86)
+                .addComponent(jLabel23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField_msv, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(112, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(jTextField_msv, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2))
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        formtrangchu.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, -1));
+
+        bangsv.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        bangsv.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Mã nhân Viên", "Họ tên", "Ngày sinh", "Giới tính", "Chức vụ", "Hệ số lương", "Số ngày nghỉ", "Nhận lương"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Boolean.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        bangsv.setGridColor(new java.awt.Color(255, 255, 255));
+        bangsv.setRowHeight(22);
+        jScrollPane1.setViewportView(bangsv);
+
+        formtrangchu.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 560, 300));
+
+        jButton1.setBackground(new java.awt.Color(23, 35, 51));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Xóa ");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        formtrangchu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, 100, 30));
+
+        getContentPane().add(formtrangchu, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, 640, 490));
 
         slidebar.setBackground(new java.awt.Color(23, 35, 51));
         slidebar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -530,85 +609,6 @@ public class Home extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 300, 490));
-
-        formtrangchu.setBackground(new java.awt.Color(255, 255, 255));
-        formtrangchu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
-
-        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(0, 0, 204));
-        jLabel23.setText("Mã Nhân Viên");
-
-        jTextField_msv.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField_msv.setForeground(new java.awt.Color(0, 0, 204));
-
-        jButton2.setText("search");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addComponent(jLabel23)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField_msv, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(112, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(jTextField_msv, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
-                .addContainerGap(40, Short.MAX_VALUE))
-        );
-
-        formtrangchu.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, -1));
-
-        bangsv.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        bangsv.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Mã nhân Viên", "Họ tên", "Ngày sinh", "Giới tính", "Chức vụ", "Hệ số lương", "Số ngày nghỉ", "Nhận lương"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Boolean.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        bangsv.setGridColor(new java.awt.Color(255, 255, 255));
-        bangsv.setRowHeight(22);
-        jScrollPane1.setViewportView(bangsv);
-
-        formtrangchu.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 560, 300));
-
-        jButton1.setBackground(new java.awt.Color(23, 35, 51));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Xóa ");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        formtrangchu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, 100, 30));
-
-        getContentPane().add(formtrangchu, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, 640, 490));
 
         formcaidat.setBackground(new java.awt.Color(153, 255, 153));
 
