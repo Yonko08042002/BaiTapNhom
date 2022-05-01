@@ -9,7 +9,13 @@ import form.Signin;
 import java.util.Calendar;
 import java.awt.Color;
 import java.awt.Font;
+import java.beans.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 public class Signup extends javax.swing.JFrame {
@@ -194,6 +200,11 @@ public class Signup extends javax.swing.JFrame {
 
         day118.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
         day118.setBorder(null);
+        day118.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                day118ActionPerformed(evt);
+            }
+        });
         jPanel3.add(day118, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 287, 40, -1));
 
         year118.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
@@ -430,12 +441,30 @@ public class Signup extends javax.swing.JFrame {
             removePlaceholderStyle(txtname118);
         }
     }//GEN-LAST:event_txtname118FocusGained
-
+    String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        final String Url = "jdbc:sqlserver://DESKTOP-JADGEKH\\SQLEXPRESS01:1433;databaseName=QuanLyLuongNv";
+        final String user = "sa";
+        final String pass = "39151111";
+        Statement st;
+        ResultSet rs;
     private void bttdangki118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttdangki118ActionPerformed
         // TODO add your handling code here:
-        Signin signin =new Signin();
-        signin.setVisible(true);
-        this.dispose();
+       String pass = new String(txtpass118.getPassword());
+       String confirmpass = new String(txtconfirmpass118.getPassword());
+       
+        try {
+            Class.forName(driver);
+            Connection con = DriverManager.getConnection(Url, user, pass);
+            PreparedStatement ps = con.prepareStatement("insert into TaiKhoan values (?,?,?,?,?,?,?,?,?)");
+            
+            ps.setInt(1, 0);
+            ps.setString(2, txtname118.getText());
+            ps.setString(3, pass);
+            ps.setString(4,confirmpass);
+            ps.
+            
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_bttdangki118ActionPerformed
 
     private void btn_Back118MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Back118MouseClicked
@@ -444,6 +473,11 @@ public class Signup extends javax.swing.JFrame {
         setVisible(false);
 
     }//GEN-LAST:event_btn_Back118MouseClicked
+
+    private void day118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_day118ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_day118ActionPerformed
 
     /**
      * @param args the command line arguments
