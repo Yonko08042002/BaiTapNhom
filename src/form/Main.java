@@ -4,12 +4,20 @@
  */
 package form;
 
+import java.awt.Color;
+import java.awt.Dimension;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author ASUS
  */
 public class Main extends javax.swing.JFrame {
-
+    
+     boolean a;   
     /**
      * Creates new form Main
      */
@@ -26,6 +34,7 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
         bar_119 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -108,7 +117,297 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(main_119, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, -1, 680));
 
         pack();
+=======
+        Header = new javax.swing.JPanel();
+        iocnMinMaxClose = new javax.swing.JPanel();
+        ButtomClose = new javax.swing.JPanel();
+        btn_close312 = new javax.swing.JLabel();
+        ButtomMax = new javax.swing.JPanel();
+        btn_fullmax312 = new javax.swing.JLabel();
+        ButtomMin = new javax.swing.JPanel();
+        menu = new javax.swing.JPanel();
+        MenuIcon = new javax.swing.JPanel();
+        lineHidemenu = new javax.swing.JPanel();
+        hideMenu = new javax.swing.JPanel();
+        btn_Hidemenu = new javax.swing.JLabel();
+        lineSetting = new javax.swing.JPanel();
+        Setting = new javax.swing.JPanel();
+        btn_Setting = new javax.swing.JLabel();
+        menuhide = new javax.swing.JPanel();
+        dashboardview = new javax.swing.JPanel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+
+        Header.setBackground(new java.awt.Color(5, 10, 46));
+        Header.setPreferredSize(new java.awt.Dimension(800, 50));
+        Header.setLayout(new java.awt.BorderLayout());
+
+        iocnMinMaxClose.setBackground(new java.awt.Color(5, 10, 46));
+        iocnMinMaxClose.setPreferredSize(new java.awt.Dimension(150, 50));
+        iocnMinMaxClose.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ButtomClose.setBackground(new java.awt.Color(5, 10, 46));
+        ButtomClose.setLayout(new java.awt.BorderLayout());
+
+        btn_close312.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btn_close312.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/multiply_35px.png"))); // NOI18N
+        btn_close312.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_close312MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_close312MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_close312MouseExited(evt);
+            }
+        });
+        ButtomClose.add(btn_close312, java.awt.BorderLayout.CENTER);
+
+        iocnMinMaxClose.add(ButtomClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 50, 50));
+
+        ButtomMax.setBackground(new java.awt.Color(5, 10, 46));
+        ButtomMax.setLayout(new java.awt.BorderLayout());
+
+        btn_fullmax312.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btn_fullmax312.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/full_screen_35px.png"))); // NOI18N
+        btn_fullmax312.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_fullmax312MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_fullmax312MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_fullmax312MouseExited(evt);
+            }
+        });
+        ButtomMax.add(btn_fullmax312, java.awt.BorderLayout.CENTER);
+
+        iocnMinMaxClose.add(ButtomMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 50, 50));
+
+        ButtomMin.setBackground(new java.awt.Color(5, 10, 46));
+        ButtomMin.setLayout(new java.awt.BorderLayout());
+        iocnMinMaxClose.add(ButtomMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
+
+        Header.add(iocnMinMaxClose, java.awt.BorderLayout.LINE_END);
+
+        getContentPane().add(Header, java.awt.BorderLayout.PAGE_START);
+
+        menu.setPreferredSize(new java.awt.Dimension(270, 450));
+        menu.setLayout(new java.awt.BorderLayout());
+
+        MenuIcon.setBackground(new java.awt.Color(5, 10, 46));
+        MenuIcon.setPreferredSize(new java.awt.Dimension(50, 450));
+        MenuIcon.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lineHidemenu.setBackground(new java.awt.Color(5, 10, 46));
+        lineHidemenu.setPreferredSize(new java.awt.Dimension(50, 5));
+
+        javax.swing.GroupLayout lineHidemenuLayout = new javax.swing.GroupLayout(lineHidemenu);
+        lineHidemenu.setLayout(lineHidemenuLayout);
+        lineHidemenuLayout.setHorizontalGroup(
+            lineHidemenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        lineHidemenuLayout.setVerticalGroup(
+            lineHidemenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        MenuIcon.add(lineHidemenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 5));
+
+        hideMenu.setBackground(new java.awt.Color(15, 19, 46));
+        hideMenu.setLayout(new java.awt.BorderLayout());
+
+        btn_Hidemenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btn_Hidemenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/back_35px.png"))); // NOI18N
+        btn_Hidemenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_HidemenuMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_HidemenuMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_HidemenuMouseExited(evt);
+            }
+        });
+        hideMenu.add(btn_Hidemenu, java.awt.BorderLayout.CENTER);
+
+        MenuIcon.add(hideMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, 50, 50));
+
+        lineSetting.setBackground(new java.awt.Color(5, 10, 46));
+        lineSetting.setPreferredSize(new java.awt.Dimension(50, 5));
+
+        javax.swing.GroupLayout lineSettingLayout = new javax.swing.GroupLayout(lineSetting);
+        lineSetting.setLayout(lineSettingLayout);
+        lineSettingLayout.setHorizontalGroup(
+            lineSettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        lineSettingLayout.setVerticalGroup(
+            lineSettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 5, Short.MAX_VALUE)
+        );
+
+        MenuIcon.add(lineSetting, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 55, 50, -1));
+
+        Setting.setBackground(new java.awt.Color(15, 19, 46));
+        Setting.setLayout(new java.awt.BorderLayout());
+
+        btn_Setting.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btn_Setting.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/settings_35px.png"))); // NOI18N
+        btn_Setting.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_SettingMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_SettingMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_SettingMouseExited(evt);
+            }
+        });
+        Setting.add(btn_Setting, java.awt.BorderLayout.CENTER);
+
+        MenuIcon.add(Setting, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 50, 50));
+
+        menu.add(MenuIcon, java.awt.BorderLayout.LINE_START);
+
+        menuhide.setBackground(new java.awt.Color(25, 29, 74));
+
+        javax.swing.GroupLayout menuhideLayout = new javax.swing.GroupLayout(menuhide);
+        menuhide.setLayout(menuhideLayout);
+        menuhideLayout.setHorizontalGroup(
+            menuhideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 220, Short.MAX_VALUE)
+        );
+        menuhideLayout.setVerticalGroup(
+            menuhideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 450, Short.MAX_VALUE)
+        );
+
+        menu.add(menuhide, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(menu, java.awt.BorderLayout.LINE_START);
+
+        dashboardview.setBackground(new java.awt.Color(73, 128, 242));
+
+        javax.swing.GroupLayout dashboardviewLayout = new javax.swing.GroupLayout(dashboardview);
+        dashboardview.setLayout(dashboardviewLayout);
+        dashboardviewLayout.setHorizontalGroup(
+            dashboardviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 530, Short.MAX_VALUE)
+        );
+        dashboardviewLayout.setVerticalGroup(
+            dashboardviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 450, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
+
+        setSize(new java.awt.Dimension(800, 500));
+        setLocationRelativeTo(null);
+>>>>>>> b78619c0ec97229d27d755bf237a9342e2df6e0f
     }// </editor-fold>//GEN-END:initComponents
+    public void changecolor (JPanel hover , Color rand){
+        hover.setBackground(rand);
+        
+    }
+     public void clickmenu(JPanel h1, JPanel h2, int numberbool){
+        if(numberbool == 1){
+            h1.setBackground(new Color(25, 29, 74));
+            h2.setBackground(new Color(5, 10, 46));
+        }
+        else{
+            h1.setBackground(new Color(5, 10, 46));
+            h2.setBackground(new Color(25, 29, 74));
+        }
+    }
+    
+    private void btn_close312MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_close312MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_btn_close312MouseClicked
+
+    private void btn_close312MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_close312MouseEntered
+        changecolor(ButtomClose, new Color(25,29,74));
+    }//GEN-LAST:event_btn_close312MouseEntered
+
+    private void btn_close312MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_close312MouseExited
+        changecolor(ButtomClose, new Color(5,10,46));
+    }//GEN-LAST:event_btn_close312MouseExited
+
+    private void btn_fullmax312MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_fullmax312MouseClicked
+        if(this.getExtendedState()!=Main.MAXIMIZED_BOTH){
+            this.setExtendedState(Main.MAXIMIZED_BOTH);
+        }
+        else{
+            this.setExtendedState(Main.NORMAL);
+        }
+    }//GEN-LAST:event_btn_fullmax312MouseClicked
+      public void changeimage(JLabel button, String resourcheimg){
+        ImageIcon aimg = new ImageIcon(getClass().getResource(resourcheimg));
+        button.setIcon(aimg);
+    }
+    public void hideshow(JPanel menushowhide, boolean dashboard, JLabel button){
+        if(dashboard == true){
+            menushowhide.setPreferredSize(new Dimension(50, menushowhide.getHeight()));
+            changeimage(button, "/icon/Menu_35px.png");
+        }
+        else{
+            menushowhide.setPreferredSize(new Dimension(270, menushowhide.getHeight()));
+            changeimage(button, "/icon/back_35px.png");
+        }
+        
+    }
+        
+    private void btn_fullmax312MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_fullmax312MouseEntered
+        changecolor(ButtomMax, new Color(25,29,74));
+    }//GEN-LAST:event_btn_fullmax312MouseEntered
+
+    private void btn_fullmax312MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_fullmax312MouseExited
+         changecolor(ButtomMax, new Color(5,10,46));
+    }//GEN-LAST:event_btn_fullmax312MouseExited
+
+    private void btn_HidemenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HidemenuMouseClicked
+        clickmenu(hideMenu, Setting, 1);
+        // create  void  for  methode hide and show panel menu
+        //(tạo khoảng trống cho menu bảng điều khiển ẩn và hiện methode)
+        if(a==true){
+          hideshow(menu, a, btn_Hidemenu);
+          SwingUtilities.updateComponentTreeUI(this);
+          //create methode change image
+          
+          a=false;
+        }
+        else{
+            hideshow(menu, a, btn_Hidemenu);
+            SwingUtilities.updateComponentTreeUI(this);
+            a=true;
+        }
+    }//GEN-LAST:event_btn_HidemenuMouseClicked
+
+    private void btn_HidemenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HidemenuMouseEntered
+        changecolor(lineHidemenu, new Color(247,78,105));
+    }//GEN-LAST:event_btn_HidemenuMouseEntered
+
+    private void btn_HidemenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HidemenuMouseExited
+       changecolor(lineHidemenu, new Color(5,10,46));
+    }//GEN-LAST:event_btn_HidemenuMouseExited
+
+    private void btn_SettingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SettingMouseClicked
+        clickmenu(Setting,hideMenu, 1);
+    }//GEN-LAST:event_btn_SettingMouseClicked
+
+    private void btn_SettingMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SettingMouseEntered
+        changecolor(lineSetting, new Color(247,78,105));
+    }//GEN-LAST:event_btn_SettingMouseEntered
+
+    private void btn_SettingMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SettingMouseExited
+        changecolor(lineSetting, new Color(5,10,46));
+    }//GEN-LAST:event_btn_SettingMouseExited
 
     /**
      * @param args the command line arguments
@@ -146,6 +445,7 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JPanel bar_119;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -155,5 +455,24 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel main_119;
     private javax.swing.JPanel menu_119;
+=======
+    private javax.swing.JPanel ButtomClose;
+    private javax.swing.JPanel ButtomMax;
+    private javax.swing.JPanel ButtomMin;
+    private javax.swing.JPanel Header;
+    private javax.swing.JPanel MenuIcon;
+    private javax.swing.JPanel Setting;
+    private javax.swing.JLabel btn_Hidemenu;
+    private javax.swing.JLabel btn_Setting;
+    private javax.swing.JLabel btn_close312;
+    private javax.swing.JLabel btn_fullmax312;
+    private javax.swing.JPanel dashboardview;
+    private javax.swing.JPanel hideMenu;
+    private javax.swing.JPanel iocnMinMaxClose;
+    private javax.swing.JPanel lineHidemenu;
+    private javax.swing.JPanel lineSetting;
+    private javax.swing.JPanel menu;
+    private javax.swing.JPanel menuhide;
+>>>>>>> b78619c0ec97229d27d755bf237a9342e2df6e0f
     // End of variables declaration//GEN-END:variables
 }
