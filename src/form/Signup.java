@@ -461,7 +461,7 @@ public class Signup extends javax.swing.JFrame {
             ps.setString(2, txtname118.getText());
             ps.setString(3, pass);
             ps.setString(4,confirmpass);
-            ps.
+           
             
         } catch (Exception e) {
         }

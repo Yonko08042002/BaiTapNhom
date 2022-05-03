@@ -4,8 +4,12 @@
  * and open the template in the editor.
  */
 package form;
-import form.Signup;
-import java.util.Calendar;
+import java.beans.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ME1
@@ -247,9 +251,34 @@ public class Signin extends javax.swing.JFrame {
 
     private void btnSignin_101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignin_101ActionPerformed
         // TODO add your handling code here:
-        Home home =new Home();
-        home.setVisible(true);
-        this.dispose();
+        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        final String Url = "jdbc:sqlserver://KANIS:1433;databaseName=QuanLyLuongNv";
+        final String user = "sa";
+        final String pass = "123";
+        Statement st;
+        ResultSet rs;
+        try {
+            Class.forName(driver);
+            Connection con = DriverManager.getConnection(Url, user, pass);
+            String sql = "select* from TaiKhoan where username = ? and pass =?";//truy vấn đến sql
+            PreparedStatement ps = con.prepareCall(sql);
+            ps.setString(1, txtUsername_101.getText());
+            ps.setString(2, txtPassword_101.getText());
+            rs = ps.executeQuery();
+            
+            if(txtUsername_101.getText().equals("")|| txtPassword_101.getText().equals("")){
+                JOptionPane.showMessageDialog(this, "Username and Password is empty!");
+            }else 
+                if(rs.next()){
+                    Home ql = new Home();
+                    ql.setVisible(true);
+                    this.dispose();
+                    JOptionPane.showMessageDialog(this, "Sign up success!");
+                }else {
+                    JOptionPane.showMessageDialog(this, "Login failed! Please try again!");
+                }
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_btnSignin_101ActionPerformed
 
     private void jlb_SignUpMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlb_SignUpMousePressed
