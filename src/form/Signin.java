@@ -248,15 +248,15 @@ public class Signin extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_formWindowOpened
-
-    private void btnSignin_101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignin_101ActionPerformed
-        // TODO add your handling code here:
         String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
         final String Url = "jdbc:sqlserver://KANIS:1433;databaseName=QuanLyLuongNv";
         final String user = "sa";
         final String pass = "123";
         Statement st;
         ResultSet rs;
+    private void btnSignin_101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignin_101ActionPerformed
+        // TODO add your handling code here:
+        
         try {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(Url, user, pass);
@@ -270,7 +270,7 @@ public class Signin extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Username and Password is empty!");
             }else 
                 if(rs.next()){
-                    Home ql = new Home();
+                    Main ql = new Main();
                     ql.setVisible(true);
                     this.dispose();
                     JOptionPane.showMessageDialog(this, "Sign up success!");
