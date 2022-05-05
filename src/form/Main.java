@@ -27,11 +27,7 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         Main.this.getRootPane().setBorder(new LineBorder(new Color(73,128,242)));
-        tabledata.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
-        tabledata.getTableHeader().setOpaque(false);
-        tabledata.getTableHeader().setBackground(new Color (25,29,74));
-        tabledata.getTableHeader().setForeground(new Color (255,255,255));
-        tabledata.setRowHeight(25);
+        
         //icontitle119.setText(this.getTitle());
         //title119.setText(this.getTitle());
     }
@@ -105,7 +101,7 @@ public class Main extends javax.swing.JFrame {
         jpgmail1 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         dashboardview = new javax.swing.JPanel();
-        kGradientPanel3 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel1 = new keeptoo.KGradientPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -759,21 +755,18 @@ public class Main extends javax.swing.JFrame {
         dashboardview.setBackground(new java.awt.Color(255, 204, 102));
         dashboardview.setLayout(new java.awt.BorderLayout());
 
-        kGradientPanel3.setkEndColor(new java.awt.Color(255, 255, 255));
-        kGradientPanel3.setkStartColor(new java.awt.Color(0, 255, 255));
-
-        javax.swing.GroupLayout kGradientPanel3Layout = new javax.swing.GroupLayout(kGradientPanel3);
-        kGradientPanel3.setLayout(kGradientPanel3Layout);
-        kGradientPanel3Layout.setHorizontalGroup(
-            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
+        kGradientPanel1.setLayout(kGradientPanel1Layout);
+        kGradientPanel1Layout.setHorizontalGroup(
+            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1215, Short.MAX_VALUE)
         );
-        kGradientPanel3Layout.setVerticalGroup(
-            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        kGradientPanel1Layout.setVerticalGroup(
+            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 700, Short.MAX_VALUE)
         );
 
-        dashboardview.add(kGradientPanel3, java.awt.BorderLayout.CENTER);
+        dashboardview.add(kGradientPanel1, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
 
@@ -1101,7 +1094,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jphome;
     private javax.swing.JPanel jplich;
     private javax.swing.JPanel jpremove;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel3;
+    private keeptoo.KGradientPanel kGradientPanel1;
     private javax.swing.JPanel lineCalendar;
     private javax.swing.JPanel lineEdit;
     private javax.swing.JPanel lineEmail;
