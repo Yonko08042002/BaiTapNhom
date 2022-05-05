@@ -782,7 +782,7 @@ public class Main extends javax.swing.JFrame {
 
         getContentPane().add(menu, java.awt.BorderLayout.LINE_START);
 
-        dashboardview.setBackground(new java.awt.Color(204, 255, 204));
+        dashboardview.setBackground(new java.awt.Color(255, 204, 102));
         dashboardview.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         header1.setBackground(new java.awt.Color(255, 255, 255));
