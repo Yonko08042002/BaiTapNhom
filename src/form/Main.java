@@ -105,33 +105,7 @@ public class Main extends javax.swing.JFrame {
         jpgmail1 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         dashboardview = new javax.swing.JPanel();
-        header1 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tabledata = new javax.swing.JTable();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        Infomation = new javax.swing.JTable();
+        kGradientPanel3 = new com.k33ptoo.components.KGradientPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -783,231 +757,23 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(menu, java.awt.BorderLayout.LINE_START);
 
         dashboardview.setBackground(new java.awt.Color(255, 204, 102));
-        dashboardview.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        dashboardview.setLayout(new java.awt.BorderLayout());
 
-        header1.setBackground(new java.awt.Color(255, 255, 255));
-        header1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+        kGradientPanel3.setkEndColor(new java.awt.Color(255, 255, 255));
+        kGradientPanel3.setkStartColor(new java.awt.Color(0, 255, 255));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/bell_30px.png"))); // NOI18N
-        header1.add(jLabel10);
-
-        dashboardview.add(header1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1213, 38));
-
-        tabledata.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 0));
-        tabledata.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        tabledata.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"NV001", "Nguyễn Đức Tín", "Nam", "08/04/2002", "Quảng Nam", "0125648968", null, null},
-                {"NV002", "Lê Thuận Diệu", "Nam", "05/11/2002", "Quảng Bình", "0123589456", null, null},
-                {"NV003", "Nguyễn Tiến An", "Nam", "10/07/2002", "Đăk Lăk", "0258963456", null, null},
-                {"NV004", "Đặng Thị Thùy Dung", "Nữ", "06/06/2002", "Quảng Trị", null, null, null}
-            },
-            new String [] {
-                "ID", "Name", "Sex", "Date of bỉth", "Address", "Phone", "Email", "Office"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        tabledata.setFocusable(false);
-        tabledata.setGridColor(new java.awt.Color(255, 255, 255));
-        tabledata.setIntercellSpacing(new java.awt.Dimension(2, 2));
-        tabledata.setShowHorizontalLines(false);
-        jScrollPane1.setViewportView(tabledata);
-
-        dashboardview.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 858, 450));
-
-        jPanel1.setBackground(new java.awt.Color(204, 102, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("New Employees");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, 33));
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("1,200");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 96, 46));
-
-        jPanel3.setBackground(new java.awt.Color(255, 0, 0));
-        jPanel3.setPreferredSize(new java.awt.Dimension(100, 5));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 20, Short.MAX_VALUE)
+        javax.swing.GroupLayout kGradientPanel3Layout = new javax.swing.GroupLayout(kGradientPanel3);
+        kGradientPanel3.setLayout(kGradientPanel3Layout);
+        kGradientPanel3Layout.setHorizontalGroup(
+            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1215, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 5, Short.MAX_VALUE)
+        kGradientPanel3Layout.setVerticalGroup(
+            kGradientPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 700, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 20, 5));
-
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setPreferredSize(new java.awt.Dimension(100, 5));
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 5, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 200, 5));
-
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("20%");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, -1, -1));
-
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/add_user_group_man_man_85px.png"))); // NOI18N
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 90, 90));
-
-        dashboardview.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 71, -1, 150));
-
-        jPanel2.setBackground(new java.awt.Color(0, 153, 255));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel15.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Income");
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 130, 33));
-
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("6,000");
-        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 96, 46));
-
-        jPanel5.setBackground(new java.awt.Color(255, 0, 0));
-        jPanel5.setPreferredSize(new java.awt.Dimension(100, 5));
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 5, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 150, 5));
-
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel6.setPreferredSize(new java.awt.Dimension(100, 5));
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 5, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 200, 5));
-
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("70%");
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, -1, -1));
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Money Bag Pounds_85px.png"))); // NOI18N
-        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 90, 90));
-
-        dashboardview.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 71, -1, 150));
-
-        jPanel7.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel19.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel19.setText("Salary");
-        jPanel7.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 130, 33));
-
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("2,000");
-        jPanel7.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 96, 46));
-
-        jPanel8.setBackground(new java.awt.Color(255, 0, 0));
-        jPanel8.setPreferredSize(new java.awt.Dimension(100, 5));
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 5, Short.MAX_VALUE)
-        );
-
-        jPanel7.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 120, 5));
-
-        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel9.setPreferredSize(new java.awt.Dimension(100, 5));
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 5, Short.MAX_VALUE)
-        );
-
-        jPanel7.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 200, 5));
-
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel21.setText("50%");
-        jPanel7.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, -1, -1));
-
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/salary_female_85px.png"))); // NOI18N
-        jPanel7.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 90, 90));
-
-        dashboardview.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(895, 71, -1, 150));
-
-        Infomation.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 0, true));
-        Infomation.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"Ngày 1:"},
-                {null},
-                {null},
-                {null}
-            },
-            new String [] {
-                "Phân công công việc"
-            }
-        ));
-        Infomation.setGridColor(new java.awt.Color(255, 255, 255));
-        Infomation.setShowHorizontalLines(false);
-        Infomation.setShowVerticalLines(false);
-        jScrollPane2.setViewportView(Infomation);
-
-        dashboardview.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(895, 250, 308, 450));
+        dashboardview.add(kGradientPanel3, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
 
@@ -1294,7 +1060,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel Edit;
     private javax.swing.JPanel Email;
     private javax.swing.JPanel Header;
-    private javax.swing.JTable Infomation;
     private javax.swing.JPanel MenuIcon;
     private javax.swing.JPanel Remove;
     private javax.swing.JPanel Salary;
@@ -1314,26 +1079,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel btn_maximus119;
     private javax.swing.JLabel btn_mini119;
     private javax.swing.JPanel dashboardview;
-    private javax.swing.JPanel header1;
     private javax.swing.JPanel hideMenu;
     private javax.swing.JPanel home;
     private javax.swing.JLabel icontitle119;
     private javax.swing.JPanel iocnMinMaxClose;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1341,17 +1092,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel jpadd;
     private javax.swing.JPanel jpcalculate;
     private javax.swing.JPanel jpedit119;
@@ -1361,6 +1101,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jphome;
     private javax.swing.JPanel jplich;
     private javax.swing.JPanel jpremove;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel3;
     private javax.swing.JPanel lineCalendar;
     private javax.swing.JPanel lineEdit;
     private javax.swing.JPanel lineEmail;
@@ -1374,7 +1115,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel menu;
     private javax.swing.JPanel menuhide;
     private javax.swing.JPanel setting;
-    private javax.swing.JTable tabledata;
     private javax.swing.JLabel title119;
     private javax.swing.JPanel title_header119;
     // End of variables declaration//GEN-END:variables
