@@ -31,7 +31,6 @@ public class AddForm extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         kGradientPanel1 = new com.k33ptoo.components.KGradientPanel();
-        btadd118 = new javax.swing.JButton();
         female118 = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         txtaddress118 = new javax.swing.JTextField();
@@ -49,6 +48,7 @@ public class AddForm extends javax.swing.JFrame {
         txtname118 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         male118 = new javax.swing.JRadioButton();
+        btadd118 = new com.k33ptoo.components.KButton();
         jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -58,18 +58,6 @@ public class AddForm extends javax.swing.JFrame {
 
         kGradientPanel1.setkEndColor(new java.awt.Color(204, 204, 255));
         kGradientPanel1.setkStartColor(new java.awt.Color(102, 255, 153));
-
-        btadd118.setBackground(new java.awt.Color(255, 255, 255));
-        btadd118.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btadd118.setForeground(new java.awt.Color(71, 120, 197));
-        btadd118.setText("ADD");
-        btadd118.setBorder(null);
-        btadd118.setBorderPainted(false);
-        btadd118.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btadd118ActionPerformed(evt);
-            }
-        });
 
         buttonGroup1.add(female118);
         female118.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -103,6 +91,9 @@ public class AddForm extends javax.swing.JFrame {
         male118.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         male118.setText("Male");
 
+        btadd118.setText("ADD");
+        btadd118.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+
         javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
         kGradientPanel1.setLayout(kGradientPanel1Layout);
         kGradientPanel1Layout.setHorizontalGroup(
@@ -132,9 +123,12 @@ public class AddForm extends javax.swing.JFrame {
                                 .addGap(50, 50, 50)
                                 .addComponent(female118))
                             .addComponent(jLabel3))
-                        .addGap(0, 75, Short.MAX_VALUE))
-                    .addComponent(btadd118, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(btadd118, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(76, Short.MAX_VALUE))
         );
         kGradientPanel1Layout.setVerticalGroup(
             kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,7 +167,7 @@ public class AddForm extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(txtposition118, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(btadd118, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btadd118, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -226,11 +220,6 @@ public class AddForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btadd118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btadd118ActionPerformed
-        // TODO add your handling code here:
-       
-    }//GEN-LAST:event_btadd118ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -267,7 +256,7 @@ public class AddForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btadd118;
+    private com.k33ptoo.components.KButton btadd118;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JRadioButton female118;
     private javax.swing.JLabel jLabel1;
