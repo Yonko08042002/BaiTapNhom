@@ -59,6 +59,7 @@ public class AddForm extends javax.swing.JFrame {
         kGradientPanel1.setkEndColor(new java.awt.Color(204, 204, 255));
         kGradientPanel1.setkStartColor(new java.awt.Color(102, 255, 153));
 
+        female118.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(female118);
         female118.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         female118.setText("Female");
@@ -87,6 +88,7 @@ public class AddForm extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel4.setText("Sex :");
 
+        male118.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(male118);
         male118.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         male118.setText("Male");
@@ -116,13 +118,13 @@ public class AddForm extends javax.swing.JFrame {
                             .addComponent(jLabel7)
                             .addComponent(jLabel6)
                             .addComponent(jLabel5)
+                            .addComponent(jLabel3)
                             .addGroup(kGradientPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addGap(28, 28, 28)
                                 .addComponent(male118)
-                                .addGap(50, 50, 50)
-                                .addComponent(female118))
-                            .addComponent(jLabel3))
+                                .addGap(63, 63, 63)
+                                .addComponent(female118)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(kGradientPanel1Layout.createSequentialGroup()
