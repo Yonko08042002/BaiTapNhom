@@ -160,7 +160,6 @@ public class Main extends javax.swing.JFrame {
         icontitle119.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/staff_18px.png"))); // NOI18N
         title_header119.add(icontitle119);
 
-        title119.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         title119.setForeground(new java.awt.Color(255, 255, 255));
         title119.setText("Quản lý Nhân viên");
         title_header119.add(title119);
@@ -799,7 +798,7 @@ public class Main extends javax.swing.JFrame {
         dashboardview.setLayout(dashboardviewLayout);
         dashboardviewLayout.setHorizontalGroup(
             dashboardviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1215, Short.MAX_VALUE)
+            .addGap(0, 781, Short.MAX_VALUE)
         );
         dashboardviewLayout.setVerticalGroup(
             dashboardviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -808,7 +807,7 @@ public class Main extends javax.swing.JFrame {
 
         getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(1465, 730));
+        setSize(new java.awt.Dimension(1031, 730));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     int xx_119, xy_119;
