@@ -20,7 +20,8 @@ import javax.swing.border.LineBorder;
  */
 public class Main extends javax.swing.JFrame {
     
-     boolean a;   
+     boolean a; 
+     JPanel [] panels;
     /**
      * Creates new form Main
      */
@@ -31,7 +32,9 @@ public class Main extends javax.swing.JFrame {
         //icontitle119.setText(this.getTitle());
         //title119.setText(this.getTitle());
     }
-
+    public void addLabelToTable(){
+        panels = new JPanel[]{hideMenu, home, add, Calender, Email, setting, Search, Edit, Salary, Remove};
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -109,6 +112,7 @@ public class Main extends javax.swing.JFrame {
         jpgmail1 = new javax.swing.JPanel();
         kGradientPanel14 = new keeptoo.KGradientPanel();
         jLabel17 = new javax.swing.JLabel();
+        kGradientPanel1 = new keeptoo.KGradientPanel();
         dashboardview = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -200,11 +204,26 @@ public class Main extends javax.swing.JFrame {
 
         hideMenu.setBackground(new java.awt.Color(0, 145, 255));
         hideMenu.setPreferredSize(new java.awt.Dimension(50, 50));
+        hideMenu.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                hideMenuMouseMoved(evt);
+            }
+        });
+        hideMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hideMenuMouseExited(evt);
+            }
+        });
         hideMenu.setLayout(new java.awt.BorderLayout());
 
         btn_Hidemenu.setBackground(new java.awt.Color(0, 255, 255));
         btn_Hidemenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btn_Hidemenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/back_to_20px.png"))); // NOI18N
+        btn_Hidemenu.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_HidemenuMouseMoved(evt);
+            }
+        });
         btn_Hidemenu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_HidemenuMouseClicked(evt);
@@ -237,6 +256,11 @@ public class Main extends javax.swing.JFrame {
         MenuIcon.add(linehome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 55, 50, 5));
 
         home.setBackground(new java.awt.Color(0, 145, 255));
+        home.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                homeMouseMoved(evt);
+            }
+        });
         home.setLayout(new java.awt.BorderLayout());
 
         btn_Home.setBackground(new java.awt.Color(0, 145, 255));
@@ -944,6 +968,23 @@ public class Main extends javax.swing.JFrame {
 
         menuhide.add(jpgmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 620, 200, 55));
 
+        kGradientPanel1.setkEndColor(new java.awt.Color(0, 0, 153));
+        kGradientPanel1.setkGradientFocus(1300);
+        kGradientPanel1.setkStartColor(new java.awt.Color(0, 145, 255));
+
+        javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
+        kGradientPanel1.setLayout(kGradientPanel1Layout);
+        kGradientPanel1Layout.setHorizontalGroup(
+            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        kGradientPanel1Layout.setVerticalGroup(
+            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 700, Short.MAX_VALUE)
+        );
+
+        menuhide.add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 700));
+
         menu.add(menuhide, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(menu, java.awt.BorderLayout.LINE_START);
@@ -967,9 +1008,9 @@ public class Main extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     int xx_119, xy_119;
-    public void changecolor (JPanel hover , Color rand){
-        hover.setBackground(rand);        
-    }
+//    public void changecolor (JPanel hover , Color rand){
+//        hover.setBackground(rand);        
+//    }
      public void clickmenu(JPanel h1, JPanel h2, int numberbool){
         if(numberbool == 1){
             h1.setBackground(new Color(0,145,255));
@@ -1015,11 +1056,13 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_HidemenuMouseClicked
 
     private void btn_HidemenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HidemenuMouseEntered
-        changecolor(lineHidemenu, new Color(247,78,105));
+//        changecolor(lineHidemenu, new Color(247,78,105));
     }//GEN-LAST:event_btn_HidemenuMouseEntered
 
     private void btn_HidemenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HidemenuMouseExited
-       changecolor(lineHidemenu, new Color(0,145,255));
+       //changecolor(lineHidemenu, new Color(0,145,255));
+       resetPaneBackground(hideMenu);
+       resetPaneBackground(lineHidemenu);
     }//GEN-LAST:event_btn_HidemenuMouseExited
 
     private void btn_maximus119MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_maximus119MousePressed
@@ -1070,136 +1113,154 @@ public class Main extends javax.swing.JFrame {
 
     private void btn_addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addMouseClicked
         // TODO add your handling code here:
-        clickmenu(add,home, 1);    
+//        clickmenu(add,home, 1);    
     }//GEN-LAST:event_btn_addMouseClicked
 
     private void btn_addMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addMouseEntered
         // TODO add your handling code here:
-        changecolor(lineadd, new Color(247,78,105));
+//        changecolor(lineadd, new Color(247,78,105));
     }//GEN-LAST:event_btn_addMouseEntered
 
     private void btn_addMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addMouseExited
         // TODO add your handling code here:
-        changecolor(lineadd, new Color(0,145,255));
+//        changecolor(lineadd, new Color(0,145,255));
     }//GEN-LAST:event_btn_addMouseExited
 
     private void btn_SettingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SettingMouseClicked
         // TODO add your handling code here:
-        clickmenu(setting,Email, 1);
+//        clickmenu(setting,Email, 1);
     }//GEN-LAST:event_btn_SettingMouseClicked
 
     private void btn_SettingMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SettingMouseEntered
         // TODO add your handling code here:
-         changecolor(lineSetting, new Color(247,78,105));
+//         changecolor(lineSetting, new Color(247,78,105));
     }//GEN-LAST:event_btn_SettingMouseEntered
 
     private void btn_SettingMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SettingMouseExited
         // TODO add your handling code here:
-        changecolor(lineSetting, new Color(0,145,255));
+//        changecolor(lineSetting, new Color(0,145,255));
     }//GEN-LAST:event_btn_SettingMouseExited
 
     private void btn_EmailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EmailMouseClicked
         // TODO add your handling code here:
-        clickmenu(Email,Calender, 1);
+//        clickmenu(Email,Calender, 1);
     }//GEN-LAST:event_btn_EmailMouseClicked
 
     private void btn_EmailMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EmailMouseEntered
         // TODO add your handling code here:
-         changecolor(lineEmail, new Color(247,78,105));
+//         changecolor(lineEmail, new Color(247,78,105));
     }//GEN-LAST:event_btn_EmailMouseEntered
 
     private void btn_EmailMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EmailMouseExited
         // TODO add your handling code here:
-        changecolor(lineEmail, new Color(0,145,255));
+//        changecolor(lineEmail, new Color(0,145,255));
     }//GEN-LAST:event_btn_EmailMouseExited
 
     private void btn_CalendarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_CalendarMouseClicked
         // TODO add your handling code here:
-        clickmenu(Calender,Remove, 1);
+//        clickmenu(Calender,Remove, 1);
     }//GEN-LAST:event_btn_CalendarMouseClicked
 
     private void btn_CalendarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_CalendarMouseEntered
         // TODO add your handling code here:
-         changecolor(lineCalendar, new Color(247,78,105));
+//         changecolor(lineCalendar, new Color(247,78,105));
     }//GEN-LAST:event_btn_CalendarMouseEntered
 
     private void btn_CalendarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_CalendarMouseExited
         // TODO add your handling code here:
-        changecolor(lineCalendar, new Color(0,145,255));
+//        changecolor(lineCalendar, new Color(0,145,255));
     }//GEN-LAST:event_btn_CalendarMouseExited
 
     private void btn_SearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SearchMouseClicked
         // TODO add your handling code here:
-        clickmenu(Search,add, 1);
+//        clickmenu(Search,add, 1);
     }//GEN-LAST:event_btn_SearchMouseClicked
 
     private void btn_SearchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SearchMouseEntered
         // TODO add your handling code here:
-        changecolor(lineSearch, new Color(247,78,105));
+//        changecolor(lineSearch, new Color(247,78,105));
     }//GEN-LAST:event_btn_SearchMouseEntered
 
     private void btn_SearchMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SearchMouseExited
         // TODO add your handling code here:
-        changecolor(lineSearch, new Color(0,145,255));
+//        changecolor(lineSearch, new Color(0,145,255));
     }//GEN-LAST:event_btn_SearchMouseExited
 
     private void btn_EditMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EditMouseClicked
         // TODO add your handling code here:
-        clickmenu(Edit,Search, 1);
+//        clickmenu(Edit,Search, 1);
     }//GEN-LAST:event_btn_EditMouseClicked
 
     private void btn_EditMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EditMouseEntered
         // TODO add your handling code here:
-        changecolor(lineEdit, new Color(247,78,105));
+//        changecolor(lineEdit, new Color(247,78,105));
     }//GEN-LAST:event_btn_EditMouseEntered
 
     private void btn_EditMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EditMouseExited
         // TODO add your handling code here:
-        changecolor(lineEdit, new Color(0,145,255));
+//        changecolor(lineEdit, new Color(0,145,255));
     }//GEN-LAST:event_btn_EditMouseExited
 
     private void btn_SalaryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SalaryMouseClicked
         // TODO add your handling code here:
-        clickmenu(Salary,Edit, 1);
+//        clickmenu(Salary,Edit, 1);
     }//GEN-LAST:event_btn_SalaryMouseClicked
 
     private void btn_SalaryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SalaryMouseEntered
         // TODO add your handling code here:
-        changecolor(linerSalary, new Color(247,78,105));
+//        changecolor(linerSalary, new Color(247,78,105));
     }//GEN-LAST:event_btn_SalaryMouseEntered
 
     private void btn_SalaryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SalaryMouseExited
         // TODO add your handling code here:
-        changecolor(linerSalary, new Color(0,145,255));
+//        changecolor(linerSalary, new Color(0,145,255));
     }//GEN-LAST:event_btn_SalaryMouseExited
 
     private void btn_RemoveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RemoveMouseClicked
         // TODO add your handling code here:
-        clickmenu(Remove,Salary, 1);
+//        clickmenu(Remove,Salary, 1);
     }//GEN-LAST:event_btn_RemoveMouseClicked
 
     private void btn_RemoveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RemoveMouseEntered
         // TODO add your handling code here:
-        changecolor(lineRemove, new Color(247,78,105));
+//        changecolor(lineRemove, new Color(247,78,105));
     }//GEN-LAST:event_btn_RemoveMouseEntered
 
     private void btn_RemoveMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RemoveMouseExited
         // TODO add your handling code here:
-        changecolor(lineRemove, new Color(0,145,255));
+        //changecolor(lineRemove, new Color(0,145,255));
     }//GEN-LAST:event_btn_RemoveMouseExited
 
     private void btn_HomeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HomeMouseExited
-        changecolor(linehome, new Color(0,145,255));
+       // changecolor(linehome, new Color(0,145,255));
     }//GEN-LAST:event_btn_HomeMouseExited
 
     private void btn_HomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HomeMouseEntered
-        changecolor(linehome, new Color(247,78,105));
+        //changecolor(linehome, new Color(247,78,105));
     }//GEN-LAST:event_btn_HomeMouseEntered
 
     private void btn_HomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HomeMouseClicked
-        clickmenu(home,hideMenu, 1);
+       // clickmenu(home,hideMenu, 1);
     }//GEN-LAST:event_btn_HomeMouseClicked
 
+    private void hideMenuMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hideMenuMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hideMenuMouseMoved
+
+    private void hideMenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hideMenuMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hideMenuMouseExited
+
+    private void homeMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homeMouseMoved
+
+    private void btn_HidemenuMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HidemenuMouseMoved
+        // TODO add your handling code here:
+        setPaneBackground(hideMenu);
+        changeColor(lineHidemenu, new Color(193,18,31));
+    }//GEN-LAST:event_btn_HidemenuMouseMoved
+    
     private void setColor(JLabel pane){
         pane.setBackground(new Color(204,0,0));
     }
@@ -1237,19 +1298,14 @@ public class Main extends javax.swing.JFrame {
             }
         });
     }
-    private void setColor(JPanel pane){
-        pane.setBackground(new Color(41,57,80));
+    private void setPaneBackground(JPanel jp){
+        jp.setBackground(new Color(0,180,216));
     }
-    private void setColor1(JPanel pane){
-        pane.setBackground(new Color(41,57,80));
+    private void resetPaneBackground(JPanel jp){
+        jp.setBackground(new Color(0,145,255));
     }
-    private void resetColor(JPanel [] pane, JPanel [] indicator){
-        for(int i=0; i<pane.length; i++){
-            pane[i].setBackground(new Color(23,35,51));
-        }
-        for(int i=0; i<indicator.length; i++){
-            indicator[i].setOpaque(false);
-        }
+    private void changeColor(JPanel hover, Color rand){
+        hover.setBackground(rand);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Calender;
@@ -1282,8 +1338,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -1299,7 +1353,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jphome;
     private javax.swing.JPanel jplich;
     private javax.swing.JPanel jpremove;
-    private keeptoo.KGradientPanel kGradientPanel10;
+    private keeptoo.KGradientPanel kGradientPanel1;
     private keeptoo.KGradientPanel kGradientPanel11;
     private keeptoo.KGradientPanel kGradientPanel12;
     private keeptoo.KGradientPanel kGradientPanel13;
@@ -1309,7 +1363,6 @@ public class Main extends javax.swing.JFrame {
     private keeptoo.KGradientPanel kGradientPanel6;
     private keeptoo.KGradientPanel kGradientPanel7;
     private keeptoo.KGradientPanel kGradientPanel8;
-    private keeptoo.KGradientPanel kGradientPanel9;
     private javax.swing.JPanel lineCalendar;
     private javax.swing.JPanel lineEdit;
     private javax.swing.JPanel lineEmail;
