@@ -114,6 +114,8 @@ public class Main extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         kGradientPanel1 = new keeptoo.KGradientPanel();
         dashboardview = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -1021,19 +1023,16 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(menu, java.awt.BorderLayout.LINE_START);
 
         dashboardview.setBackground(new java.awt.Color(255, 204, 102));
-
-        javax.swing.GroupLayout dashboardviewLayout = new javax.swing.GroupLayout(dashboardview);
-        dashboardview.setLayout(dashboardviewLayout);
-        dashboardviewLayout.setHorizontalGroup(
-            dashboardviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 781, Short.MAX_VALUE)
-        );
-        dashboardviewLayout.setVerticalGroup(
-            dashboardviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
-        );
-
+        dashboardview.setLayout(new java.awt.BorderLayout());
         getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
+
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        jPanel2.setBackground(new java.awt.Color(102, 255, 102));
+        jPanel2.setLayout(new java.awt.BorderLayout());
+        jPanel1.add(jPanel2, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         setSize(new java.awt.Dimension(1031, 730));
         setLocationRelativeTo(null);
@@ -1060,6 +1059,7 @@ public class Main extends javax.swing.JFrame {
         if(dashboard == true){
             menushowhide.setPreferredSize(new Dimension(50, menushowhide.getHeight()));
             changeimage(button, "/icon/Hamburger Menu_20px.png");
+            
         }
         else{
             menushowhide.setPreferredSize(new Dimension(250, menushowhide.getHeight()));
@@ -1432,6 +1432,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jpadd;
     private javax.swing.JPanel jpcalculate;
     private javax.swing.JPanel jpedit119;
