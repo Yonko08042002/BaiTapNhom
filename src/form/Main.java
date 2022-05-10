@@ -266,6 +266,11 @@ public class Main extends javax.swing.JFrame {
         btn_Home.setBackground(new java.awt.Color(0, 145, 255));
         btn_Home.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btn_Home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/home_20px.png"))); // NOI18N
+        btn_Home.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_HomeMouseMoved(evt);
+            }
+        });
         btn_Home.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_HomeMouseClicked(evt);
@@ -302,6 +307,11 @@ public class Main extends javax.swing.JFrame {
 
         btn_add.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btn_add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/add_20px.png"))); // NOI18N
+        btn_add.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_addMouseMoved(evt);
+            }
+        });
         btn_add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_addMouseClicked(evt);
@@ -340,6 +350,11 @@ public class Main extends javax.swing.JFrame {
         btn_Calendar.setBackground(new java.awt.Color(0, 255, 255));
         btn_Calendar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btn_Calendar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Tear-Off Calendar_20px.png"))); // NOI18N
+        btn_Calendar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_CalendarMouseMoved(evt);
+            }
+        });
         btn_Calendar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_CalendarMouseClicked(evt);
@@ -378,6 +393,11 @@ public class Main extends javax.swing.JFrame {
         btn_Email.setBackground(new java.awt.Color(0, 255, 255));
         btn_Email.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btn_Email.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/mail_20px.png"))); // NOI18N
+        btn_Email.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_EmailMouseMoved(evt);
+            }
+        });
         btn_Email.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_EmailMouseClicked(evt);
@@ -416,6 +436,11 @@ public class Main extends javax.swing.JFrame {
         btn_Setting.setBackground(new java.awt.Color(0, 255, 255));
         btn_Setting.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btn_Setting.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/settings_20px.png"))); // NOI18N
+        btn_Setting.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_SettingMouseMoved(evt);
+            }
+        });
         btn_Setting.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_SettingMouseClicked(evt);
@@ -452,6 +477,11 @@ public class Main extends javax.swing.JFrame {
 
         btn_Search.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btn_Search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/search_20px.png"))); // NOI18N
+        btn_Search.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_SearchMouseMoved(evt);
+            }
+        });
         btn_Search.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_SearchMouseClicked(evt);
@@ -488,6 +518,11 @@ public class Main extends javax.swing.JFrame {
 
         btn_Edit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btn_Edit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/edit_20px.png"))); // NOI18N
+        btn_Edit.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_EditMouseMoved(evt);
+            }
+        });
         btn_Edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_EditMouseClicked(evt);
@@ -524,6 +559,11 @@ public class Main extends javax.swing.JFrame {
 
         btn_Salary.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btn_Salary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/calculate_20px.png"))); // NOI18N
+        btn_Salary.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_SalaryMouseMoved(evt);
+            }
+        });
         btn_Salary.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_SalaryMouseClicked(evt);
@@ -560,6 +600,11 @@ public class Main extends javax.swing.JFrame {
 
         btn_Remove.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btn_Remove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/trash_20px.png"))); // NOI18N
+        btn_Remove.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_RemoveMouseMoved(evt);
+            }
+        });
         btn_Remove.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_RemoveMouseClicked(evt);
@@ -597,21 +642,15 @@ public class Main extends javax.swing.JFrame {
         kGradientPanel5.setLayout(kGradientPanel5Layout);
         kGradientPanel5Layout.setHorizontalGroup(
             kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 202, Short.MAX_VALUE)
+            .addGap(0, 200, Short.MAX_VALUE)
             .addGroup(kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel5Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
         );
         kGradientPanel5Layout.setVerticalGroup(
             kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 55, Short.MAX_VALUE)
             .addGroup(kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel5Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addContainerGap()))
+                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))
         );
 
         jphome.add(kGradientPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, -1));
@@ -672,21 +711,17 @@ public class Main extends javax.swing.JFrame {
         kGradientPanel7.setLayout(kGradientPanel7Layout);
         kGradientPanel7Layout.setHorizontalGroup(
             kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 202, Short.MAX_VALUE)
             .addGroup(kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(kGradientPanel7Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         kGradientPanel7Layout.setVerticalGroup(
             kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 55, Short.MAX_VALUE)
             .addGroup(kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel7Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addContainerGap()))
+                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jpedit119Layout = new javax.swing.GroupLayout(jpedit119);
@@ -695,7 +730,7 @@ public class Main extends javax.swing.JFrame {
             jpedit119Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpedit119Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(kGradientPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(kGradientPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jpedit119Layout.setVerticalGroup(
@@ -886,21 +921,17 @@ public class Main extends javax.swing.JFrame {
         kGradientPanel12.setLayout(kGradientPanel12Layout);
         kGradientPanel12Layout.setHorizontalGroup(
             kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 202, Short.MAX_VALUE)
             .addGroup(kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(kGradientPanel12Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         kGradientPanel12Layout.setVerticalGroup(
             kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 55, Short.MAX_VALUE)
             .addGroup(kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel12Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addContainerGap()))
+                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jpgmailLayout = new javax.swing.GroupLayout(jpgmail);
@@ -909,7 +940,7 @@ public class Main extends javax.swing.JFrame {
             jpgmailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpgmailLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(kGradientPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(kGradientPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jpgmailLayout.setVerticalGroup(
@@ -1123,7 +1154,8 @@ public class Main extends javax.swing.JFrame {
 
     private void btn_addMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addMouseExited
         // TODO add your handling code here:
-//        changecolor(lineadd, new Color(0,145,255));
+       resetPaneBackground(add);
+       resetPaneBackground(lineadd);
     }//GEN-LAST:event_btn_addMouseExited
 
     private void btn_SettingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SettingMouseClicked
@@ -1137,8 +1169,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_SettingMouseEntered
 
     private void btn_SettingMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SettingMouseExited
-        // TODO add your handling code here:
-//        changecolor(lineSetting, new Color(0,145,255));
+        resetPaneBackground(setting);
+       resetPaneBackground(lineSetting);
     }//GEN-LAST:event_btn_SettingMouseExited
 
     private void btn_EmailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EmailMouseClicked
@@ -1152,8 +1184,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_EmailMouseEntered
 
     private void btn_EmailMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EmailMouseExited
-        // TODO add your handling code here:
-//        changecolor(lineEmail, new Color(0,145,255));
+        resetPaneBackground(Email);
+       resetPaneBackground(lineEmail);
     }//GEN-LAST:event_btn_EmailMouseExited
 
     private void btn_CalendarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_CalendarMouseClicked
@@ -1167,8 +1199,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_CalendarMouseEntered
 
     private void btn_CalendarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_CalendarMouseExited
-        // TODO add your handling code here:
-//        changecolor(lineCalendar, new Color(0,145,255));
+        resetPaneBackground(Calender);
+       resetPaneBackground(lineCalendar);
     }//GEN-LAST:event_btn_CalendarMouseExited
 
     private void btn_SearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SearchMouseClicked
@@ -1183,7 +1215,8 @@ public class Main extends javax.swing.JFrame {
 
     private void btn_SearchMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SearchMouseExited
         // TODO add your handling code here:
-//        changecolor(lineSearch, new Color(0,145,255));
+        resetPaneBackground(Search);
+       resetPaneBackground(lineSearch);
     }//GEN-LAST:event_btn_SearchMouseExited
 
     private void btn_EditMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EditMouseClicked
@@ -1197,8 +1230,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_EditMouseEntered
 
     private void btn_EditMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EditMouseExited
-        // TODO add your handling code here:
-//        changecolor(lineEdit, new Color(0,145,255));
+        resetPaneBackground(Edit);
+       resetPaneBackground(lineEdit);
     }//GEN-LAST:event_btn_EditMouseExited
 
     private void btn_SalaryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SalaryMouseClicked
@@ -1212,8 +1245,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_SalaryMouseEntered
 
     private void btn_SalaryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SalaryMouseExited
-        // TODO add your handling code here:
-//        changecolor(linerSalary, new Color(0,145,255));
+        resetPaneBackground(Salary);
+       resetPaneBackground(linerSalary);
     }//GEN-LAST:event_btn_SalaryMouseExited
 
     private void btn_RemoveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RemoveMouseClicked
@@ -1227,12 +1260,13 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_RemoveMouseEntered
 
     private void btn_RemoveMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RemoveMouseExited
-        // TODO add your handling code here:
-        //changecolor(lineRemove, new Color(0,145,255));
+        resetPaneBackground(Remove);
+       resetPaneBackground(lineRemove);
     }//GEN-LAST:event_btn_RemoveMouseExited
 
     private void btn_HomeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HomeMouseExited
-       // changecolor(linehome, new Color(0,145,255));
+       resetPaneBackground(home);
+       resetPaneBackground(linehome);
     }//GEN-LAST:event_btn_HomeMouseExited
 
     private void btn_HomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HomeMouseEntered
@@ -1258,8 +1292,62 @@ public class Main extends javax.swing.JFrame {
     private void btn_HidemenuMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HidemenuMouseMoved
         // TODO add your handling code here:
         setPaneBackground(hideMenu);
-        changeColor(lineHidemenu, new Color(193,18,31));
+        changeColor(lineHidemenu, new Color(255,0,43));
     }//GEN-LAST:event_btn_HidemenuMouseMoved
+
+    private void btn_HomeMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HomeMouseMoved
+        // TODO add your handling code here:
+        setPaneBackground(home);
+        changeColor(linehome, new Color(255,0,43));
+    }//GEN-LAST:event_btn_HomeMouseMoved
+
+    private void btn_addMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addMouseMoved
+        // TODO add your handling code here:
+        setPaneBackground(add);
+        changeColor(lineadd, new Color(255,0,43));
+    }//GEN-LAST:event_btn_addMouseMoved
+
+    private void btn_SearchMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SearchMouseMoved
+        // TODO add your handling code here:
+        setPaneBackground(Search);
+        changeColor(lineSearch, new Color(255,0,43));
+    }//GEN-LAST:event_btn_SearchMouseMoved
+
+    private void btn_EditMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EditMouseMoved
+        // TODO add your handling code here:
+        setPaneBackground(Edit);
+        changeColor(lineEdit, new Color(255,0,43));
+    }//GEN-LAST:event_btn_EditMouseMoved
+
+    private void btn_SalaryMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SalaryMouseMoved
+        // TODO add your handling code here:
+        setPaneBackground(Salary);
+        changeColor(linerSalary, new Color(255,0,43));
+    }//GEN-LAST:event_btn_SalaryMouseMoved
+
+    private void btn_RemoveMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RemoveMouseMoved
+        // TODO add your handling code here:
+        setPaneBackground(Remove);
+        changeColor(lineRemove, new Color(255,0,43));
+    }//GEN-LAST:event_btn_RemoveMouseMoved
+
+    private void btn_CalendarMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_CalendarMouseMoved
+        // TODO add your handling code here:
+        setPaneBackground(Calender);
+        changeColor(lineCalendar, new Color(255,0,43));
+    }//GEN-LAST:event_btn_CalendarMouseMoved
+
+    private void btn_EmailMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EmailMouseMoved
+        // TODO add your handling code here:
+        setPaneBackground(Email);
+        changeColor(lineEmail, new Color(255,0,43));
+    }//GEN-LAST:event_btn_EmailMouseMoved
+
+    private void btn_SettingMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SettingMouseMoved
+        // TODO add your handling code here:
+        setPaneBackground(setting);
+        changeColor(lineSetting, new Color(255,0,43));
+    }//GEN-LAST:event_btn_SettingMouseMoved
     
     private void setColor(JLabel pane){
         pane.setBackground(new Color(204,0,0));
