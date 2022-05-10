@@ -4,22 +4,36 @@
  */
 package form;
 
+import Connect.NhanVienDAO;
+import Service.Service;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+import javax.swing.Timer;
 import javax.swing.border.LineBorder;
+import javax.swing.table.DefaultTableModel;
+import model.nhanVien;
 
 /**
  *
  * @author ASUS
  */
 public class Main extends javax.swing.JFrame {
-    
+    int selectedIndex;
+    Service qlService;
+    DefaultTableModel defaultTableModel;
+    private List<nhanVien> ql;
+    private DefaultTableModel model;
      boolean a; 
      JPanel [] panels;
     /**
@@ -28,9 +42,41 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         Main.this.getRootPane().setBorder(new LineBorder(new Color(73,128,242)));
-        
+        showTime();
+        showDate();
+        qlthongtin.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
+        qlthongtin.getTableHeader().setOpaque(false);
+        qlthongtin.getTableHeader().setBackground(new Color(0, 139, 139));
+        qlthongtin.getTableHeader().setForeground(new Color(255,255,240));
+        qlthongtin.setRowHeight(25);
+        model = (DefaultTableModel)qlthongtin.getModel();
+        showTable();
         //icontitle119.setText(this.getTitle());
         //title119.setText(this.getTitle());
+    }
+    private void setTableData(List<nhanVien> ql){
+        for (nhanVien qly : ql){
+            defaultTableModel.addRow(new Object[]{qly.getID(), qly.getName(), qly.getSex(), qly.getAddress(), qly.getPhone(), qly.getEmail(), qly.getDateOfBirth(), qly.getPosition()});
+            
+        }
+    }
+    void showTime(){
+         new Timer(0, new ActionListener(){
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                Date d = new Date();
+                SimpleDateFormat s = new SimpleDateFormat("hh:mm:ss a");
+                Time.setText(s.format(d));
+             }
+             
+             
+         }).start();
+    }
+    void showDate(){
+        Date d = new Date();
+        SimpleDateFormat s = new SimpleDateFormat("dd-MM-yyyy");
+        date.setText(s.format(d));
+        
     }
     public void addLabelToTable(){
         panels = new JPanel[]{hideMenu, home, add, Calender, Email, setting, Search, Edit, Salary, Remove};
@@ -115,7 +161,34 @@ public class Main extends javax.swing.JFrame {
         kGradientPanel1 = new keeptoo.KGradientPanel();
         dashboardview = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        Time = new javax.swing.JLabel();
+        date = new javax.swing.JLabel();
+        kGradientPanel3 = new keeptoo.KGradientPanel();
+        jLabel2 = new javax.swing.JLabel();
+        kGradientPanel9 = new keeptoo.KGradientPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        kGradientPanel10 = new keeptoo.KGradientPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        kGradientPanel15 = new keeptoo.KGradientPanel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        qlthongtin = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -646,7 +719,9 @@ public class Main extends javax.swing.JFrame {
             kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 200, Short.MAX_VALUE)
             .addGroup(kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                .addGroup(kGradientPanel5Layout.createSequentialGroup()
+                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         kGradientPanel5Layout.setVerticalGroup(
             kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -699,6 +774,7 @@ public class Main extends javax.swing.JFrame {
 
         jpedit119.setBackground(new java.awt.Color(25, 29, 74));
         jpedit119.setPreferredSize(new java.awt.Dimension(220, 55));
+        jpedit119.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         kGradientPanel7.setkEndColor(new java.awt.Color(0, 0, 153));
         kGradientPanel7.setkGradientFocus(300);
@@ -713,10 +789,10 @@ public class Main extends javax.swing.JFrame {
         kGradientPanel7.setLayout(kGradientPanel7Layout);
         kGradientPanel7Layout.setHorizontalGroup(
             kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 202, Short.MAX_VALUE)
+            .addGap(0, 200, Short.MAX_VALUE)
             .addGroup(kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(kGradientPanel7Layout.createSequentialGroup()
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         kGradientPanel7Layout.setVerticalGroup(
@@ -726,22 +802,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jpedit119Layout = new javax.swing.GroupLayout(jpedit119);
-        jpedit119.setLayout(jpedit119Layout);
-        jpedit119Layout.setHorizontalGroup(
-            jpedit119Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpedit119Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(kGradientPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jpedit119Layout.setVerticalGroup(
-            jpedit119Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpedit119Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(kGradientPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jpedit119.add(kGradientPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, -1));
 
         menuhide.add(jpedit119, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 200, 55));
 
@@ -764,7 +825,9 @@ public class Main extends javax.swing.JFrame {
             kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 200, Short.MAX_VALUE)
             .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                .addGroup(kGradientPanel4Layout.createSequentialGroup()
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         kGradientPanel4Layout.setVerticalGroup(
             kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -779,6 +842,7 @@ public class Main extends javax.swing.JFrame {
 
         jpcalculate.setBackground(new java.awt.Color(25, 29, 74));
         jpcalculate.setPreferredSize(new java.awt.Dimension(220, 55));
+        jpcalculate.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         kGradientPanel8.setkEndColor(new java.awt.Color(0, 0, 153));
         kGradientPanel8.setkGradientFocus(300);
@@ -793,7 +857,7 @@ public class Main extends javax.swing.JFrame {
         kGradientPanel8.setLayout(kGradientPanel8Layout);
         kGradientPanel8Layout.setHorizontalGroup(
             kGradientPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 202, Short.MAX_VALUE)
             .addGroup(kGradientPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(kGradientPanel8Layout.createSequentialGroup()
                     .addContainerGap()
@@ -806,23 +870,11 @@ public class Main extends javax.swing.JFrame {
             .addGroup(kGradientPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(kGradientPanel8Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
-        javax.swing.GroupLayout jpcalculateLayout = new javax.swing.GroupLayout(jpcalculate);
-        jpcalculate.setLayout(jpcalculateLayout);
-        jpcalculateLayout.setHorizontalGroup(
-            jpcalculateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpcalculateLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(kGradientPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jpcalculateLayout.setVerticalGroup(
-            jpcalculateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kGradientPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jpcalculate.add(kGradientPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 55));
 
         menuhide.add(jpcalculate, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 275, 200, 55));
 
@@ -843,9 +895,9 @@ public class Main extends javax.swing.JFrame {
         kGradientPanel11.setLayout(kGradientPanel11Layout);
         kGradientPanel11Layout.setHorizontalGroup(
             kGradientPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 202, Short.MAX_VALUE)
+            .addGap(0, 200, Short.MAX_VALUE)
             .addGroup(kGradientPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE))
+                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
         );
         kGradientPanel11Layout.setVerticalGroup(
             kGradientPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -854,7 +906,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))
         );
 
-        jpremove.add(kGradientPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jpremove.add(kGradientPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, -1));
 
         menuhide.add(jpremove, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 200, 55));
 
@@ -913,6 +965,7 @@ public class Main extends javax.swing.JFrame {
         kGradientPanel12.setkEndColor(new java.awt.Color(0, 0, 153));
         kGradientPanel12.setkGradientFocus(300);
         kGradientPanel12.setkStartColor(new java.awt.Color(0, 145, 255));
+        kGradientPanel12.setPreferredSize(new java.awt.Dimension(200, 55));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -923,7 +976,7 @@ public class Main extends javax.swing.JFrame {
         kGradientPanel12.setLayout(kGradientPanel12Layout);
         kGradientPanel12Layout.setHorizontalGroup(
             kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 202, Short.MAX_VALUE)
+            .addGap(0, 200, Short.MAX_VALUE)
             .addGroup(kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(kGradientPanel12Layout.createSequentialGroup()
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
@@ -1022,19 +1075,252 @@ public class Main extends javax.swing.JFrame {
 
         getContentPane().add(menu, java.awt.BorderLayout.LINE_START);
 
-        dashboardview.setBackground(new java.awt.Color(255, 204, 102));
+        dashboardview.setBackground(new java.awt.Color(255, 102, 102));
         dashboardview.setLayout(new java.awt.BorderLayout());
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(929, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/clock_30px.png"))); // NOI18N
+
+        Time.setFont(new java.awt.Font("Script MT Bold", 0, 14)); // NOI18N
+        Time.setText("Time");
+
+        date.setFont(new java.awt.Font("Script MT Bold", 0, 14)); // NOI18N
+        date.setText("Date");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Time)
+                .addGap(53, 53, 53)
+                .addComponent(date)
+                .addContainerGap(928, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Time)
+                    .addComponent(date))
+                .addContainerGap())
+        );
+
+        dashboardview.add(jPanel1, java.awt.BorderLayout.PAGE_START);
+
+        kGradientPanel3.setkEndColor(new java.awt.Color(255, 255, 255));
+        kGradientPanel3.setkGradientFocus(1000);
+        kGradientPanel3.setkStartColor(new java.awt.Color(204, 204, 255));
+        kGradientPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Script MT Bold", 0, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel2.setText("Home/View");
+        kGradientPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 11, -1, -1));
+
+        kGradientPanel9.setkEndColor(new java.awt.Color(255, 204, 102));
+        kGradientPanel9.setkGradientFocus(400);
+        kGradientPanel9.setkStartColor(new java.awt.Color(255, 51, 0));
+        kGradientPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/time_85px.png"))); // NOI18N
+        kGradientPanel9.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 80, 80));
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Hours");
+        kGradientPanel9.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 186, -1));
+
+        jLabel14.setFont(new java.awt.Font("Script MT Bold", 1, 36)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("80,000");
+        kGradientPanel9.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 110, 40));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 110, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 5, Short.MAX_VALUE)
+        );
+
+        kGradientPanel9.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 110, 5));
+
+        jPanel5.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel5.setPreferredSize(new java.awt.Dimension(80, 5));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 130, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 5, Short.MAX_VALUE)
+        );
+
+        kGradientPanel9.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 130, 5));
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("52%");
+        kGradientPanel9.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 30, 20));
+
+        kGradientPanel3.add(kGradientPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, 309, 143));
+
+        kGradientPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/add_user_group_man_man_85px.png"))); // NOI18N
+        kGradientPanel10.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 90, 85));
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("New Employees");
+        kGradientPanel10.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 186, -1));
+
+        jLabel21.setFont(new java.awt.Font("Script MT Bold", 1, 36)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("5,100");
+        kGradientPanel10.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 110, 40));
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 160, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 5, Short.MAX_VALUE)
+        );
+
+        kGradientPanel10.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 160, 5));
+
+        jPanel7.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel7.setPreferredSize(new java.awt.Dimension(80, 5));
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 5, Short.MAX_VALUE)
+        );
+
+        kGradientPanel10.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 80, 5));
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("20%");
+        kGradientPanel10.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 30, 20));
+
+        kGradientPanel3.add(kGradientPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 309, 143));
+
+        kGradientPanel15.setkEndColor(new java.awt.Color(153, 255, 153));
+        kGradientPanel15.setkGradientFocus(400);
+        kGradientPanel15.setkStartColor(new java.awt.Color(0, 153, 0));
+        kGradientPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Money Bag Pounds_85px.png"))); // NOI18N
+        kGradientPanel15.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 90, 85));
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setText("Income");
+        kGradientPanel15.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 186, -1));
+
+        jLabel25.setFont(new java.awt.Font("Script MT Bold", 1, 36)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setText("10,100");
+        kGradientPanel15.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 110, 40));
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 90, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 5, Short.MAX_VALUE)
+        );
+
+        kGradientPanel15.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 90, 5));
+
+        jPanel9.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel9.setPreferredSize(new java.awt.Dimension(80, 5));
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 150, Short.MAX_VALUE)
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 5, Short.MAX_VALUE)
+        );
+
+        kGradientPanel15.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 150, 5));
+
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("65%");
+        kGradientPanel15.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 30, 20));
+
+        kGradientPanel3.add(kGradientPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, 309, 143));
+
+        qlthongtin.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Name", "Sex", "Address", "Phone", "Email", "Date of bỉth", "Position"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        qlthongtin.setFocusable(false);
+        qlthongtin.setGridColor(new java.awt.Color(255, 255, 255));
+        qlthongtin.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        qlthongtin.setRowHeight(25);
+        qlthongtin.setSelectionBackground(new java.awt.Color(202, 225, 255));
+        qlthongtin.setShowVerticalLines(false);
+        qlthongtin.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(qlthongtin);
+
+        kGradientPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 790, 400));
+
+        dashboardview.add(kGradientPanel3, java.awt.BorderLayout.CENTER);
+
         getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
 
-        jPanel1.setLayout(new java.awt.BorderLayout());
-
-        jPanel2.setBackground(new java.awt.Color(102, 255, 102));
-        jPanel2.setLayout(new java.awt.BorderLayout());
-        jPanel1.add(jPanel2, java.awt.BorderLayout.CENTER);
-
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
-
-        setSize(new java.awt.Dimension(1031, 730));
+        setSize(new java.awt.Dimension(1346, 705));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     int xx_119, xy_119;
@@ -1059,7 +1345,6 @@ public class Main extends javax.swing.JFrame {
         if(dashboard == true){
             menushowhide.setPreferredSize(new Dimension(50, menushowhide.getHeight()));
             changeimage(button, "/icon/Hamburger Menu_20px.png");
-            
         }
         else{
             menushowhide.setPreferredSize(new Dimension(250, menushowhide.getHeight()));
@@ -1099,11 +1384,11 @@ public class Main extends javax.swing.JFrame {
     private void btn_maximus119MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_maximus119MousePressed
         // TODO add your handling code here:
         setColor(btn_maximus119);
-        if(Main.this.getExtendedState() == MAXIMIZED_BOTH){
-                Main.this.setExtendedState(JFrame.NORMAL);
+        if(this.getExtendedState() != Main.MAXIMIZED_BOTH){
+                this.setExtendedState(Main.MAXIMIZED_BOTH);
             }
             else{
-                Main.this.setExtendedState(MAXIMIZED_BOTH);
+                    this.setExtendedState(Main.NORMAL);
             }  
     }//GEN-LAST:event_btn_maximus119MousePressed
 
@@ -1404,6 +1689,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel Remove;
     private javax.swing.JPanel Salary;
     private javax.swing.JPanel Search;
+    private javax.swing.JLabel Time;
     private javax.swing.JPanel add;
     private javax.swing.JLabel btn_Calendar;
     private javax.swing.JLabel btn_Edit;
@@ -1419,21 +1705,42 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel btn_maximus119;
     private javax.swing.JLabel btn_mini119;
     private javax.swing.JPanel dashboardview;
+    private javax.swing.JLabel date;
     private javax.swing.JPanel hideMenu;
     private javax.swing.JPanel home;
     private javax.swing.JLabel icontitle119;
     private javax.swing.JPanel iocnMinMaxClose;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel jpadd;
     private javax.swing.JPanel jpcalculate;
     private javax.swing.JPanel jpedit119;
@@ -1444,15 +1751,19 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jplich;
     private javax.swing.JPanel jpremove;
     private keeptoo.KGradientPanel kGradientPanel1;
+    private keeptoo.KGradientPanel kGradientPanel10;
     private keeptoo.KGradientPanel kGradientPanel11;
     private keeptoo.KGradientPanel kGradientPanel12;
     private keeptoo.KGradientPanel kGradientPanel13;
     private keeptoo.KGradientPanel kGradientPanel14;
+    private keeptoo.KGradientPanel kGradientPanel15;
+    private keeptoo.KGradientPanel kGradientPanel3;
     private keeptoo.KGradientPanel kGradientPanel4;
     private keeptoo.KGradientPanel kGradientPanel5;
     private keeptoo.KGradientPanel kGradientPanel6;
     private keeptoo.KGradientPanel kGradientPanel7;
     private keeptoo.KGradientPanel kGradientPanel8;
+    private keeptoo.KGradientPanel kGradientPanel9;
     private javax.swing.JPanel lineCalendar;
     private javax.swing.JPanel lineEdit;
     private javax.swing.JPanel lineEmail;
@@ -1465,8 +1776,18 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel linerSalary;
     private javax.swing.JPanel menu;
     private javax.swing.JPanel menuhide;
+    private javax.swing.JTable qlthongtin;
     private javax.swing.JPanel setting;
     private javax.swing.JLabel title119;
     private javax.swing.JPanel title_header119;
     // End of variables declaration//GEN-END:variables
+    private void showTable() {
+        ql =new NhanVienDAO().getAllUsers();
+        model.setRowCount(0);
+        for(nhanVien qly : ql){
+            model.addRow(new Object[]{
+                qly.getID(), qly.getName(), qly.getSex(), qly.getAddress(), qly.getPhone(), qly.getEmail(), qly.getDateOfBirth(), qly.getPosition()
+            });
+        }
+    }
 }

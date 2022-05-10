@@ -12,9 +12,9 @@ import java.sql.DriverManager;
 public class JDBCConnection {
     public static Connection JDBCConnection() {
         //Thày đổi theo máy của moin người
-        final String Url = "jdbc:sqlserver://LAPTOP-92FGE7G6\\SQLEXPRESS:1433;databaseName=T_1234";
+        final String Url = "jdbc:sqlserver://THUYDUNG\\SQLEXPRESS:1433;databaseName=QuanLyLuongNv";
         final String user = "sa";
-        final String pass = "1234";
+        final String pass = "k2cr2o7.h2fsbf6";
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             return DriverManager.getConnection(Url, user, pass);
