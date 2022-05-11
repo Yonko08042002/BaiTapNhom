@@ -141,6 +141,7 @@ public class Signup extends javax.swing.JFrame {
         });
         jPanel3.add(bttdangki118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 452, 290, 42));
 
+        txtname118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtname118.setText("Name");
         txtname118.setBorder(null);
         txtname118.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -158,6 +159,7 @@ public class Signup extends javax.swing.JFrame {
         });
         jPanel3.add(txtname118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 72, 290, 23));
 
+        txtaddress118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtaddress118.setText("Address");
         txtaddress118.setBorder(null);
         txtaddress118.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -170,6 +172,7 @@ public class Signup extends javax.swing.JFrame {
         });
         jPanel3.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 329, 290, 23));
 
+        txtphone118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtphone118.setText("Phone");
         txtphone118.setBorder(null);
         txtphone118.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -182,6 +185,7 @@ public class Signup extends javax.swing.JFrame {
         });
         jPanel3.add(txtphone118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 370, 290, 23));
 
+        txtemail118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtemail118.setText("Email");
         txtemail118.setBorder(null);
         txtemail118.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -226,6 +230,7 @@ public class Signup extends javax.swing.JFrame {
         jLabel12.setText("Male/Female ");
         jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 231, -1, 23));
 
+        txtusername118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtusername118.setText("Username");
         txtusername118.setBorder(null);
         txtusername118.addFocusListener(new java.awt.event.FocusAdapter() {
