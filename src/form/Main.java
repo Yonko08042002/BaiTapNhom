@@ -131,34 +131,16 @@ public class Main extends javax.swing.JFrame {
         Remove = new javax.swing.JPanel();
         btn_Remove = new javax.swing.JLabel();
         menuhide = new javax.swing.JPanel();
-        jphome = new javax.swing.JPanel();
-        kGradientPanel5 = new keeptoo.KGradientPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jpadd = new javax.swing.JPanel();
-        kGradientPanel6 = new keeptoo.KGradientPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jpedit119 = new javax.swing.JPanel();
-        kGradientPanel7 = new keeptoo.KGradientPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jpfind = new javax.swing.JPanel();
-        kGradientPanel4 = new keeptoo.KGradientPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jpcalculate = new javax.swing.JPanel();
-        kGradientPanel8 = new keeptoo.KGradientPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jpremove = new javax.swing.JPanel();
-        kGradientPanel11 = new keeptoo.KGradientPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jplich = new javax.swing.JPanel();
-        kGradientPanel13 = new keeptoo.KGradientPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jpgmail = new javax.swing.JPanel();
-        kGradientPanel12 = new keeptoo.KGradientPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jpgmail1 = new javax.swing.JPanel();
-        kGradientPanel14 = new keeptoo.KGradientPanel();
-        jLabel17 = new javax.swing.JLabel();
         kGradientPanel1 = new keeptoo.KGradientPanel();
+        txt_home = new javax.swing.JLabel();
+        txt_add = new javax.swing.JLabel();
+        txt_search = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         dashboardview = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -700,374 +682,65 @@ public class Main extends javax.swing.JFrame {
         menuhide.setBackground(new java.awt.Color(0, 145, 255));
         menuhide.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jphome.setBackground(new java.awt.Color(25, 29, 74));
-        jphome.setPreferredSize(new java.awt.Dimension(220, 55));
-        jphome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        kGradientPanel1.setkEndColor(new java.awt.Color(0, 0, 102));
+        kGradientPanel1.setkGradientFocus(1000);
+        kGradientPanel1.setkStartColor(new java.awt.Color(0, 145, 255));
+        kGradientPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        kGradientPanel5.setkEndColor(new java.awt.Color(0, 0, 153));
-        kGradientPanel5.setkGradientFocus(300);
-        kGradientPanel5.setkStartColor(new java.awt.Color(0, 145, 255));
+        txt_home.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_home.setForeground(new java.awt.Color(255, 255, 255));
+        txt_home.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt_home.setText("Home");
+        kGradientPanel1.add(txt_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 55, 200, 55));
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Home");
+        txt_add.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_add.setForeground(new java.awt.Color(255, 255, 255));
+        txt_add.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt_add.setText("Add Employees");
+        kGradientPanel1.add(txt_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 200, 55));
 
-        javax.swing.GroupLayout kGradientPanel5Layout = new javax.swing.GroupLayout(kGradientPanel5);
-        kGradientPanel5.setLayout(kGradientPanel5Layout);
-        kGradientPanel5Layout.setHorizontalGroup(
-            kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-            .addGroup(kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel5Layout.createSequentialGroup()
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-        kGradientPanel5Layout.setVerticalGroup(
-            kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 55, Short.MAX_VALUE)
-            .addGroup(kGradientPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))
-        );
-
-        jphome.add(kGradientPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, -1));
-
-        menuhide.add(jphome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 55, 200, 55));
-
-        jpadd.setBackground(new java.awt.Color(25, 29, 74));
-        jpadd.setPreferredSize(new java.awt.Dimension(220, 55));
-        jpadd.setLayout(new java.awt.BorderLayout());
-
-        kGradientPanel6.setkEndColor(new java.awt.Color(0, 0, 153));
-        kGradientPanel6.setkGradientFocus(300);
-        kGradientPanel6.setkStartColor(new java.awt.Color(0, 145, 255));
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Add Employees");
-
-        javax.swing.GroupLayout kGradientPanel6Layout = new javax.swing.GroupLayout(kGradientPanel6);
-        kGradientPanel6.setLayout(kGradientPanel6Layout);
-        kGradientPanel6Layout.setHorizontalGroup(
-            kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 202, Short.MAX_VALUE)
-            .addGroup(kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel6Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        kGradientPanel6Layout.setVerticalGroup(
-            kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 55, Short.MAX_VALUE)
-            .addGroup(kGradientPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel6Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-
-        jpadd.add(kGradientPanel6, java.awt.BorderLayout.CENTER);
-
-        menuhide.add(jpadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 200, 55));
-
-        jpedit119.setBackground(new java.awt.Color(25, 29, 74));
-        jpedit119.setPreferredSize(new java.awt.Dimension(220, 55));
-        jpedit119.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        kGradientPanel7.setkEndColor(new java.awt.Color(0, 0, 153));
-        kGradientPanel7.setkGradientFocus(300);
-        kGradientPanel7.setkStartColor(new java.awt.Color(0, 145, 255));
+        txt_search.setBackground(new java.awt.Color(204, 0, 0));
+        txt_search.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txt_search.setForeground(new java.awt.Color(255, 255, 255));
+        txt_search.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt_search.setText("Search");
+        kGradientPanel1.add(txt_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 165, 200, 55));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Edit");
-
-        javax.swing.GroupLayout kGradientPanel7Layout = new javax.swing.GroupLayout(kGradientPanel7);
-        kGradientPanel7.setLayout(kGradientPanel7Layout);
-        kGradientPanel7Layout.setHorizontalGroup(
-            kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-            .addGroup(kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel7Layout.createSequentialGroup()
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-        kGradientPanel7Layout.setVerticalGroup(
-            kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 55, Short.MAX_VALUE)
-            .addGroup(kGradientPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))
-        );
-
-        jpedit119.add(kGradientPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, -1));
-
-        menuhide.add(jpedit119, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 200, 55));
-
-        jpfind.setBackground(new java.awt.Color(25, 29, 74));
-        jpfind.setPreferredSize(new java.awt.Dimension(220, 55));
-        jpfind.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        kGradientPanel4.setkEndColor(new java.awt.Color(0, 0, 153));
-        kGradientPanel4.setkGradientFocus(300);
-        kGradientPanel4.setkStartColor(new java.awt.Color(0, 145, 255));
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Search");
-
-        javax.swing.GroupLayout kGradientPanel4Layout = new javax.swing.GroupLayout(kGradientPanel4);
-        kGradientPanel4.setLayout(kGradientPanel4Layout);
-        kGradientPanel4Layout.setHorizontalGroup(
-            kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-            .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel4Layout.createSequentialGroup()
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-        kGradientPanel4Layout.setVerticalGroup(
-            kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 55, Short.MAX_VALUE)
-            .addGroup(kGradientPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))
-        );
-
-        jpfind.add(kGradientPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        menuhide.add(jpfind, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 165, 200, 55));
-
-        jpcalculate.setBackground(new java.awt.Color(25, 29, 74));
-        jpcalculate.setPreferredSize(new java.awt.Dimension(220, 55));
-        jpcalculate.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        kGradientPanel8.setkEndColor(new java.awt.Color(0, 0, 153));
-        kGradientPanel8.setkGradientFocus(300);
-        kGradientPanel8.setkStartColor(new java.awt.Color(0, 145, 255));
+        kGradientPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 200, 55));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Salary");
-
-        javax.swing.GroupLayout kGradientPanel8Layout = new javax.swing.GroupLayout(kGradientPanel8);
-        kGradientPanel8.setLayout(kGradientPanel8Layout);
-        kGradientPanel8Layout.setHorizontalGroup(
-            kGradientPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 202, Short.MAX_VALUE)
-            .addGroup(kGradientPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel8Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        kGradientPanel8Layout.setVerticalGroup(
-            kGradientPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 55, Short.MAX_VALUE)
-            .addGroup(kGradientPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel8Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-
-        jpcalculate.add(kGradientPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 55));
-
-        menuhide.add(jpcalculate, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 275, 200, 55));
-
-        jpremove.setBackground(new java.awt.Color(25, 29, 74));
-        jpremove.setPreferredSize(new java.awt.Dimension(220, 55));
-        jpremove.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        kGradientPanel11.setkEndColor(new java.awt.Color(0, 0, 153));
-        kGradientPanel11.setkGradientFocus(300);
-        kGradientPanel11.setkStartColor(new java.awt.Color(0, 145, 255));
+        kGradientPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 275, 200, 55));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Remove");
-
-        javax.swing.GroupLayout kGradientPanel11Layout = new javax.swing.GroupLayout(kGradientPanel11);
-        kGradientPanel11.setLayout(kGradientPanel11Layout);
-        kGradientPanel11Layout.setHorizontalGroup(
-            kGradientPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-            .addGroup(kGradientPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
-        );
-        kGradientPanel11Layout.setVerticalGroup(
-            kGradientPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 55, Short.MAX_VALUE)
-            .addGroup(kGradientPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))
-        );
-
-        jpremove.add(kGradientPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, -1));
-
-        menuhide.add(jpremove, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 200, 55));
-
-        jplich.setBackground(new java.awt.Color(25, 29, 74));
-        jplich.setPreferredSize(new java.awt.Dimension(220, 55));
-
-        kGradientPanel13.setkEndColor(new java.awt.Color(0, 0, 153));
-        kGradientPanel13.setkGradientFocus(300);
-        kGradientPanel13.setkStartColor(new java.awt.Color(0, 145, 255));
+        kGradientPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 200, 55));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("Calendar");
-
-        javax.swing.GroupLayout kGradientPanel13Layout = new javax.swing.GroupLayout(kGradientPanel13);
-        kGradientPanel13.setLayout(kGradientPanel13Layout);
-        kGradientPanel13Layout.setHorizontalGroup(
-            kGradientPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(kGradientPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel13Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        kGradientPanel13Layout.setVerticalGroup(
-            kGradientPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 55, Short.MAX_VALUE)
-            .addGroup(kGradientPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel13Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-
-        javax.swing.GroupLayout jplichLayout = new javax.swing.GroupLayout(jplich);
-        jplich.setLayout(jplichLayout);
-        jplichLayout.setHorizontalGroup(
-            jplichLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jplichLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(kGradientPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jplichLayout.setVerticalGroup(
-            jplichLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kGradientPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        menuhide.add(jplich, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 200, 55));
-
-        jpgmail.setBackground(new java.awt.Color(25, 29, 74));
-        jpgmail.setPreferredSize(new java.awt.Dimension(220, 55));
-
-        kGradientPanel12.setkEndColor(new java.awt.Color(0, 0, 153));
-        kGradientPanel12.setkGradientFocus(300);
-        kGradientPanel12.setkStartColor(new java.awt.Color(0, 145, 255));
-        kGradientPanel12.setPreferredSize(new java.awt.Dimension(200, 55));
+        kGradientPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 200, 55));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Email");
-
-        javax.swing.GroupLayout kGradientPanel12Layout = new javax.swing.GroupLayout(kGradientPanel12);
-        kGradientPanel12.setLayout(kGradientPanel12Layout);
-        kGradientPanel12Layout.setHorizontalGroup(
-            kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-            .addGroup(kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel12Layout.createSequentialGroup()
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-        kGradientPanel12Layout.setVerticalGroup(
-            kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 55, Short.MAX_VALUE)
-            .addGroup(kGradientPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jpgmailLayout = new javax.swing.GroupLayout(jpgmail);
-        jpgmail.setLayout(jpgmailLayout);
-        jpgmailLayout.setHorizontalGroup(
-            jpgmailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpgmailLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(kGradientPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jpgmailLayout.setVerticalGroup(
-            jpgmailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kGradientPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        menuhide.add(jpgmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 565, 200, 55));
-
-        jpgmail1.setBackground(new java.awt.Color(25, 29, 74));
-        jpgmail1.setPreferredSize(new java.awt.Dimension(220, 55));
-
-        kGradientPanel14.setkEndColor(new java.awt.Color(0, 0, 153));
-        kGradientPanel14.setkGradientFocus(300);
-        kGradientPanel14.setkStartColor(new java.awt.Color(0, 145, 255));
+        kGradientPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 565, 200, 55));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("Setting");
-
-        javax.swing.GroupLayout kGradientPanel14Layout = new javax.swing.GroupLayout(kGradientPanel14);
-        kGradientPanel14.setLayout(kGradientPanel14Layout);
-        kGradientPanel14Layout.setHorizontalGroup(
-            kGradientPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(kGradientPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel14Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        kGradientPanel14Layout.setVerticalGroup(
-            kGradientPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 55, Short.MAX_VALUE)
-            .addGroup(kGradientPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(kGradientPanel14Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-
-        javax.swing.GroupLayout jpgmail1Layout = new javax.swing.GroupLayout(jpgmail1);
-        jpgmail1.setLayout(jpgmail1Layout);
-        jpgmail1Layout.setHorizontalGroup(
-            jpgmail1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpgmail1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(kGradientPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jpgmail1Layout.setVerticalGroup(
-            jpgmail1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kGradientPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        menuhide.add(jpgmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 620, 200, 55));
-
-        kGradientPanel1.setkEndColor(new java.awt.Color(0, 0, 153));
-        kGradientPanel1.setkGradientFocus(1300);
-        kGradientPanel1.setkStartColor(new java.awt.Color(0, 145, 255));
-
-        javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
-        kGradientPanel1.setLayout(kGradientPanel1Layout);
-        kGradientPanel1Layout.setHorizontalGroup(
-            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-        kGradientPanel1Layout.setVerticalGroup(
-            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
-        );
+        kGradientPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 620, 200, 55));
 
         menuhide.add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 700));
 
@@ -1119,7 +792,7 @@ public class Main extends javax.swing.JFrame {
 
         kGradientPanel3.setkEndColor(new java.awt.Color(255, 255, 255));
         kGradientPanel3.setkGradientFocus(1000);
-        kGradientPanel3.setkStartColor(new java.awt.Color(204, 204, 255));
+        kGradientPanel3.setkStartColor(new java.awt.Color(153, 255, 255));
         kGradientPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Script MT Bold", 0, 15)); // NOI18N
@@ -1314,7 +987,7 @@ public class Main extends javax.swing.JFrame {
         qlthongtin.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(qlthongtin);
 
-        kGradientPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 790, 400));
+        kGradientPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 800, 400));
 
         dashboardview.add(kGradientPanel3, java.awt.BorderLayout.CENTER);
 
@@ -1711,8 +1384,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel icontitle119;
     private javax.swing.JPanel iocnMinMaxClose;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -1729,7 +1400,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
@@ -1741,28 +1411,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JPanel jpadd;
-    private javax.swing.JPanel jpcalculate;
-    private javax.swing.JPanel jpedit119;
-    private javax.swing.JPanel jpfind;
-    private javax.swing.JPanel jpgmail;
-    private javax.swing.JPanel jpgmail1;
-    private javax.swing.JPanel jphome;
-    private javax.swing.JPanel jplich;
-    private javax.swing.JPanel jpremove;
     private keeptoo.KGradientPanel kGradientPanel1;
     private keeptoo.KGradientPanel kGradientPanel10;
-    private keeptoo.KGradientPanel kGradientPanel11;
-    private keeptoo.KGradientPanel kGradientPanel12;
-    private keeptoo.KGradientPanel kGradientPanel13;
-    private keeptoo.KGradientPanel kGradientPanel14;
     private keeptoo.KGradientPanel kGradientPanel15;
     private keeptoo.KGradientPanel kGradientPanel3;
-    private keeptoo.KGradientPanel kGradientPanel4;
-    private keeptoo.KGradientPanel kGradientPanel5;
-    private keeptoo.KGradientPanel kGradientPanel6;
-    private keeptoo.KGradientPanel kGradientPanel7;
-    private keeptoo.KGradientPanel kGradientPanel8;
     private keeptoo.KGradientPanel kGradientPanel9;
     private javax.swing.JPanel lineCalendar;
     private javax.swing.JPanel lineEdit;
@@ -1780,6 +1432,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel setting;
     private javax.swing.JLabel title119;
     private javax.swing.JPanel title_header119;
+    private javax.swing.JLabel txt_add;
+    private javax.swing.JLabel txt_home;
+    private javax.swing.JLabel txt_search;
     // End of variables declaration//GEN-END:variables
     private void showTable() {
         ql =new NhanVienDAO().getAllUsers();
