@@ -4,9 +4,7 @@
  */
 package form;
 
-import form.Home;
-import form.Signin;
-import java.util.Calendar;
+import Connect.NhanVienDAO;
 import java.awt.Color;
 import java.awt.Font;
 import java.beans.Statement;
@@ -17,6 +15,7 @@ import java.sql.ResultSet;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import model.taiKhoan;
 
 public class Signup extends javax.swing.JFrame {
 
@@ -62,24 +61,14 @@ public class Signup extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         bttdangki118 = new javax.swing.JButton();
         txtname118 = new javax.swing.JTextField();
         txtaddress118 = new javax.swing.JTextField();
         txtphone118 = new javax.swing.JTextField();
         txtemail118 = new javax.swing.JTextField();
-        month118 = new javax.swing.JComboBox<>();
-        day118 = new javax.swing.JComboBox<>();
-        year118 = new javax.swing.JComboBox<>();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         txtusername118 = new javax.swing.JTextField();
         txtpass118 = new javax.swing.JPasswordField();
         txtconfirmpass118 = new javax.swing.JPasswordField();
-        Nam118 = new javax.swing.JRadioButton();
-        Nu118 = new javax.swing.JRadioButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
@@ -124,10 +113,6 @@ public class Signup extends javax.swing.JFrame {
         jLabel3.setText("Hello ! Let's get started");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 50, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setText("Date of birth");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
-
         bttdangki118.setBackground(new java.awt.Color(255, 255, 255));
         bttdangki118.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         bttdangki118.setForeground(new java.awt.Color(71, 120, 197));
@@ -139,9 +124,10 @@ public class Signup extends javax.swing.JFrame {
                 bttdangki118ActionPerformed(evt);
             }
         });
-        jPanel3.add(bttdangki118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 452, 290, 42));
+        jPanel3.add(bttdangki118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 290, 42));
 
         txtname118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtname118.setForeground(new java.awt.Color(0, 51, 255));
         txtname118.setText("Name");
         txtname118.setBorder(null);
         txtname118.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -170,7 +156,7 @@ public class Signup extends javax.swing.JFrame {
                 txtaddress118FocusLost(evt);
             }
         });
-        jPanel3.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 329, 290, 23));
+        jPanel3.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 290, 23));
 
         txtphone118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtphone118.setText("Phone");
@@ -183,7 +169,7 @@ public class Signup extends javax.swing.JFrame {
                 txtphone118FocusLost(evt);
             }
         });
-        jPanel3.add(txtphone118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 370, 290, 23));
+        jPanel3.add(txtphone118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 290, 23));
 
         txtemail118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtemail118.setText("Email");
@@ -196,39 +182,7 @@ public class Signup extends javax.swing.JFrame {
                 txtemail118FocusLost(evt);
             }
         });
-        jPanel3.add(txtemail118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 411, 290, 23));
-
-        month118.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", " " }));
-        month118.setBorder(null);
-        jPanel3.add(month118, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 287, 42, -1));
-
-        day118.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-        day118.setBorder(null);
-        day118.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                day118ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(day118, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 287, 40, -1));
-
-        year118.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-        jPanel3.add(year118, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 287, 50, -1));
-
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel9.setText("Date");
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 260, -1, -1));
-
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel10.setText("Month");
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 260, -1, -1));
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel11.setText("Year");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel12.setText("Male/Female ");
-        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 231, -1, 23));
+        jPanel3.add(txtemail118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 290, 23));
 
         txtusername118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtusername118.setText("Username");
@@ -272,25 +226,31 @@ public class Signup extends javax.swing.JFrame {
         });
         jPanel3.add(txtconfirmpass118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 182, 290, 23));
 
-        bttgroup1.add(Nam118);
-        Nam118.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        Nam118.setText("Male");
-        jPanel3.add(Nam118, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 230, -1, -1));
-
-        bttgroup1.add(Nu118);
-        Nu118.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        Nu118.setText("Female");
-        jPanel3.add(Nu118, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 230, -1, -1));
+        jSeparator1.setBackground(new java.awt.Color(0, 51, 255));
         jPanel3.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 280, -1));
-        jPanel3.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 280, -1));
-        jPanel3.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 172, 280, 10));
-        jPanel3.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 280, -1));
-        jPanel3.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
-        jPanel3.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 280, -1));
-        jPanel3.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 280, -1));
-        jPanel3.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 280, 10));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 40, 360, 550));
+        jSeparator2.setBackground(new java.awt.Color(0, 51, 255));
+        jPanel3.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 280, -1));
+
+        jSeparator3.setBackground(new java.awt.Color(0, 51, 255));
+        jPanel3.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 172, 280, 10));
+
+        jSeparator4.setBackground(new java.awt.Color(0, 51, 255));
+        jPanel3.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 280, -1));
+
+        jSeparator5.setBackground(new java.awt.Color(0, 51, 255));
+        jPanel3.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
+
+        jSeparator6.setBackground(new java.awt.Color(0, 51, 255));
+        jPanel3.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 280, -1));
+
+        jSeparator7.setBackground(new java.awt.Color(0, 51, 255));
+        jPanel3.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 280, -1));
+
+        jSeparator8.setBackground(new java.awt.Color(0, 51, 255));
+        jPanel3.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 280, 10));
+
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 70, 350, 450));
 
         btn_Back118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Logout_w_30px.png"))); // NOI18N
         btn_Back118.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -454,21 +414,43 @@ public class Signup extends javax.swing.JFrame {
         ResultSet rs;
     private void bttdangki118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttdangki118ActionPerformed
         // TODO add your handling code here:
-       String pass = new String(txtpass118.getPassword());
+       String passwork  = new String(txtpass118.getPassword());
        String confirmpass = new String(txtconfirmpass118.getPassword());
        
         try {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(Url, user, pass);
-            PreparedStatement ps = con.prepareStatement("insert into TaiKhoan values (?,?,?,?,?,?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("insert into TaiKhoan values (?,?,?,?,?,?,?)");
             
-            ps.setInt(1, 0);
-            ps.setString(2, txtname118.getText());
-            ps.setString(3, pass);
+            ps.setString(1, txtname118.getText());
+            ps.setString(2, txtusername118.getText());
+            ps.setString(3, passwork);
             ps.setString(4,confirmpass);
+            ps.setString(5, txtaddress118.getText());
+            ps.setString(6, txtphone118.getText());
+            ps.setString(7, txtemail118.getText());
            
-            
-        } catch (Exception e) {
+            if(passwork.equals(confirmpass)){
+                ps.executeUpdate();
+                JOptionPane.showMessageDialog(this, "User Successfull Registered", "Success", JOptionPane.INFORMATION_MESSAGE);
+            }else{
+                JOptionPane.showMessageDialog(this, "Check your Username or Passwork for Error ", "User not registered", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception e) {e.printStackTrace(); 
+        }
+        taiKhoan tk = new taiKhoan();
+        tk.setName(txtname118.getText());
+        tk.setUsername(txtusername118.getText());
+        tk.setPassword(txtpass118.getText());
+        tk.setConfirmpassword(txtconfirmpass118.getText());
+        tk.setAddress(txtaddress118.getText());
+        tk.setPhone(txtphone118.getText());
+        tk.setEmail(txtemail118.getText());
+        boolean isOk=true;
+        if(isOk){
+            new NhanVienDAO().addTaiKhoan(tk);
+            JOptionPane.showMessageDialog(this, "Bạn đã thêm thông tin thành công!");
+       
         }
     }//GEN-LAST:event_bttdangki118ActionPerformed
 
@@ -478,11 +460,6 @@ public class Signup extends javax.swing.JFrame {
         setVisible(false);
 
     }//GEN-LAST:event_btn_Back118MouseClicked
-
-    private void day118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_day118ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_day118ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -523,21 +500,13 @@ public class Signup extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton Nam118;
-    private javax.swing.JRadioButton Nu118;
     private javax.swing.JLabel btn_Back118;
     private javax.swing.JButton bttdangki118;
     private javax.swing.ButtonGroup bttgroup1;
-    private javax.swing.JComboBox<String> day118;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
@@ -548,7 +517,6 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
-    private javax.swing.JComboBox<String> month118;
     private javax.swing.JTextField txtaddress118;
     private javax.swing.JPasswordField txtconfirmpass118;
     private javax.swing.JTextField txtemail118;
@@ -556,6 +524,5 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JPasswordField txtpass118;
     private javax.swing.JTextField txtphone118;
     private javax.swing.JTextField txtusername118;
-    private javax.swing.JComboBox<String> year118;
     // End of variables declaration//GEN-END:variables
 }

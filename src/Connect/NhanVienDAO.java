@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import model.taiKhoan;
 /**
  *
  * @author ASUS
@@ -78,6 +79,29 @@ public class NhanVienDAO {
             e.printStackTrace();
         }
     }
+    //
+    public void addTaiKhoan(taiKhoan tk){
+     Connection connection = JDBCConnection.JDBCConnection();          
+            String sql = "INSERT INTO TaiKhoan (ten, username, pass, confirmpassword, diachi, sdt,email) "
+                    + "values (?,?,?,?,?,?,?,?) ";            
+            try {
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.setString(1, tk.getName());
+                preparedStatement.setString(2, tk.getUsername());
+                preparedStatement.setString(3, tk.getPassword());
+                preparedStatement.setString(4, tk.getConfirmpassword());
+                preparedStatement.setString(5, tk.getAddress());
+                preparedStatement.setString(6, tk.getPhone());
+                preparedStatement.setString(7, tk.getEmail());
+                
+//                int rs = preparedStatement.executeUpdate();
+//                System.out.println(rs);
+                preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    //
     public int updateUser(nhanVien tl){
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "Update AddNhanVien set ten = ? , gioitinh = ? , diachi = ? , sdt = ? , email = ? ,ngaysinh=?,chucvu=? where id = ? ";

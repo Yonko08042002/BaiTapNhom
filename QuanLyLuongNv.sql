@@ -4,15 +4,12 @@ use QuanLyLuongNv
 go
 create table TaiKhoan
 (
-	id varchar(10) primary key,
 	ten nvarchar(50),
-	username nvarchar(50),
-	pass nvarchar(50),
-	confirmpassword nvarchar(50),
-	gioitinh nvarchar(50),
-	ngaysinh date,
+	username varchar(50),
+	pass varchar(50),
+	confirmpassword varchar(50),
 	diachi nvarchar(50),
-	sdt nvarchar(50),
+	sdt varchar(50),
 	email nvarchar(50)
 )
 create table AddNhanVien
