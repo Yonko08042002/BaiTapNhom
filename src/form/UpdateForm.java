@@ -46,6 +46,7 @@ public class UpdateForm extends javax.swing.JFrame {
         jSeparator12 = new javax.swing.JSeparator();
         txtname123 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
+        btn_Hidemenu = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -178,41 +179,66 @@ public class UpdateForm extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 320, 30));
 
+        btn_Hidemenu.setBackground(new java.awt.Color(0, 255, 255));
+        btn_Hidemenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btn_Hidemenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/back_to_20px.png"))); // NOI18N
+        btn_Hidemenu.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_HidemenuMouseMoved(evt);
+            }
+        });
+        btn_Hidemenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_HidemenuMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_HidemenuMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_HidemenuMouseExited(evt);
+            }
+        });
+
         javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
         kGradientPanel2.setLayout(kGradientPanel2Layout);
         kGradientPanel2Layout.setHorizontalGroup(
             kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel10)
                 .addContainerGap())
             .addGroup(kGradientPanel2Layout.createSequentialGroup()
                 .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(kGradientPanel2Layout.createSequentialGroup()
-                        .addContainerGap(180, Short.MAX_VALUE)
+                        .addContainerGap(175, Short.MAX_VALUE)
                         .addComponent(jLabel2))
                     .addGroup(kGradientPanel2Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_Hidemenu)
+                            .addComponent(jLabel11))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33))
         );
         kGradientPanel2Layout.setVerticalGroup(
             kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78))
-            .addGroup(kGradientPanel2Layout.createSequentialGroup()
-                .addGap(218, 218, 218)
-                .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                        .addComponent(btn_Hidemenu)
+                        .addGap(187, 187, 187)
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel2)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(78, 78, 78))))
         );
 
         getContentPane().add(kGradientPanel2, java.awt.BorderLayout.CENTER);
@@ -223,6 +249,40 @@ public class UpdateForm extends javax.swing.JFrame {
     private void btadd118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btadd118ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btadd118ActionPerformed
+
+    private void btn_HidemenuMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HidemenuMouseMoved
+        // TODO add your handling code here:
+        setPaneBackground(hideMenu);
+        changeColor(lineHidemenu, new Color(255,0,43));
+    }//GEN-LAST:event_btn_HidemenuMouseMoved
+
+    private void btn_HidemenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HidemenuMouseClicked
+        clickmenu(hideMenu, home, 1);
+        // create  void  for  methode hide and show panel menu
+        //(tạo khoảng trống cho menu bảng điều khiển ẩn và hiện methode)
+        if(a==true){
+            hideshow(menu, a, btn_Hidemenu);
+            SwingUtilities.updateComponentTreeUI(this);
+            //create methode change image
+
+            a=false;
+        }
+        else{
+            hideshow(menu, a, btn_Hidemenu);
+            SwingUtilities.updateComponentTreeUI(this);
+            a=true;
+        }
+    }//GEN-LAST:event_btn_HidemenuMouseClicked
+
+    private void btn_HidemenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HidemenuMouseEntered
+        //        changecolor(lineHidemenu, new Color(247,78,105));
+    }//GEN-LAST:event_btn_HidemenuMouseEntered
+
+    private void btn_HidemenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HidemenuMouseExited
+        //changecolor(lineHidemenu, new Color(0,145,255));
+        resetPaneBackground(hideMenu);
+        resetPaneBackground(lineHidemenu);
+    }//GEN-LAST:event_btn_HidemenuMouseExited
 
     /**
      * @param args the command line arguments
@@ -262,6 +322,7 @@ public class UpdateForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.k33ptoo.components.KButton btadd118;
+    private javax.swing.JLabel btn_Hidemenu;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JRadioButton female118;
     private javax.swing.JComboBox<String> jComboBox1;

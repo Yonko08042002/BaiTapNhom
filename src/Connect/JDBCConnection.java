@@ -15,9 +15,9 @@ public class JDBCConnection {
 //        final String Url = "jdbc:sqlserver://DESKTOP-JADGEKH\\SQLEXPRESS01:1433;databaseName=QuanLyLuongNv";
 //        final String user = "sa";
 //        final String pass = "39151111";
-        final String Url = "jdbc:sqlserver://LAPTOP-92FGE7G6\\SQLEXPRESS:1433;databaseName=QuanLyLuongNv";
+        final String Url = "jdbc:sqlserver://KANIS:1433;databaseName=QuanLyLuongNv";
         final String user = "sa";
-        final String pass = "1234";
+        final String pass = "123";
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             return DriverManager.getConnection(Url, user, pass);
