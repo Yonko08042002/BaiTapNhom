@@ -4,7 +4,7 @@
  */
 package form;
 
-import Connect.NhanVienDAO;
+import Connect.TaiKhoanDAO;
 import java.awt.Color;
 import java.awt.Font;
 import java.beans.Statement;
@@ -433,25 +433,27 @@ public class Signup extends javax.swing.JFrame {
             if(passwork.equals(confirmpass)){
                 ps.executeUpdate();
                 JOptionPane.showMessageDialog(this, "User Successfull Registered", "Success", JOptionPane.INFORMATION_MESSAGE);
+                taiKhoan tk = new taiKhoan();
+                tk.setName(txtname118.getText());
+                tk.setUsername(txtusername118.getText());
+                tk.setPassword(txtpass118.getText());
+                tk.setConfirmpassword(txtconfirmpass118.getText());
+                tk.setAddress(txtaddress118.getText());
+                tk.setPhone(txtphone118.getText());
+                tk.setEmail(txtemail118.getText());
+                boolean isOk=true;
+                if(isOk){
+                    new TaiKhoanDAO().addTaiKhoan(tk);
+                    Signin ql = new Signin();
+                    ql.setVisible(true);
+                    this.dispose();
+                }
             }else{
                 JOptionPane.showMessageDialog(this, "Check your Username or Passwork for Error ", "User not registered", JOptionPane.ERROR_MESSAGE);
             }
         } catch (Exception e) {e.printStackTrace(); 
         }
-        taiKhoan tk = new taiKhoan();
-        tk.setName(txtname118.getText());
-        tk.setUsername(txtusername118.getText());
-        tk.setPassword(txtpass118.getText());
-        tk.setConfirmpassword(txtconfirmpass118.getText());
-        tk.setAddress(txtaddress118.getText());
-        tk.setPhone(txtphone118.getText());
-        tk.setEmail(txtemail118.getText());
-        boolean isOk=true;
-        if(isOk){
-            new NhanVienDAO().addTaiKhoan(tk);
-            JOptionPane.showMessageDialog(this, "Bạn đã thêm thông tin thành công!");
-       
-        }
+        
     }//GEN-LAST:event_bttdangki118ActionPerformed
 
     private void btn_Back118MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Back118MouseClicked
