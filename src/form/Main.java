@@ -360,6 +360,11 @@ public class Main extends javax.swing.JFrame {
         MenuIcon.add(lineadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 50, -1));
 
         add.setBackground(new java.awt.Color(0, 145, 255));
+        add.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addMouseClicked(evt);
+            }
+        });
         add.setLayout(new java.awt.BorderLayout());
 
         btn_add.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -773,7 +778,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(Time)
                 .addGap(53, 53, 53)
                 .addComponent(date)
-                .addContainerGap(928, Short.MAX_VALUE))
+                .addContainerGap(925, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -969,15 +974,7 @@ public class Main extends javax.swing.JFrame {
             new String [] {
                 "ID", "Name", "Sex", "Address", "Phone", "Email", "Date of bỉth", "Position"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
+        ));
         qlthongtin.setFocusable(false);
         qlthongtin.setGridColor(new java.awt.Color(255, 255, 255));
         qlthongtin.setIntercellSpacing(new java.awt.Dimension(0, 0));
@@ -987,13 +984,13 @@ public class Main extends javax.swing.JFrame {
         qlthongtin.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(qlthongtin);
 
-        kGradientPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 800, 400));
+        kGradientPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 830, 400));
 
         dashboardview.add(kGradientPanel3, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(1346, 705));
+        setSize(new java.awt.Dimension(1343, 705));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     int xx_119, xy_119;
@@ -1101,8 +1098,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_HeaderMouseClicked
 
     private void btn_addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addMouseClicked
-        // TODO add your handling code here:
-//        clickmenu(add,home, 1);    
+        AddForm fm = new AddForm();
+        fm.setVisible(true);
     }//GEN-LAST:event_btn_addMouseClicked
 
     private void btn_addMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addMouseEntered
@@ -1178,8 +1175,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_SearchMouseExited
 
     private void btn_EditMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EditMouseClicked
-        // TODO add your handling code here:
-//        clickmenu(Edit,Search, 1);
+        UpdateForm fm = new UpdateForm();
+        fm.setVisible(true);
     }//GEN-LAST:event_btn_EditMouseClicked
 
     private void btn_EditMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EditMouseEntered
@@ -1306,6 +1303,10 @@ public class Main extends javax.swing.JFrame {
         setPaneBackground(setting);
         changeColor(lineSetting, new Color(255,0,43));
     }//GEN-LAST:event_btn_SettingMouseMoved
+
+    private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addMouseClicked
     
     private void setColor(JLabel pane){
         pane.setBackground(new Color(204,0,0));

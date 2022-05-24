@@ -12,7 +12,7 @@ package model;
 public class nhanVien {
     private String ID;
     private String Name;
-    private Boolean Sex;
+    private String Sex;
     private String Address;
     private String Phone;
     private String Email;
@@ -22,7 +22,7 @@ public class nhanVien {
     public nhanVien() {
     }
 
-    public nhanVien(String ID, String Name, Boolean Sex, String Address, String Phone, String Email, String DateOfBirth, String Position) {
+    public nhanVien(String ID, String Name, String Sex, String Address, String Phone, String Email, String DateOfBirth, String Position) {
         this.ID = ID;
         this.Name = Name;
         this.Sex = Sex;
@@ -49,11 +49,11 @@ public class nhanVien {
         this.Name = Name;
     }
 
-    public Boolean getSex() {
+    public String getSex() {
         return Sex;
     }
 
-    public void setSex(Boolean Sex) {
+    public void setSex(String Sex) {
         this.Sex = Sex;
     }
 

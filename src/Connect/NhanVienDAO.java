@@ -28,7 +28,7 @@ public class NhanVienDAO {
                 nhanVien tl = new nhanVien();
                 tl.setID(rs.getString("id"));
                 tl.setName(rs.getString("ten"));
-                tl.setSex(rs.getBoolean("gioitinh"));
+                tl.setSex(rs.getString("gioitinh"));
                 tl.setAddress(rs.getString("diachi"));
                 tl.setPhone(rs.getString("sdt"));
                 tl.setEmail(rs.getString("email"));
@@ -59,13 +59,13 @@ public class NhanVienDAO {
     }
     public void add(nhanVien tl){
      Connection connection = JDBCConnection.JDBCConnection();          
-            String sql = "INSERT INTO AddNhanVien (id, ten, gioitinh, diachi, sdt,email,ngaysinh,chucvu ) "
+            String sql = "INSERT INTO AddNhanVien (id, ten, gioitinh, diachi, sdt,email, ngaysinh, chucvu) "
                     + "values (?,?,?,?,?,?,?,?) ";            
             try {
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setString(1, tl.getID());
                 preparedStatement.setString(2, tl.getName());
-                preparedStatement.setBoolean(3, tl.getSex());
+                preparedStatement.setString(3, tl.getSex());
                 preparedStatement.setString(4, tl.getAddress());
                 preparedStatement.setString(5, tl.getPhone());
                 preparedStatement.setString(6, tl.getEmail());
@@ -88,7 +88,7 @@ public class NhanVienDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(8, tl.getID());
             preparedStatement.setString(1, tl.getName());
-            preparedStatement.setBoolean(2, tl.getSex());
+            preparedStatement.setString(2, tl.getSex());
             preparedStatement.setString(3, tl.getAddress());
             preparedStatement.setString(4, tl.getPhone());
             preparedStatement.setString(5, tl.getEmail());
@@ -129,7 +129,7 @@ public class NhanVienDAO {
                 nhanVien tl = new nhanVien();
                 tl.setID(rs.getString("id"));
                 tl.setName(rs.getString("ten"));
-                tl.setSex(rs.getBoolean("gioitinh"));
+                tl.setSex(rs.getString("gioitinh"));
                 tl.setAddress(rs.getString("diachi"));
                 tl.setEmail(rs.getString("sdt"));
                 tl.setEmail(rs.getString("email"));
@@ -142,26 +142,27 @@ public class NhanVienDAO {
         }
         return ql;
     }
-//    public nhanVien find1TaiLieu(String id){
-//        nhanVien tl = new nhanVien();
-//        Connection connection = JDBCConnection.JDBCConnection();
-//        String sql = "select * from AddNhanVien where Id like ?";
-//        try {
-//            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-//            preparedStatement.setString(1,"%"+id+"%");
-//            ResultSet rs = preparedStatement.executeQuery();
-//            while (rs.next()) {
-//                tl.setMasv(rs.getString("maSV"));
-//                tl.setTensv(rs.getString("tenSV"));
-//                tl.setNgsinh(rs.getString("ngaySinh"));
-//                tl.setGtinh(rs.getString("gioiTinh"));
-//                tl.setEmail(rs.getString("email"));
-//                tl.setSdt(rs.getString("sdt"));
-//                tl.setDiachi(rs.getString("diaChi"));
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return tl;
-//    }
+    public nhanVien find1TaiLieu(String id){
+        nhanVien tl = new nhanVien();
+        Connection connection = JDBCConnection.JDBCConnection();
+        String sql = "select * from AddNhanVien where id like ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,"%"+id+"%");
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                tl.setID(rs.getString("id"));
+                tl.setName(rs.getString("ten"));
+                tl.setSex(rs.getString("gioitinh"));
+                tl.setAddress(rs.getString("diachi"));
+                tl.setEmail(rs.getString("sdt"));
+                tl.setEmail(rs.getString("email"));
+                tl.setDateOfBirth(rs.getString("ngaysinh"));
+                tl.setPosition(rs.getString("chucvu"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return tl;
+    }
 }

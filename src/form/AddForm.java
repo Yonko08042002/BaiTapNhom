@@ -4,6 +4,10 @@
  */
 package form;
 
+import Connect.NhanVienDAO;
+import javax.swing.JOptionPane;
+import model.nhanVien;
+
 /**
  *
  * @author DELL
@@ -46,15 +50,15 @@ public class AddForm extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator8 = new javax.swing.JSeparator();
-        txtname119 = new javax.swing.JTextField();
+        txtaddress118 = new javax.swing.JTextField();
         jSeparator9 = new javax.swing.JSeparator();
-        txtname120 = new javax.swing.JTextField();
+        txtphone118 = new javax.swing.JTextField();
         jSeparator10 = new javax.swing.JSeparator();
-        txtname121 = new javax.swing.JTextField();
+        txtemaill118 = new javax.swing.JTextField();
         jSeparator11 = new javax.swing.JSeparator();
-        txtname122 = new javax.swing.JTextField();
+        txtdate118 = new javax.swing.JTextField();
         jSeparator12 = new javax.swing.JSeparator();
-        txtname123 = new javax.swing.JTextField();
+        txtposition118 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
@@ -153,42 +157,42 @@ public class AddForm extends javax.swing.JFrame {
         jSeparator8.setBackground(new java.awt.Color(0, 51, 255));
         jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 310, 10));
 
-        txtname119.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
-        txtname119.setForeground(new java.awt.Color(0, 48, 73));
-        txtname119.setBorder(null);
-        jPanel1.add(txtname119, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 310, 25));
+        txtaddress118.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        txtaddress118.setForeground(new java.awt.Color(0, 48, 73));
+        txtaddress118.setBorder(null);
+        jPanel1.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 310, 25));
 
         jSeparator9.setBackground(new java.awt.Color(0, 51, 255));
         jPanel1.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 310, 10));
 
-        txtname120.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
-        txtname120.setForeground(new java.awt.Color(0, 48, 73));
-        txtname120.setBorder(null);
-        jPanel1.add(txtname120, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 310, 30));
+        txtphone118.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        txtphone118.setForeground(new java.awt.Color(0, 48, 73));
+        txtphone118.setBorder(null);
+        jPanel1.add(txtphone118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 310, 30));
 
         jSeparator10.setBackground(new java.awt.Color(0, 51, 255));
         jPanel1.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 310, 10));
 
-        txtname121.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
-        txtname121.setForeground(new java.awt.Color(0, 48, 73));
-        txtname121.setBorder(null);
-        jPanel1.add(txtname121, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 310, 25));
+        txtemaill118.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        txtemaill118.setForeground(new java.awt.Color(0, 48, 73));
+        txtemaill118.setBorder(null);
+        jPanel1.add(txtemaill118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 310, 25));
 
         jSeparator11.setBackground(new java.awt.Color(0, 51, 255));
         jPanel1.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 310, 10));
 
-        txtname122.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
-        txtname122.setForeground(new java.awt.Color(0, 48, 73));
-        txtname122.setBorder(null);
-        jPanel1.add(txtname122, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 310, 25));
+        txtdate118.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        txtdate118.setForeground(new java.awt.Color(0, 48, 73));
+        txtdate118.setBorder(null);
+        jPanel1.add(txtdate118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 310, 25));
 
         jSeparator12.setBackground(new java.awt.Color(0, 51, 255));
         jPanel1.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, 310, 10));
 
-        txtname123.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
-        txtname123.setForeground(new java.awt.Color(0, 48, 73));
-        txtname123.setBorder(null);
-        jPanel1.add(txtname123, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 310, 25));
+        txtposition118.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        txtposition118.setForeground(new java.awt.Color(0, 48, 73));
+        txtposition118.setBorder(null);
+        jPanel1.add(txtposition118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 310, 25));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI Black", 1, 48)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
@@ -204,8 +208,7 @@ public class AddForm extends javax.swing.JFrame {
                 .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(kGradientPanel2Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel2))
                     .addGroup(kGradientPanel2Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel11)))
@@ -237,6 +240,29 @@ public class AddForm extends javax.swing.JFrame {
 
     private void btadd118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btadd118ActionPerformed
         // TODO add your handling code here:
+        nhanVien ql = new nhanVien();
+        ql.setID(txtid118.getText());
+        ql.setName(txtname118.getText());
+        ql.setAddress(txtaddress118.getText());
+        ql.setDateOfBirth(txtdate118.getText());
+        ql.setPhone(txtphone118.getText());
+        ql.setPosition(txtposition118.getText());
+        ql.setEmail(txtemaill118.getText());
+        String gt="";
+        if(male118.isSelected()){
+            gt = "Male";
+        }
+        else{
+            gt = "Female";
+        }
+        boolean isOk=true;
+            if(isOk){
+                new NhanVienDAO().add(ql);
+                JOptionPane.showMessageDialog(this, "Bạn đã thêm thông tin thành công!");
+                Main fm = new Main();
+                this.dispose();
+                fm.setVisible(true);
+            } 
     }//GEN-LAST:event_btadd118ActionPerformed
 
     /**
@@ -299,12 +325,12 @@ public class AddForm extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator9;
     private com.k33ptoo.components.KGradientPanel kGradientPanel2;
     private javax.swing.JRadioButton male118;
+    private javax.swing.JTextField txtaddress118;
+    private javax.swing.JTextField txtdate118;
+    private javax.swing.JTextField txtemaill118;
     private javax.swing.JTextField txtid118;
     private javax.swing.JTextField txtname118;
-    private javax.swing.JTextField txtname119;
-    private javax.swing.JTextField txtname120;
-    private javax.swing.JTextField txtname121;
-    private javax.swing.JTextField txtname122;
-    private javax.swing.JTextField txtname123;
+    private javax.swing.JTextField txtphone118;
+    private javax.swing.JTextField txtposition118;
     // End of variables declaration//GEN-END:variables
 }
