@@ -34,13 +34,11 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        txt_Id = new javax.swing.JTextField();
         cbo_ChucVu = new javax.swing.JComboBox<>();
         txt_LuongCoBan = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         txt_LuongThuong = new javax.swing.JTextField();
         txt_LuongDuocNhan = new javax.swing.JTextField();
-        jSeparator1 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         txt_Email = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
@@ -50,6 +48,7 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         jSeparator7 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         tb_Luong = new javax.swing.JTable();
+        cbo_ChucVu1 = new javax.swing.JComboBox<>();
         btn_Add = new com.k33ptoo.components.KButton();
         btn_Exit = new com.k33ptoo.components.KButton();
         btn_Edit = new com.k33ptoo.components.KButton();
@@ -59,6 +58,7 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(51, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -88,8 +88,6 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(102, 102, 102));
         jLabel7.setText("Lương thưởng:");
-
-        txt_Id.setBorder(null);
 
         cbo_ChucVu.setBackground(new java.awt.Color(204, 255, 255));
         cbo_ChucVu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Trưởng phòng", "Nhân Viên", "Giám đốc", "Chủ tịch", " ", " ", " ", " " }));
@@ -122,14 +120,20 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tb_Luong);
 
+        cbo_ChucVu1.setBackground(new java.awt.Color(204, 255, 255));
+        cbo_ChucVu1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
+        cbo_ChucVu1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 512, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 533, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(25, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -138,10 +142,9 @@ public class DieuChinhLuong extends javax.swing.JFrame {
                                     .addComponent(jLabel2))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txt_Id, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
                                     .addComponent(jSeparator7, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txt_Name, javax.swing.GroupLayout.Alignment.LEADING)))
+                                    .addComponent(txt_Name, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
+                                    .addComponent(cbo_ChucVu1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel4)
@@ -169,11 +172,11 @@ public class DieuChinhLuong extends javax.swing.JFrame {
                                     .addComponent(txt_LuongThuong, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jSeparator6)
-                                    .addComponent(txt_LuongDuocNhan, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))))))
-                .addGap(39, 39, 39))
+                                    .addComponent(jSeparator6, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                                    .addComponent(txt_LuongDuocNhan))))
+                        .addGap(39, 39, 39))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,19 +185,17 @@ public class DieuChinhLuong extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jLabel5)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txt_Id, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2))
-                    .addComponent(txt_LuongCoBan))
+                        .addComponent(jLabel2)
+                        .addComponent(cbo_ChucVu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_LuongCoBan, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE))
                 .addGap(2, 2, 2)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel3)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel3)
-                        .addComponent(jLabel7))
-                    .addComponent(txt_LuongThuong, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
+                        .addComponent(txt_LuongThuong, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(txt_Name))
                 .addGap(2, 2, 2)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,34 +221,57 @@ public class DieuChinhLuong extends javax.swing.JFrame {
                         .addComponent(txt_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(2, 2, 2)
                         .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 74, -1, -1));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 74, 590, 380));
 
         btn_Add.setText("ADD");
+        btn_Add.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btn_Add.setkBorderRadius(50);
+        btn_Add.setkEndColor(new java.awt.Color(204, 0, 204));
+        btn_Add.setkHoverEndColor(new java.awt.Color(204, 51, 255));
+        btn_Add.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_Add.setkHoverStartColor(new java.awt.Color(51, 255, 255));
         jPanel1.add(btn_Add, new org.netbeans.lib.awtextra.AbsoluteConstraints(633, 91, 137, -1));
 
         btn_Exit.setText("EXIT");
+        btn_Exit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btn_Exit.setkBorderRadius(50);
+        btn_Exit.setkEndColor(new java.awt.Color(204, 0, 204));
+        btn_Exit.setkHoverEndColor(new java.awt.Color(204, 51, 255));
+        btn_Exit.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_Exit.setkHoverStartColor(new java.awt.Color(51, 255, 255));
         jPanel1.add(btn_Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(633, 316, 137, -1));
 
         btn_Edit.setText("EDIT");
+        btn_Edit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btn_Edit.setkBorderRadius(50);
+        btn_Edit.setkEndColor(new java.awt.Color(204, 0, 204));
+        btn_Edit.setkHoverEndColor(new java.awt.Color(204, 51, 255));
+        btn_Edit.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_Edit.setkHoverStartColor(new java.awt.Color(51, 255, 255));
         jPanel1.add(btn_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(633, 164, 137, -1));
 
         btn_Del.setText("DEL");
+        btn_Del.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btn_Del.setkBorderRadius(50);
+        btn_Del.setkEndColor(new java.awt.Color(204, 0, 204));
+        btn_Del.setkHoverEndColor(new java.awt.Color(204, 51, 255));
+        btn_Del.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_Del.setkHoverStartColor(new java.awt.Color(51, 255, 255));
         jPanel1.add(btn_Del, new org.netbeans.lib.awtextra.AbsoluteConstraints(633, 241, 137, -1));
+
+        kGradientPanel1.setkEndColor(new java.awt.Color(153, 255, 255));
+        kGradientPanel1.setkStartColor(new java.awt.Color(105, 48, 195));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/salary_female_100px.png"))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Lương Nhân Viên");
+        jLabel1.setText("EMPLOYEES SALARY");
 
         javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
         kGradientPanel1.setLayout(kGradientPanel1Layout);
@@ -258,20 +282,20 @@ public class DieuChinhLuong extends javax.swing.JFrame {
                 .addComponent(jLabel9)
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(223, Short.MAX_VALUE))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
         kGradientPanel1Layout.setVerticalGroup(
             kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kGradientPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel9)
-                .addGap(0, 350, Short.MAX_VALUE))
+                .addGap(0, 390, Short.MAX_VALUE))
             .addGroup(kGradientPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 450));
+        jPanel1.add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 490));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -285,6 +309,7 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -329,6 +354,7 @@ public class DieuChinhLuong extends javax.swing.JFrame {
     private com.k33ptoo.components.KButton btn_Edit;
     private com.k33ptoo.components.KButton btn_Exit;
     private javax.swing.JComboBox<String> cbo_ChucVu;
+    private javax.swing.JComboBox<String> cbo_ChucVu1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -341,7 +367,6 @@ public class DieuChinhLuong extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
@@ -350,7 +375,6 @@ public class DieuChinhLuong extends javax.swing.JFrame {
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
     private javax.swing.JTable tb_Luong;
     private javax.swing.JTextField txt_Email;
-    private javax.swing.JTextField txt_Id;
     private javax.swing.JTextField txt_LuongCoBan;
     private javax.swing.JTextField txt_LuongDuocNhan;
     private javax.swing.JTextField txt_LuongThuong;

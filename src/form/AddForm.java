@@ -65,6 +65,7 @@ public class AddForm extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         kGradientPanel2.setkEndColor(new java.awt.Color(153, 255, 255));
         kGradientPanel2.setkStartColor(new java.awt.Color(105, 48, 195));
@@ -143,6 +144,9 @@ public class AddForm extends javax.swing.JFrame {
         btadd118.setText("ADD");
         btadd118.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btadd118.setkBorderRadius(50);
+        btadd118.setkEndColor(new java.awt.Color(153, 0, 153));
+        btadd118.setkHoverEndColor(new java.awt.Color(51, 204, 255));
+        btadd118.setkHoverForeGround(new java.awt.Color(255, 255, 255));
         btadd118.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btadd118ActionPerformed(evt);
@@ -201,6 +205,11 @@ public class AddForm extends javax.swing.JFrame {
         jLabel11.setText(" Employees");
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Logout_w_30px.png"))); // NOI18N
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/pencil_50px.png"))); // NOI18N
 
@@ -228,14 +237,14 @@ public class AddForm extends javax.swing.JFrame {
                         .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(jLabel10))
+                .addGap(16, 16, 16)
+                .addComponent(jLabel10)
+                .addContainerGap())
         );
         kGradientPanel2Layout.setVerticalGroup(
             kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kGradientPanel2Layout.createSequentialGroup()
                 .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(kGradientPanel2Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -247,13 +256,17 @@ public class AddForm extends javax.swing.JFrame {
                                 .addComponent(jLabel11)
                                 .addGap(47, 47, 47)
                                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
         getContentPane().add(kGradientPanel2, java.awt.BorderLayout.CENTER);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btadd118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btadd118ActionPerformed
@@ -282,6 +295,11 @@ public class AddForm extends javax.swing.JFrame {
                 fm.setVisible(true);
             } 
     }//GEN-LAST:event_btadd118ActionPerformed
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel10MouseClicked
 
     /**
      * @param args the command line arguments
