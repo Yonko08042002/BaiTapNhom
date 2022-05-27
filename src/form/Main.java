@@ -17,6 +17,7 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
@@ -170,7 +171,6 @@ public class Main extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         qlthongtin = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
@@ -203,6 +203,16 @@ public class Main extends javax.swing.JFrame {
         jPanel30 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel31 = new javax.swing.JPanel();
+        jPanel32 = new javax.swing.JPanel();
+        jTextField_search = new javax.swing.JTextField();
+        kButton_refresh = new com.k33ptoo.components.KButton();
+        kButton_search = new com.k33ptoo.components.KButton();
+        jLabel31 = new javax.swing.JLabel();
+        jPanel33 = new javax.swing.JPanel();
+        jPanel34 = new javax.swing.JPanel();
+        kButton_remove = new com.k33ptoo.components.KButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -810,7 +820,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(Time)
                 .addGap(53, 53, 53)
                 .addComponent(date)
-                .addContainerGap(939, Short.MAX_VALUE))
+                .addContainerGap(1144, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1014,9 +1024,6 @@ public class Main extends javax.swing.JFrame {
 
         kGradientPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 670, 380));
 
-        jButton1.setText("jButton1");
-        kGradientPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 70, 120, -1));
-
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -1027,7 +1034,7 @@ public class Main extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 5, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         kGradientPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 980, 5));
@@ -1079,11 +1086,11 @@ public class Main extends javax.swing.JFrame {
 
         jLabel3.setBackground(new java.awt.Color(0, 51, 204));
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel3.setText("Home/View");
-        kGradientPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 20));
+        jLabel3.setText("Overview");
+        kGradientPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 200, -1, 20));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/nv.png"))); // NOI18N
-        kGradientPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 440, 430, 190));
+        kGradientPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 390, 190));
 
         jPanel13.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1385,11 +1392,106 @@ public class Main extends javax.swing.JFrame {
 
         kGradientPanel3.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 220, 60, 5));
 
+        jLabel10.setBackground(new java.awt.Color(0, 51, 204));
+        jLabel10.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        jLabel10.setText("Home/View");
+        kGradientPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 20));
+
+        jPanel31.setBackground(new java.awt.Color(0, 102, 255));
+
+        javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
+        jPanel31.setLayout(jPanel31Layout);
+        jPanel31Layout.setHorizontalGroup(
+            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+        jPanel31Layout.setVerticalGroup(
+            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        kGradientPanel3.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 220, 60, 5));
+
+        jPanel32.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
+        jPanel32.setLayout(jPanel32Layout);
+        jPanel32Layout.setHorizontalGroup(
+            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 110, Short.MAX_VALUE)
+        );
+        jPanel32Layout.setVerticalGroup(
+            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        kGradientPanel3.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 220, 110, 5));
+        kGradientPanel3.add(jTextField_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 50, 190, 30));
+
+        kButton_refresh.setText("Refresh");
+        kButton_refresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton_refreshActionPerformed(evt);
+            }
+        });
+        kGradientPanel3.add(kButton_refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 150, 70, 40));
+
+        kButton_search.setText("Search");
+        kButton_search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton_searchActionPerformed(evt);
+            }
+        });
+        kGradientPanel3.add(kButton_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 100, 70, 40));
+
+        jLabel31.setBackground(new java.awt.Color(0, 51, 204));
+        jLabel31.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        jLabel31.setText("Manage");
+        kGradientPanel3.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 10, -1, 20));
+
+        jPanel33.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
+        jPanel33.setLayout(jPanel33Layout);
+        jPanel33Layout.setHorizontalGroup(
+            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 120, Short.MAX_VALUE)
+        );
+        jPanel33Layout.setVerticalGroup(
+            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        kGradientPanel3.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 30, 120, 5));
+
+        jPanel34.setBackground(new java.awt.Color(0, 102, 255));
+
+        javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
+        jPanel34.setLayout(jPanel34Layout);
+        jPanel34Layout.setHorizontalGroup(
+            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+        jPanel34Layout.setVerticalGroup(
+            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        kGradientPanel3.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 30, 60, 5));
+
+        kButton_remove.setText("Remove");
+        kButton_remove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton_removeActionPerformed(evt);
+            }
+        });
+        kGradientPanel3.add(kButton_remove, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 100, 70, 40));
+
         dashboardview.add(kGradientPanel3, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(1357, 705));
+        setSize(new java.awt.Dimension(1562, 705));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     int xx_119, xy_119;
@@ -1706,6 +1808,32 @@ public class Main extends javax.swing.JFrame {
     private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_addMouseClicked
+
+    private void kButton_refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton_refreshActionPerformed
+        jTextField_search.setText("");
+        showTable();
+    }//GEN-LAST:event_kButton_refreshActionPerformed
+
+    private void kButton_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton_searchActionPerformed
+        String name = jTextField_search.getText();
+        if(name.length()>0){
+            ql = new NhanVienDAO().findTaiLieu(name);
+            model.setRowCount(0);
+            for(nhanVien qly : ql){
+            model.addRow(new Object[]{
+                 qly.getID(), qly.getName(), qly.getSex(), qly.getAddress(), qly.getPhone(), qly.getEmail(), qly.getDateOfBirth(), qly.getPosition()
+                });
+            }
+        }
+    }//GEN-LAST:event_kButton_searchActionPerformed
+
+    private void kButton_removeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton_removeActionPerformed
+        selectedIndex = qlthongtin.getSelectedRow();
+        nhanVien qltv = ql.get(selectedIndex);
+        JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn xóa không?");
+        new NhanVienDAO().delete(qltv.getID());
+        showTable();
+    }//GEN-LAST:event_kButton_removeActionPerformed
     
     private void setColor(JLabel pane){
         pane.setBackground(new Color(204,0,0));
@@ -1783,8 +1911,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel home;
     private javax.swing.JLabel icontitle119;
     private javax.swing.JPanel iocnMinMaxClose;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -1806,6 +1934,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1836,6 +1965,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
+    private javax.swing.JPanel jPanel31;
+    private javax.swing.JPanel jPanel32;
+    private javax.swing.JPanel jPanel33;
+    private javax.swing.JPanel jPanel34;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -1843,6 +1976,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField_search;
+    private com.k33ptoo.components.KButton kButton_refresh;
+    private com.k33ptoo.components.KButton kButton_remove;
+    private com.k33ptoo.components.KButton kButton_search;
     private keeptoo.KGradientPanel kGradientPanel1;
     private keeptoo.KGradientPanel kGradientPanel10;
     private keeptoo.KGradientPanel kGradientPanel15;

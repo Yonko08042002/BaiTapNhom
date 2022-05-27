@@ -18,11 +18,14 @@ public class nhanVien {
     private String Email;
     private String DateOfBirth;
     private String Position;
+    private double luongthuong;
+    private double luongcb;
+    private double luongnhan;
 
     public nhanVien() {
     }
 
-    public nhanVien(String ID, String Name, String Sex, String Address, String Phone, String Email, String DateOfBirth, String Position) {
+    public nhanVien(String ID, String Name, String Sex, String Address, String Phone, String Email, String DateOfBirth, String Position, double luongthuong, double luongcb, double luongnhan) {
         this.ID = ID;
         this.Name = Name;
         this.Sex = Sex;
@@ -31,6 +34,33 @@ public class nhanVien {
         this.Email = Email;
         this.DateOfBirth = DateOfBirth;
         this.Position = Position;
+        this.luongcb = luongcb;
+        this.luongnhan = luongnhan;
+        this.luongthuong = luongthuong;
+    }
+
+    public double getLuongthuong() {
+        return luongthuong;
+    }
+
+    public void setLuongthuong(double luongthuong) {
+        this.luongthuong = luongthuong;
+    }
+
+    public double getLuongcb() {
+        return luongcb;
+    }
+
+    public void setLuongcb(double luongcb) {
+        this.luongcb = luongcb;
+    }
+
+    public double getLuongnhan() {
+        return luongthuong+luongcb;
+    }
+
+    public void setLuongnhan(double luongnhan) {
+        this.luongnhan = luongnhan;
     }
 
     public String getID() {

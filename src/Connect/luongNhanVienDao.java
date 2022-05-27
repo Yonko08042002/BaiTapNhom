@@ -1,8 +1,10 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Connect;
+
 import model.nhanVien;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,14 +15,14 @@ import java.util.List;
 import model.taiKhoan;
 /**
  *
- * @author ASUS
+ * @author dell
  */
-public class NhanVienDAO {
+public class luongNhanVienDao {
     public List<nhanVien> getAllUsers() {
         List<nhanVien> ltl = new ArrayList<nhanVien>();
 
         Connection connection = JDBCConnection.JDBCConnection();
-        String sql = "select * from AddNhanVien";
+        String sql = "select *, luongCoBan+luongThuong as luongNhan from AddNhanVien";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
@@ -28,12 +30,11 @@ public class NhanVienDAO {
                 nhanVien tl = new nhanVien();
                 tl.setID(rs.getString("id"));
                 tl.setName(rs.getString("ten"));
-                tl.setSex(rs.getString("gioitinh"));
-                tl.setAddress(rs.getString("diachi"));
-                tl.setPhone(rs.getString("sdt"));
+                tl.setPosition(rs.getString("chucVu"));
                 tl.setEmail(rs.getString("email"));
-                tl.setDateOfBirth(rs.getString("ngaysinh"));
-                tl.setPosition(rs.getString("chucvu"));
+                tl.setLuongcb(rs.getDouble("luongcoban"));
+                tl.setLuongthuong(rs.getDouble("luongthuong"));
+                tl.setLuongnhan(rs.getDouble("luongNhan"));
                 ltl.add(tl);
             }
         } catch (Exception e) {
@@ -59,19 +60,16 @@ public class NhanVienDAO {
     }
     public void add(nhanVien tl){
      Connection connection = JDBCConnection.JDBCConnection();          
-            String sql = "INSERT INTO AddNhanVien (id, ten, gioitinh, diachi, sdt,email, ngaysinh, chucvu) "
-                    + "values (?,?,?,?,?,?,?,?) ";            
+            String sql = "INSERT INTO AddNhanVien (id, ten, chucVu, email, luongcoban, luongthuong) "
+                    + "values (?,?,?,?,?,?) ";            
             try {
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setString(1, tl.getID());
                 preparedStatement.setString(2, tl.getName());
-                preparedStatement.setString(3, tl.getSex());
-                preparedStatement.setString(4, tl.getAddress());
-                preparedStatement.setString(5, tl.getPhone());
-                preparedStatement.setString(6, tl.getEmail());
-                preparedStatement.setString(7, tl.getDateOfBirth());
-                preparedStatement.setString(8, tl.getPosition());
-                
+                preparedStatement.setString(3, tl.getPosition());
+                preparedStatement.setString(4, tl.getEmail());
+                preparedStatement.setDouble(5, tl.getLuongcb());
+                preparedStatement.setDouble(6, tl.getLuongthuong());                
 //                int rs = preparedStatement.executeUpdate();
 //                System.out.println(rs);
                 preparedStatement.execute();
@@ -83,18 +81,15 @@ public class NhanVienDAO {
     //
     public int updateUser(nhanVien tl){
         Connection connection = JDBCConnection.JDBCConnection();
-        String sql = "Update AddNhanVien set ten = ? , gioitinh = ? , diachi = ? , sdt = ? , email = ? ,ngaysinh=?,chucvu=? where id = ? ";
+        String sql = "Update AddNhanVien set ten = ? , chucVu = ? , email = ? , luongcoban = ? , luongthuong = ? where id = ? ";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(8, tl.getID());
+            preparedStatement.setString(6, tl.getID());
             preparedStatement.setString(1, tl.getName());
-            preparedStatement.setString(2, tl.getSex());
-            preparedStatement.setString(3, tl.getAddress());
-            preparedStatement.setString(4, tl.getPhone());
-            preparedStatement.setString(5, tl.getEmail());
-            preparedStatement.setString(6, tl.getDateOfBirth());
-            preparedStatement.setString(7, tl.getPosition());
-            
+            preparedStatement.setString(2, tl.getPosition());
+            preparedStatement.setString(3, tl.getEmail());
+            preparedStatement.setDouble(4, tl.getLuongcb());
+            preparedStatement.setDouble(5, tl.getLuongthuong());          
             if(preparedStatement.executeUpdate()>0){
                 System.out.println("Update thành công!");
                 return 1;
@@ -120,7 +115,7 @@ public class NhanVienDAO {
     public ArrayList<nhanVien> findTaiLieu(String name){
         ArrayList<nhanVien> ql = new ArrayList<nhanVien>();
         Connection connection = JDBCConnection.JDBCConnection();
-        String sql = "select * from AddNhanVien where ten like ?";
+        String sql = "select *, luongCoBan+luongThuong as luongNhan from AddNhanVien where ten like ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1,"%"+name+"%");
@@ -129,12 +124,11 @@ public class NhanVienDAO {
                 nhanVien tl = new nhanVien();
                 tl.setID(rs.getString("id"));
                 tl.setName(rs.getString("ten"));
-                tl.setSex(rs.getString("gioitinh"));
-                tl.setAddress(rs.getString("diachi"));
-                tl.setEmail(rs.getString("sdt"));
-                tl.setEmail(rs.getString("email"));
-                tl.setDateOfBirth(rs.getString("ngaysinh"));
                 tl.setPosition(rs.getString("chucvu"));
+                tl.setEmail(rs.getString("email"));
+                tl.setLuongcb(rs.getDouble("luongcoban"));
+                tl.setLuongthuong(rs.getDouble("luongthuong"));
+                tl.setLuongnhan(rs.getDouble("luongNhan"));
                 ql.add(tl);
             }
         } catch (Exception e) {
@@ -145,7 +139,7 @@ public class NhanVienDAO {
     public nhanVien find1TaiLieu(String id){
         nhanVien tl = new nhanVien();
         Connection connection = JDBCConnection.JDBCConnection();
-        String sql = "select * from AddNhanVien where id like ?";
+        String sql = "select *, luongCoBan+luongThuong as luongNhan from AddNhanVien where id like ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1,"%"+id+"%");
@@ -153,12 +147,11 @@ public class NhanVienDAO {
             while (rs.next()) {
                 tl.setID(rs.getString("id"));
                 tl.setName(rs.getString("ten"));
-                tl.setSex(rs.getString("gioitinh"));
-                tl.setAddress(rs.getString("diachi"));
-                tl.setEmail(rs.getString("sdt"));
-                tl.setEmail(rs.getString("email"));
-                tl.setDateOfBirth(rs.getString("ngaysinh"));
                 tl.setPosition(rs.getString("chucvu"));
+                tl.setEmail(rs.getString("email"));
+                tl.setLuongcb(rs.getDouble("luongcoban"));
+                tl.setLuongthuong(rs.getDouble("luongthuong"));
+                tl.setLuongnhan(rs.getDouble("luongNhan"));
             }
         } catch (Exception e) {
             e.printStackTrace();
