@@ -820,7 +820,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(Time)
                 .addGap(53, 53, 53)
                 .addComponent(date)
-                .addContainerGap(1144, Short.MAX_VALUE))
+                .addContainerGap(919, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1294,8 +1294,6 @@ public class Main extends javax.swing.JFrame {
         jLabel29.setText("HAH");
         jPanel14.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
-        jPanel26.setBackground(new java.awt.Color(102, 0, 102));
-
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
         jPanel26.setLayout(jPanel26Layout);
         jPanel26Layout.setHorizontalGroup(
@@ -1308,6 +1306,8 @@ public class Main extends javax.swing.JFrame {
         );
 
         jPanel14.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 120, 5));
+
+        jPanel27.setBackground(new java.awt.Color(204, 153, 255));
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
@@ -1322,7 +1322,7 @@ public class Main extends javax.swing.JFrame {
 
         jPanel14.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 90, 5));
 
-        jPanel28.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel28.setBackground(new java.awt.Color(102, 0, 102));
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
@@ -1426,23 +1426,37 @@ public class Main extends javax.swing.JFrame {
         );
 
         kGradientPanel3.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 220, 110, 5));
-        kGradientPanel3.add(jTextField_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 50, 190, 30));
+        kGradientPanel3.add(jTextField_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 50, 170, 30));
 
         kButton_refresh.setText("Refresh");
+        kButton_refresh.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        kButton_refresh.setkBackGroundColor(new java.awt.Color(51, 153, 255));
+        kButton_refresh.setkBorderRadius(50);
+        kButton_refresh.setkEndColor(new java.awt.Color(102, 0, 204));
+        kButton_refresh.setkHoverEndColor(new java.awt.Color(0, 153, 204));
+        kButton_refresh.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        kButton_refresh.setkHoverStartColor(new java.awt.Color(153, 204, 0));
         kButton_refresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kButton_refreshActionPerformed(evt);
             }
         });
-        kGradientPanel3.add(kButton_refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 150, 70, 40));
+        kGradientPanel3.add(kButton_refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 100, 60, 40));
 
         kButton_search.setText("Search");
+        kButton_search.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        kButton_search.setkBackGroundColor(new java.awt.Color(51, 153, 255));
+        kButton_search.setkBorderRadius(50);
+        kButton_search.setkEndColor(new java.awt.Color(102, 0, 204));
+        kButton_search.setkHoverEndColor(new java.awt.Color(0, 153, 204));
+        kButton_search.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        kButton_search.setkHoverStartColor(new java.awt.Color(153, 204, 0));
         kButton_search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kButton_searchActionPerformed(evt);
             }
         });
-        kGradientPanel3.add(kButton_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 100, 70, 40));
+        kGradientPanel3.add(kButton_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 100, 60, 40));
 
         jLabel31.setBackground(new java.awt.Color(0, 51, 204));
         jLabel31.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
@@ -1455,14 +1469,14 @@ public class Main extends javax.swing.JFrame {
         jPanel33.setLayout(jPanel33Layout);
         jPanel33Layout.setHorizontalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
+            .addGap(0, 110, Short.MAX_VALUE)
         );
         jPanel33Layout.setVerticalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        kGradientPanel3.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 30, 120, 5));
+        kGradientPanel3.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 30, 110, 5));
 
         jPanel34.setBackground(new java.awt.Color(0, 102, 255));
 
@@ -1480,18 +1494,25 @@ public class Main extends javax.swing.JFrame {
         kGradientPanel3.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 30, 60, 5));
 
         kButton_remove.setText("Remove");
+        kButton_remove.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        kButton_remove.setkBackGroundColor(new java.awt.Color(51, 153, 255));
+        kButton_remove.setkBorderRadius(50);
+        kButton_remove.setkEndColor(new java.awt.Color(102, 0, 204));
+        kButton_remove.setkHoverEndColor(new java.awt.Color(0, 153, 204));
+        kButton_remove.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        kButton_remove.setkHoverStartColor(new java.awt.Color(153, 204, 0));
         kButton_remove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kButton_removeActionPerformed(evt);
             }
         });
-        kGradientPanel3.add(kButton_remove, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 100, 70, 40));
+        kGradientPanel3.add(kButton_remove, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 150, 150, 40));
 
         dashboardview.add(kGradientPanel3, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(1562, 705));
+        setSize(new java.awt.Dimension(1337, 705));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     int xx_119, xy_119;

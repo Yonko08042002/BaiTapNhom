@@ -127,7 +127,6 @@ public class Signup extends javax.swing.JFrame {
         jPanel3.add(bttdangki118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 290, 42));
 
         txtname118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txtname118.setForeground(new java.awt.Color(0, 51, 255));
         txtname118.setText("Name");
         txtname118.setBorder(null);
         txtname118.addFocusListener(new java.awt.event.FocusAdapter() {
