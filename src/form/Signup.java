@@ -406,9 +406,12 @@ public class Signup extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtname118FocusGained
     String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        final String Url = "jdbc:sqlserver://DESKTOP-JADGEKH\\SQLEXPRESS01:1433;databaseName=QuanLyLuongNv";
+//        final String Url = "jdbc:sqlserver://DESKTOP-JADGEKH\\SQLEXPRESS01:1433;databaseName=QuanLyLuongNv";
+//        final String user = "sa";
+//        final String pass = "39151111";
+       final String Url = "jdbc:sqlserver://LAPTOP-92FGE7G6\\SQLEXPRESS:1433;databaseName=QuanLyLuongNv";
         final String user = "sa";
-        final String pass = "39151111";
+        final String pass = "1234";
         Statement st;
         ResultSet rs;
     private void bttdangki118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttdangki118ActionPerformed
