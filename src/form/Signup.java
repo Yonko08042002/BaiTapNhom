@@ -4,6 +4,7 @@
  */
 package form;
 
+import Connect.JDBCConnection;
 import Connect.TaiKhoanDAO;
 import java.awt.Color;
 import java.awt.Font;
@@ -405,56 +406,39 @@ public class Signup extends javax.swing.JFrame {
             removePlaceholderStyle(txtname118);
         }
     }//GEN-LAST:event_txtname118FocusGained
-    String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-//        final String Url = "jdbc:sqlserver://DESKTOP-JADGEKH\\SQLEXPRESS01:1433;databaseName=QuanLyLuongNv";
-//        final String user = "sa";
-//        final String pass = "39151111";
-       final String Url = "jdbc:sqlserver://LAPTOP-92FGE7G6\\SQLEXPRESS:1433;databaseName=QuanLyLuongNv";
-        final String user = "sa";
-        final String pass = "1234";
-        Statement st;
-        ResultSet rs;
+
     private void bttdangki118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttdangki118ActionPerformed
         // TODO add your handling code here:
        String passwork  = new String(txtpass118.getPassword());
        String confirmpass = new String(txtconfirmpass118.getPassword());
        
-        try {
-            Class.forName(driver);
-            Connection con = DriverManager.getConnection(Url, user, pass);
-            PreparedStatement ps = con.prepareStatement("insert into TaiKhoan values (?,?,?,?,?,?,?)");
+            JDBCConnection  con =  new JDBCConnection();
             
-            ps.setString(1, txtname118.getText());
-            ps.setString(2, txtusername118.getText());
-            ps.setString(3, passwork);
-            ps.setString(4,confirmpass);
-            ps.setString(5, txtaddress118.getText());
-            ps.setString(6, txtphone118.getText());
-            ps.setString(7, txtemail118.getText());
-           
-            if(passwork.equals(confirmpass)){
-                ps.executeUpdate();
-                JOptionPane.showMessageDialog(this, "User Successfull Registered", "Success", JOptionPane.INFORMATION_MESSAGE);
-                taiKhoan tk = new taiKhoan();
-                tk.setName(txtname118.getText());
-                tk.setUsername(txtusername118.getText());
-                tk.setPassword(txtpass118.getText());
-                tk.setConfirmpassword(txtconfirmpass118.getText());
-                tk.setAddress(txtaddress118.getText());
-                tk.setPhone(txtphone118.getText());
-                tk.setEmail(txtemail118.getText());
-                boolean isOk=true;
-                if(isOk){
-                    new TaiKhoanDAO().addTaiKhoan(tk);
-                    Signin ql = new Signin();
-                    ql.setVisible(true);
-                    this.dispose();
+            if(txtname118.equals("")|| txtusername118.equals("")||txtpass118.equals("")||txtconfirmpass118.equals("")||txtaddress118.equals("")||txtphone118.equals("")||txtemail118.equals("")){
+                JOptionPane.showMessageDialog(this, "Please fill in all the information");
+            }else{
+                if(passwork.equals(confirmpass)){
+                    JOptionPane.showMessageDialog(this, "User Successfull Registered", "Success", JOptionPane.INFORMATION_MESSAGE);
+                    taiKhoan tk = new taiKhoan();
+                    tk.setName(txtname118.getText());
+                    tk.setUsername(txtusername118.getText());
+                    tk.setPassword(txtpass118.getText());
+                    tk.setConfirmpassword(txtconfirmpass118.getText());
+                    tk.setAddress(txtaddress118.getText());
+                    tk.setPhone(txtphone118.getText());
+                    tk.setEmail(txtemail118.getText());
+                    boolean isOk=true;
+                    if(isOk){
+                        new TaiKhoanDAO().addTaiKhoan(tk);
+                        this.setVisible(isOk);
+                        Signin ql = new Signin();
+                        ql.setVisible(true);
+                        this.dispose();
                 }
             }else{
                 JOptionPane.showMessageDialog(this, "Check your Username or Passwork for Error ", "User not registered", JOptionPane.ERROR_MESSAGE);
             }
-        } catch (Exception e) {e.printStackTrace(); 
-        }
+            }
         
     }//GEN-LAST:event_bttdangki118ActionPerformed
 
