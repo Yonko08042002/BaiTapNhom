@@ -11,7 +11,7 @@ package model;
 public class taiKhoan {
     private String Name;
     private String Username;
-    private String Password;
+    private String Pass;
     private String Confirmpassword;
     private String Address;
     private String Phone;
@@ -20,10 +20,10 @@ public class taiKhoan {
     public taiKhoan() {
     }
 
-    public taiKhoan(String Name, String Username, String Password, String Confirmpassword, String Address, String Phone, String Email) {
+    public taiKhoan(String Name, String Username, String Pass, String Confirmpassword, String Address, String Phone, String Email) {
         this.Name = Name;
         this.Username = Username;
-        this.Password = Password;
+        this.Pass = Pass;
         this.Confirmpassword = Confirmpassword;
         this.Address = Address;
         this.Phone = Phone;
@@ -47,11 +47,11 @@ public class taiKhoan {
     }
 
     public String getPassword() {
-        return Password;
+        return Pass;
     }
 
-    public void setPassword(String Passwork) {
-        this.Password = Password;
+    public void setPassword(String Pass) {
+        this.Pass = Pass;
     }
 
     public String getConfirmpassword() {

@@ -5,15 +5,17 @@
 package Service;
 
 import Connect.NhanVienDAO;
+import Connect.TaiKhoanDAO;
 import model.nhanVien;
 import java.util.List;
+import model.taiKhoan;
 /**
  *
  * @author ASUS
  */
 public class Service {
     private NhanVienDAO qlnv;
-
+    private TaiKhoanDAO qltk;
     public Service() {
         qlnv = new NhanVienDAO();
         
@@ -29,6 +31,9 @@ public class Service {
     
     public void delete(String id){
         qlnv.delete(id);
+    }
+    public void addTaiKhoan(taiKhoan tk){
+        qltk.addTaiKhoan(tk);
     }
     /*public users getUserByID(int id){
        return userLink.getUserByID(id);
