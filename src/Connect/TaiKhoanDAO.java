@@ -61,9 +61,6 @@ public class TaiKhoanDAO {
             e.printStackTrace();
         }
     }
-    public void login(taiKhoan tk){
-        
-    }
     //
  
 }

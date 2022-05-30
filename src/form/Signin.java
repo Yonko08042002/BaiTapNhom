@@ -250,30 +250,34 @@ public class Signin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_formWindowOpened
         
-        
+        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        final String Url = "jdbc:sqlserver://DESKTOP-JADGEKH\\SQLEXPRESS01:1433;databaseName=QuanLyLuongNv";
+        final String user = "sa";
+        final String pass = "39151111";
+        Statement st;
+        ResultSet rs;
     private void btnSignin_101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignin_101ActionPerformed
         // TODO add your handling code here:
         
         try {
-            
-            JDBCConnection  con =  new JDBCConnection();
-            
+            Class.forName(driver);
+            Connection con = DriverManager.getConnection(Url, user, pass);
+            String sql = "select* from TaiKhoan where username = ? and pass =?";//truy vấn đến sql
             PreparedStatement ps = con.prepareCall(sql);
             ps.setString(1, txtUsername_101.getText());
             ps.setString(2, txtPassword_101.getText());
-            ResultSet rs;
             rs = ps.executeQuery();
             
             if(txtUsername_101.getText().equals("")|| txtPassword_101.getText().equals("")){
-                JOptionPane.showMessageDialog(this, "Username and Password is empty!");
+                JOptionPane.showMessageDialog(this, "Username and Password is empty");
             }else 
                 if(rs.next()){
                     Main ql = new Main();
                     ql.setVisible(true);
                     this.dispose();
-                    JOptionPane.showMessageDialog(this, "Sign up success!");
+                    JOptionPane.showMessageDialog(this, "User has successfully login!");
                 }else {
-                    JOptionPane.showMessageDialog(this, "Login failed! Please try again!");
+                    JOptionPane.showMessageDialog(this, "Login failed !");
                 }
         } catch (Exception e) {
         }
