@@ -36,6 +36,7 @@ public class Main extends javax.swing.JFrame {
     private List<nhanVien> ql;
     private DefaultTableModel model;
      boolean a; 
+   
      JPanel [] panels;
     /**
      * Creates new form Main
@@ -207,7 +208,6 @@ public class Main extends javax.swing.JFrame {
         jPanel31 = new javax.swing.JPanel();
         jPanel32 = new javax.swing.JPanel();
         jTextField_search = new javax.swing.JTextField();
-        kButton_refresh = new com.k33ptoo.components.KButton();
         kButton_search = new com.k33ptoo.components.KButton();
         jLabel31 = new javax.swing.JLabel();
         jPanel33 = new javax.swing.JPanel();
@@ -216,6 +216,11 @@ public class Main extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         Header.setBackground(new java.awt.Color(102, 102, 102));
         Header.setPreferredSize(new java.awt.Dimension(800, 30));
@@ -751,24 +756,44 @@ public class Main extends javax.swing.JFrame {
         txt_search.setForeground(new java.awt.Color(255, 255, 255));
         txt_search.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt_search.setText("Search");
+        txt_search.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_searchMouseClicked(evt);
+            }
+        });
         kGradientPanel1.add(txt_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 165, 200, 55));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Edit");
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
+        });
         kGradientPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 200, 55));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Salary");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
         kGradientPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 275, 200, 55));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Remove");
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel15MouseClicked(evt);
+            }
+        });
         kGradientPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 200, 55));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
@@ -820,7 +845,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(Time)
                 .addGap(53, 53, 53)
                 .addComponent(date)
-                .addContainerGap(924, Short.MAX_VALUE))
+                .addContainerGap(1120, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -837,6 +862,7 @@ public class Main extends javax.swing.JFrame {
 
         dashboardview.add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
+        kGradientPanel3.setToolTipText("");
         kGradientPanel3.setkEndColor(new java.awt.Color(202, 240, 248));
         kGradientPanel3.setkStartColor(new java.awt.Color(202, 240, 248));
         kGradientPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1089,8 +1115,8 @@ public class Main extends javax.swing.JFrame {
         jLabel3.setText("Overview");
         kGradientPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 200, -1, 20));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/nv.png"))); // NOI18N
-        kGradientPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 390, 190));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Capture.PNG"))); // NOI18N
+        kGradientPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 440, 250, 190));
 
         jPanel13.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1426,25 +1452,16 @@ public class Main extends javax.swing.JFrame {
         );
 
         kGradientPanel3.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 220, 110, 5));
-        kGradientPanel3.add(jTextField_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 50, 170, 30));
 
-        kButton_refresh.setText("Refresh");
-        kButton_refresh.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        kButton_refresh.setkBackGroundColor(new java.awt.Color(51, 153, 255));
-        kButton_refresh.setkBorderRadius(50);
-        kButton_refresh.setkEndColor(new java.awt.Color(102, 0, 204));
-        kButton_refresh.setkHoverEndColor(new java.awt.Color(0, 153, 204));
-        kButton_refresh.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        kButton_refresh.setkHoverStartColor(new java.awt.Color(153, 204, 0));
-        kButton_refresh.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kButton_refreshActionPerformed(evt);
+        jTextField_search.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                jTextField_searchCaretUpdate(evt);
             }
         });
-        kGradientPanel3.add(kButton_refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 100, 60, 40));
+        kGradientPanel3.add(jTextField_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 50, 170, 30));
 
         kButton_search.setText("Search");
-        kButton_search.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        kButton_search.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         kButton_search.setkBackGroundColor(new java.awt.Color(51, 153, 255));
         kButton_search.setkBorderRadius(50);
         kButton_search.setkEndColor(new java.awt.Color(102, 0, 204));
@@ -1456,7 +1473,7 @@ public class Main extends javax.swing.JFrame {
                 kButton_searchActionPerformed(evt);
             }
         });
-        kGradientPanel3.add(kButton_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 100, 60, 40));
+        kGradientPanel3.add(kButton_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 100, 150, 40));
 
         jLabel31.setBackground(new java.awt.Color(0, 51, 204));
         jLabel31.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
@@ -1512,7 +1529,7 @@ public class Main extends javax.swing.JFrame {
 
         getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(1342, 705));
+        setSize(new java.awt.Dimension(1538, 705));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     int xx_119, xy_119;
@@ -1830,11 +1847,6 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_addMouseClicked
 
-    private void kButton_refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton_refreshActionPerformed
-        jTextField_search.setText("");
-        showTable();
-    }//GEN-LAST:event_kButton_refreshActionPerformed
-
     private void kButton_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton_searchActionPerformed
         String name = jTextField_search.getText();
         if(name.length()>0){
@@ -1845,6 +1857,9 @@ public class Main extends javax.swing.JFrame {
                  qly.getID(), qly.getName(), qly.getSex(), qly.getAddress(), qly.getPhone(), qly.getEmail(), qly.getDateOfBirth(), qly.getPosition()
                 });
             }
+        }else{
+             jTextField_search.setText("");
+              showTable();
         }
     }//GEN-LAST:event_kButton_searchActionPerformed
 
@@ -1855,6 +1870,77 @@ public class Main extends javax.swing.JFrame {
         new NhanVienDAO().delete(qltv.getID());
         showTable();
     }//GEN-LAST:event_kButton_removeActionPerformed
+
+    private void jTextField_searchCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextField_searchCaretUpdate
+        // TODO add your handling code here:
+         showTable();
+    }//GEN-LAST:event_jTextField_searchCaretUpdate
+
+    private void txt_searchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_searchMouseClicked
+        // TODO add your handling code here:
+          clickmenu(hideMenu, home, 1);
+        // create  void  for  methode hide and show panel menu
+        //(tạo khoảng trống cho menu bảng điều khiển ẩn và hiện methode)
+        if(a==true){
+          hideshow(menu, a, btn_Hidemenu);
+          SwingUtilities.updateComponentTreeUI(this);
+          //create methode change image
+          
+          a=false;
+        }
+        else{
+            hideshow(menu, a, btn_Hidemenu);
+            SwingUtilities.updateComponentTreeUI(this);
+            a=true;
+        }
+    }//GEN-LAST:event_txt_searchMouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        for (double i = 0.0; i <=1.0; i = i+0.1){
+            String val = i+ "";
+            float f = Float.valueOf(val);
+            this.setOpacity(f);
+            try{
+                Thread.sleep(50);
+            }catch(Exception e){
+                
+            }
+        }
+    }//GEN-LAST:event_formWindowOpened
+
+    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+        // TODO add your handling code here:
+        clickmenu(hideMenu, home, 1);
+        // create  void  for  methode hide and show panel menu
+        //(tạo khoảng trống cho menu bảng điều khiển ẩn và hiện methode)
+        if(a==true){
+          hideshow(menu, a, btn_Hidemenu);
+          SwingUtilities.updateComponentTreeUI(this);
+          //create methode change image
+          
+          a=false;
+        }
+        else{
+            hideshow(menu, a, btn_Hidemenu);
+            SwingUtilities.updateComponentTreeUI(this);
+            a=true;
+        }
+    }//GEN-LAST:event_jLabel15MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+        DieuChinhLuong dcl = new DieuChinhLuong();
+        dcl.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+        // TODO add your handling code here:
+        AddForm add = new AddForm();
+        add.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel12MouseClicked
     
     private void setColor(JLabel pane){
         pane.setBackground(new Color(204,0,0));
@@ -1998,7 +2084,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField_search;
-    private com.k33ptoo.components.KButton kButton_refresh;
     private com.k33ptoo.components.KButton kButton_remove;
     private com.k33ptoo.components.KButton kButton_search;
     private keeptoo.KGradientPanel kGradientPanel1;
