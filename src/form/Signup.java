@@ -112,7 +112,7 @@ public class Signup extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Emoji", 3, 14)); // NOI18N
         jLabel3.setText("Hello ! Let's get started");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 50, -1, -1));
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 50, 190, -1));
 
         bttdangki118.setBackground(new java.awt.Color(255, 255, 255));
         bttdangki118.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -161,7 +161,7 @@ public class Signup extends javax.swing.JFrame {
                 txtaddress118ActionPerformed(evt);
             }
         });
-        jPanel3.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 260, 30));
+        jPanel3.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 260, 20));
 
         txtphone118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtphone118.setText("Phone");
@@ -255,7 +255,7 @@ public class Signup extends javax.swing.JFrame {
         jSeparator8.setBackground(new java.awt.Color(0, 51, 255));
         jPanel3.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 280, 10));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 70, 350, 450));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 350, 450));
 
         btn_Back118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Logout_w_30px.png"))); // NOI18N
         btn_Back118.addMouseListener(new java.awt.event.MouseAdapter() {
