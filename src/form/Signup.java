@@ -125,7 +125,7 @@ public class Signup extends javax.swing.JFrame {
                 bttdangki118ActionPerformed(evt);
             }
         });
-        jPanel3.add(bttdangki118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 290, 42));
+        jPanel3.add(bttdangki118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 290, 42));
 
         txtname118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtname118.setText("Name");
@@ -156,7 +156,12 @@ public class Signup extends javax.swing.JFrame {
                 txtaddress118FocusLost(evt);
             }
         });
-        jPanel3.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 290, 23));
+        txtaddress118.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtaddress118ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 260, 30));
 
         txtphone118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtphone118.setText("Phone");
@@ -448,6 +453,10 @@ public class Signup extends javax.swing.JFrame {
         setVisible(false);
 
     }//GEN-LAST:event_btn_Back118MouseClicked
+
+    private void txtaddress118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtaddress118ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtaddress118ActionPerformed
 
     /**
      * @param args the command line arguments
