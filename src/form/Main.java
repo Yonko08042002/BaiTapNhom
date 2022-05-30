@@ -850,7 +850,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(Time)
                 .addGap(53, 53, 53)
                 .addComponent(date)
-                .addContainerGap(924, Short.MAX_VALUE))
+                .addContainerGap(1181, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1121,7 +1121,7 @@ public class Main extends javax.swing.JFrame {
         kGradientPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 200, -1, 20));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Capture.PNG"))); // NOI18N
-        kGradientPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 440, 250, 190));
+        kGradientPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 440, 250, 190));
 
         jPanel13.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1463,6 +1463,16 @@ public class Main extends javax.swing.JFrame {
                 jTextField_searchCaretUpdate(evt);
             }
         });
+        jTextField_search.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField_searchMouseClicked(evt);
+            }
+        });
+        jTextField_search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField_searchActionPerformed(evt);
+            }
+        });
         kGradientPanel3.add(jTextField_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 50, 170, 30));
 
         kButton_search.setText("Search");
@@ -1534,7 +1544,7 @@ public class Main extends javax.swing.JFrame {
 
         getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(1342, 705));
+        setSize(new java.awt.Dimension(1599, 705));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     int xx_119, xy_119;
@@ -1878,7 +1888,8 @@ public class Main extends javax.swing.JFrame {
 
     private void jTextField_searchCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextField_searchCaretUpdate
         // TODO add your handling code here:
-         showTable();
+//         jTextField_search.setText("");
+//          showTable();
     }//GEN-LAST:event_jTextField_searchCaretUpdate
 
     private void txt_searchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_searchMouseClicked
@@ -1948,6 +1959,16 @@ public class Main extends javax.swing.JFrame {
     private void btn_SalaryMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_btn_SalaryMouseWheelMoved
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_SalaryMouseWheelMoved
+
+    private void jTextField_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_searchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_searchActionPerformed
+
+    private void jTextField_searchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_searchMouseClicked
+        // TODO add your handling code here:
+        jTextField_search.setText("");
+         showTable();
+    }//GEN-LAST:event_jTextField_searchMouseClicked
     
     private void setColor(JLabel pane){
         pane.setBackground(new Color(204,0,0));
