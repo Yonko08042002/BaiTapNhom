@@ -673,6 +673,11 @@ public class Main extends javax.swing.JFrame {
                 btn_SalaryMouseMoved(evt);
             }
         });
+        btn_Salary.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                btn_SalaryMouseWheelMoved(evt);
+            }
+        });
         btn_Salary.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_SalaryMouseClicked(evt);
@@ -845,7 +850,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(Time)
                 .addGap(53, 53, 53)
                 .addComponent(date)
-                .addContainerGap(1120, Short.MAX_VALUE))
+                .addContainerGap(924, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1112,7 +1117,7 @@ public class Main extends javax.swing.JFrame {
 
         jLabel3.setBackground(new java.awt.Color(0, 51, 204));
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel3.setText("Overview");
+        jLabel3.setText("Outstanding");
         kGradientPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 200, -1, 20));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Capture.PNG"))); // NOI18N
@@ -1529,7 +1534,7 @@ public class Main extends javax.swing.JFrame {
 
         getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(1538, 705));
+        setSize(new java.awt.Dimension(1342, 705));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     int xx_119, xy_119;
@@ -1932,15 +1937,17 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         DieuChinhLuong dcl = new DieuChinhLuong();
         dcl.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
         // TODO add your handling code here:
         AddForm add = new AddForm();
         add.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void btn_SalaryMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_btn_SalaryMouseWheelMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_SalaryMouseWheelMoved
     
     private void setColor(JLabel pane){
         pane.setBackground(new Color(204,0,0));

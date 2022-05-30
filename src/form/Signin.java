@@ -5,6 +5,7 @@
  */
 package form;
 import Connect.JDBCConnection;
+import Connect.TaiKhoanDAO;
 import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -250,18 +251,13 @@ public class Signin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_formWindowOpened
         
-        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        final String Url = "jdbc:sqlserver://DESKTOP-JADGEKH\\SQLEXPRESS01:1433;databaseName=QuanLyLuongNv";
-        final String user = "sa";
-        final String pass = "39151111";
-        Statement st;
-        ResultSet rs;
+
     private void btnSignin_101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignin_101ActionPerformed
-        // TODO add your handling code here:
-        
+
+            Statement st;
+            ResultSet rs;
         try {
-            Class.forName(driver);
-            Connection con = DriverManager.getConnection(Url, user, pass);
+            Connection con = JDBCConnection.JDBCConnection();
             String sql = "select* from TaiKhoan where username = ? and pass =?";//truy vấn đến sql
             PreparedStatement ps = con.prepareCall(sql);
             ps.setString(1, txtUsername_101.getText());
