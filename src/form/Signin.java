@@ -73,29 +73,29 @@ public class Signin extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Created By  Error Sever Team");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 360, 360, 150));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 360, 150));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/—Pngtree—business staff talking and working_7256294.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 380, 360));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 380, 360));
 
         jPanel_Signin101.setBackground(new java.awt.Color(255, 255, 255));
         jPanel_Signin101.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbLogin_312.setBackground(new java.awt.Color(0, 0, 0));
-        jlbLogin_312.setFont(new java.awt.Font("Segoe UI", 0, 32)); // NOI18N
+        jlbLogin_312.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         jlbLogin_312.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlbLogin_312.setText("Sign In");
-        jPanel_Signin101.add(jlbLogin_312, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 190, 41));
+        jPanel_Signin101.add(jlbLogin_312, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 190, 41));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Hello! Let's get started");
-        jPanel_Signin101.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 420, -1));
+        jPanel_Signin101.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 380, -1));
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
@@ -104,15 +104,15 @@ public class Signin extends javax.swing.JFrame {
 
         txtUsername_101.setFont(txtUsername_101.getFont().deriveFont(txtUsername_101.getFont().getSize()+2f));
         txtUsername_101.setBorder(null);
-        jPanel_Signin101.add(txtUsername_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 140, 240, 30));
+        jPanel_Signin101.add(txtUsername_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 140, 320, 30));
 
         jLabel6.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("_________________________________________");
-        jPanel_Signin101.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 147, 290, 40));
+        jLabel6.setText("_______________________________________________");
+        jPanel_Signin101.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 147, 330, 40));
 
         jLabel_iconUser_101.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel_iconUser_101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/user_25px.png"))); // NOI18N
-        jPanel_Signin101.add(jLabel_iconUser_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 147, 40, 39));
+        jPanel_Signin101.add(jLabel_iconUser_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 40, 39));
 
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
@@ -122,11 +122,11 @@ public class Signin extends javax.swing.JFrame {
         txtPassword_101.setFont(txtPassword_101.getFont().deriveFont(txtPassword_101.getFont().getSize()+2f));
         txtPassword_101.setBorder(null);
         txtPassword_101.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel_Signin101.add(txtPassword_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 240, 30));
+        jPanel_Signin101.add(txtPassword_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 320, 30));
 
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("_________________________________________");
-        jPanel_Signin101.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 216, 290, 40));
+        jLabel9.setText("_______________________________________________");
+        jPanel_Signin101.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 216, 330, 40));
 
         disable_101.setBackground(new java.awt.Color(0, 0, 0));
         disable_101.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -137,7 +137,7 @@ public class Signin extends javax.swing.JFrame {
                 disable_101MouseClicked(evt);
             }
         });
-        jPanel_Signin101.add(disable_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 216, 40, 40));
+        jPanel_Signin101.add(disable_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 40, 40));
 
         show_101.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         show_101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/eye_25px.png"))); // NOI18N
@@ -147,13 +147,13 @@ public class Signin extends javax.swing.JFrame {
                 show_101MouseClicked(evt);
             }
         });
-        jPanel_Signin101.add(show_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 216, 40, 40));
+        jPanel_Signin101.add(show_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 40, 40));
 
         jCheckBox1.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jCheckBox1.setText("Remember Password");
         jCheckBox1.setOpaque(false);
-        jPanel_Signin101.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 261, -1, -1));
+        jPanel_Signin101.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
         jLabel11.setBackground(new java.awt.Color(0, 0, 0));
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
@@ -161,10 +161,10 @@ public class Signin extends javax.swing.JFrame {
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel11.setText("Forget Password ?");
         jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel_Signin101.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 261, 121, 27));
+        jPanel_Signin101.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 121, 27));
 
         btnSignin_101.setBackground(new java.awt.Color(255, 255, 255));
-        btnSignin_101.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnSignin_101.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnSignin_101.setForeground(new java.awt.Color(71, 120, 197));
         btnSignin_101.setText("SIGN IN");
         btnSignin_101.setBorder(null);
@@ -175,7 +175,7 @@ public class Signin extends javax.swing.JFrame {
                 btnSignin_101ActionPerformed(evt);
             }
         });
-        jPanel_Signin101.add(btnSignin_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 306, 341, 40));
+        jPanel_Signin101.add(btnSignin_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 341, 40));
 
         jlb_SignUp.setBackground(new java.awt.Color(0, 0, 0));
         jlb_SignUp.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
@@ -189,16 +189,16 @@ public class Signin extends javax.swing.JFrame {
                 jlb_SignUpMousePressed(evt);
             }
         });
-        jPanel_Signin101.add(jlb_SignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 357, 60, -1));
+        jPanel_Signin101.add(jlb_SignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 60, -1));
 
         jLabel14.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 2, 13)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(51, 51, 51));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel14.setText("Don't have an account?");
-        jPanel_Signin101.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 357, 213, -1));
+        jPanel_Signin101.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 170, -1));
 
-        jPanel1.add(jPanel_Signin101, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, 400, 460));
+        jPanel1.add(jPanel_Signin101, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 420, 460));
 
         jLabel_back_312.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel_back_312.setForeground(new java.awt.Color(255, 255, 255));
@@ -282,8 +282,8 @@ public class Signin extends javax.swing.JFrame {
     private void jlb_SignUpMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlb_SignUpMousePressed
         // TODO add your handling code here:
         Signup signup =new Signup();
-        signup.setVisible(true);//Hiển thị màn hình form ký
-        this.dispose();//thoát khỏi form đăng ký
+        signup.setVisible(true);//Hiển thị màn hình form đăng ký
+        this.dispose();//thoát khỏi form đăng nhập
     }//GEN-LAST:event_jlb_SignUpMousePressed
 
     private void jlb_SignUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlb_SignUpMouseClicked
