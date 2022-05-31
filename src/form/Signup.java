@@ -125,7 +125,7 @@ public class Signup extends javax.swing.JFrame {
                 bttdangki118ActionPerformed(evt);
             }
         });
-        jPanel3.add(bttdangki118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 290, 42));
+        jPanel3.add(bttdangki118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 342, 280, 40));
 
         txtname118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtname118.setText("Name");
@@ -161,7 +161,7 @@ public class Signup extends javax.swing.JFrame {
                 txtaddress118ActionPerformed(evt);
             }
         });
-        jPanel3.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 260, 20));
+        jPanel3.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 260, 20));
 
         txtphone118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtphone118.setText("Phone");
@@ -174,7 +174,7 @@ public class Signup extends javax.swing.JFrame {
                 txtphone118FocusLost(evt);
             }
         });
-        jPanel3.add(txtphone118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 290, 23));
+        jPanel3.add(txtphone118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 290, 23));
 
         txtemail118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtemail118.setText("Email");
@@ -187,7 +187,7 @@ public class Signup extends javax.swing.JFrame {
                 txtemail118FocusLost(evt);
             }
         });
-        jPanel3.add(txtemail118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 290, 23));
+        jPanel3.add(txtemail118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 290, 23));
 
         txtusername118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtusername118.setText("Username");
@@ -229,7 +229,7 @@ public class Signup extends javax.swing.JFrame {
                 txtconfirmpass118FocusLost(evt);
             }
         });
-        jPanel3.add(txtconfirmpass118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 182, 290, 23));
+        jPanel3.add(txtconfirmpass118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 290, 23));
 
         jSeparator1.setBackground(new java.awt.Color(0, 51, 255));
         jPanel3.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 280, -1));
@@ -247,15 +247,15 @@ public class Signup extends javax.swing.JFrame {
         jPanel3.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
 
         jSeparator6.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel3.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 280, -1));
+        jPanel3.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 280, -1));
 
         jSeparator7.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel3.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 280, -1));
+        jPanel3.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 272, 280, 10));
 
         jSeparator8.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel3.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 280, 10));
+        jPanel3.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 280, 10));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 350, 450));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 340, 420));
 
         btn_Back118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Logout_w_30px.png"))); // NOI18N
         btn_Back118.addMouseListener(new java.awt.event.MouseAdapter() {
