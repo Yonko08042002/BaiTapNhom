@@ -27,12 +27,12 @@ public class Form_1 extends javax.swing.JPanel {
         lineChart.addLegend("Expense", new Color(54, 4, 143), new Color(104, 49, 200));
         lineChart.addLegend("Profit", new Color(5, 125, 0), new Color(95, 209, 69));
         lineChart.addLegend("Cost", new Color(186, 37, 37), new Color(241, 100, 120));
-        lineChart.addData(new ModelChart("DungDU", new double[]{500, 200, 80, 89}));
-        lineChart.addData(new ModelChart("February", new double[]{600, 750, 90, 150}));
-        lineChart.addData(new ModelChart("March", new double[]{200, 350, 460, 900}));
-        lineChart.addData(new ModelChart("April", new double[]{480, 150, 750, 700}));
-        lineChart.addData(new ModelChart("May", new double[]{350, 540, 300, 150}));
-        lineChart.addData(new ModelChart("June", new double[]{190, 280, 81, 200}));
+        lineChart.addData(new ModelChart("July", new double[]{500, 200, 80, 89}));
+        lineChart.addData(new ModelChart("August", new double[]{600, 750, 90, 150}));
+        lineChart.addData(new ModelChart("September", new double[]{200, 350, 460, 900}));
+        lineChart.addData(new ModelChart("October", new double[]{480, 150, 750, 700}));
+        lineChart.addData(new ModelChart("November", new double[]{350, 540, 300, 150}));
+        lineChart.addData(new ModelChart("December", new double[]{190, 280, 81, 200}));
         lineChart.start();
         progress1.start();
         progress2.start();
