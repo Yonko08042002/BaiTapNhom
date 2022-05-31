@@ -145,6 +145,8 @@ public class Main extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         dashboardview = new javax.swing.JPanel();
         Panel1 = new javax.swing.JPanel();
+        form_11 = new com.raven.form.Form_1();
+        formHome1 = new com.raven.form.FormHome();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         Time = new javax.swing.JLabel();
@@ -833,17 +835,9 @@ public class Main extends javax.swing.JFrame {
 
         Panel1.setBackground(new java.awt.Color(0, 0, 0));
         Panel1.setPreferredSize(new java.awt.Dimension(1270, 635));
-
-        javax.swing.GroupLayout Panel1Layout = new javax.swing.GroupLayout(Panel1);
-        Panel1.setLayout(Panel1Layout);
-        Panel1Layout.setHorizontalGroup(
-            Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1099, Short.MAX_VALUE)
-        );
-        Panel1Layout.setVerticalGroup(
-            Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 635, Short.MAX_VALUE)
-        );
+        Panel1.setLayout(new java.awt.BorderLayout());
+        Panel1.add(form_11, java.awt.BorderLayout.CENTER);
+        Panel1.add(formHome1, java.awt.BorderLayout.PAGE_START);
 
         dashboardview.add(Panel1, java.awt.BorderLayout.PAGE_END);
 
@@ -2094,6 +2088,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel btn_mini119;
     private javax.swing.JPanel dashboardview;
     private javax.swing.JLabel date;
+    private com.raven.form.FormHome formHome1;
+    private com.raven.form.Form_1 form_11;
     private javax.swing.JPanel hideMenu;
     private javax.swing.JPanel home;
     private javax.swing.JLabel icontitle119;
