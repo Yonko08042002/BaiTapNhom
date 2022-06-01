@@ -361,11 +361,12 @@ public class UpdateForm extends javax.swing.JFrame {
             bk.setPosition(txtposition101.getText());
             String gt="";
             if(male118.isSelected()){
-                gt = "Male";
+                gt = "Nam";
             }
             else{
-                gt = "Female";
+                gt = "Nữ";
             }
+            bk.setSex(gt);
             qlbd.updateUser(bk);
             JOptionPane.showMessageDialog(this, "Bạn đã sửa thông tin thành công!");
             Main fm = new Main();

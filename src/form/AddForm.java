@@ -286,11 +286,12 @@ public class AddForm extends javax.swing.JFrame {
         ql.setEmail(txtemaill118.getText());
         String gt="";
         if(male118.isSelected()){
-            gt = "Male";
+            gt = "Nam";
         }
         else{
-            gt = "Female";
+            gt = "Nữ";
         }
+        ql.setSex(gt);
         boolean isOk=true;
             if(isOk){
                 new NhanVienDAO().add(ql);
