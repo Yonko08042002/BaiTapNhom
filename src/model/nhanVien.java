@@ -4,6 +4,8 @@
  */
 package model;
 
+import javax.swing.text.StyledEditorKit;
+
 
 /**
  *
@@ -21,11 +23,12 @@ public class nhanVien {
     private double luongthuong;
     private double luongcb;
     private double luongnhan;
+    private Boolean tinhtrang ;
 
     public nhanVien() {
     }
 
-    public nhanVien(String ID, String Name, String Sex, String Address, String Phone, String Email, String DateOfBirth, String Position, double luongthuong, double luongcb, double luongnhan) {
+    public nhanVien(String ID, String Name, String Sex, String Address, String Phone, String Email, String DateOfBirth, String Position, double luongthuong, double luongcb, double luongnhan,Boolean tinhtrang) {
         this.ID = ID;
         this.Name = Name;
         this.Sex = Sex;
@@ -37,6 +40,15 @@ public class nhanVien {
         this.luongcb = luongcb;
         this.luongnhan = luongnhan;
         this.luongthuong = luongthuong;
+        this.tinhtrang=tinhtrang;
+    }
+
+    public Boolean getTinhtrang() {
+        return tinhtrang;
+    }
+
+    public void setTinhtrang(Boolean tinhtrang) {
+        this.tinhtrang = tinhtrang;
     }
 
     public double getLuongthuong() {

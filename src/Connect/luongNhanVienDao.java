@@ -34,6 +34,7 @@ public class luongNhanVienDao {
                 tl.setEmail(rs.getString("email"));
                 tl.setLuongcb(rs.getDouble("luongcoban"));
                 tl.setLuongthuong(rs.getDouble("luongthuong"));
+                tl.setTinhtrang(rs.getBoolean("tinhtrang"));
                 tl.setLuongnhan(rs.getDouble("luongNhan"));
                 ltl.add(tl);
             }
@@ -60,8 +61,8 @@ public class luongNhanVienDao {
     }
     public void add(nhanVien tl){
      Connection connection = JDBCConnection.JDBCConnection();          
-            String sql = "INSERT INTO AddNhanVien (id, ten, chucVu, email, luongcoban, luongthuong) "
-                    + "values (?,?,?,?,?,?) ";            
+            String sql = "INSERT INTO AddNhanVien (id, ten, chucVu, email, luongcoban, luongthuong,tinhtrang) "
+                    + "values (?,?,?,?,?,?,?) ";            
             try {
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setString(1, tl.getID());
@@ -69,7 +70,8 @@ public class luongNhanVienDao {
                 preparedStatement.setString(3, tl.getPosition());
                 preparedStatement.setString(4, tl.getEmail());
                 preparedStatement.setDouble(5, tl.getLuongcb());
-                preparedStatement.setDouble(6, tl.getLuongthuong());                
+                preparedStatement.setDouble(6, tl.getLuongthuong()); 
+                preparedStatement.setBoolean(7, tl.getTinhtrang());
 //                int rs = preparedStatement.executeUpdate();
 //                System.out.println(rs);
                 preparedStatement.execute();
@@ -81,15 +83,16 @@ public class luongNhanVienDao {
     //
     public int updateUser(nhanVien tl){
         Connection connection = JDBCConnection.JDBCConnection();
-        String sql = "Update AddNhanVien set ten = ? , chucVu = ? , email = ? , luongcoban = ? , luongthuong = ? where id = ? ";
+        String sql = "Update AddNhanVien set ten = ? , chucVu = ? , email = ? , luongcoban = ? , luongthuong = ? ,tinhtrang=? where id = ? ";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(6, tl.getID());
+            preparedStatement.setString(7, tl.getID());
             preparedStatement.setString(1, tl.getName());
             preparedStatement.setString(2, tl.getPosition());
             preparedStatement.setString(3, tl.getEmail());
             preparedStatement.setDouble(4, tl.getLuongcb());
-            preparedStatement.setDouble(5, tl.getLuongthuong());          
+            preparedStatement.setDouble(5, tl.getLuongthuong());   
+            preparedStatement.setBoolean(6, tl.getTinhtrang()); 
             if(preparedStatement.executeUpdate()>0){
                 System.out.println("Update thành công!");
                 return 1;
@@ -129,6 +132,7 @@ public class luongNhanVienDao {
                 tl.setLuongcb(rs.getDouble("luongcoban"));
                 tl.setLuongthuong(rs.getDouble("luongthuong"));
                 tl.setLuongnhan(rs.getDouble("luongNhan"));
+                tl.setTinhtrang(rs.getBoolean("tinhtrang"));
                 ql.add(tl);
             }
         } catch (Exception e) {
@@ -152,6 +156,7 @@ public class luongNhanVienDao {
                 tl.setLuongcb(rs.getDouble("luongcoban"));
                 tl.setLuongthuong(rs.getDouble("luongthuong"));
                 tl.setLuongnhan(rs.getDouble("luongNhan"));
+                tl.setTinhtrang(rs.getBoolean("tinhtrang"));
             }
         } catch (Exception e) {
             e.printStackTrace();

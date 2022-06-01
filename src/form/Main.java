@@ -7,10 +7,14 @@ package form;
 import Connect.NhanVienDAO;
 import Service.Service;
 import java.awt.Color;
+import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -844,6 +848,11 @@ public class Main extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Email");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
         kGradientPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 565, 200, 55));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
@@ -885,7 +894,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(date)
                 .addGap(540, 540, 540)
                 .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(351, Short.MAX_VALUE))
+                .addContainerGap(323, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1771,7 +1780,7 @@ public class Main extends javax.swing.JFrame {
 
         getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(1349, 705));
+        setSize(new java.awt.Dimension(1321, 705));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     int xx_119, xy_119;
@@ -1912,6 +1921,11 @@ public class Main extends javax.swing.JFrame {
     private void btn_EmailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EmailMouseClicked
         // TODO add your handling code here:
 //        clickmenu(Email,Calender, 1);
+            try {
+                    Desktop.getDesktop().browse(new URI("https://www.google.com/intl/vi/gmail/about/"));
+                } catch (IOException | URISyntaxException e1) {
+                    e1.printStackTrace();
+                }
     }//GEN-LAST:event_btn_EmailMouseClicked
 
     private void btn_EmailMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EmailMouseEntered
@@ -1942,6 +1956,23 @@ public class Main extends javax.swing.JFrame {
     private void btn_SearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SearchMouseClicked
         // TODO add your handling code here:
 //        clickmenu(Search,add, 1);
+        Panel1.setVisible(false);
+        Panel3.setVisible(true);
+         clickmenu(hideMenu, home, 1);
+        // create  void  for  methode hide and show panel menu
+        //(tạo khoảng trống cho menu bảng điều khiển ẩn và hiện methode)
+        if(a==true){
+          hideshow(menu, a, btn_Hidemenu);
+          SwingUtilities.updateComponentTreeUI(this);
+          //create methode change image
+          
+          a=false;
+        }
+        else{
+//            hideshow(menu, a, btn_Hidemenu);
+//            SwingUtilities.updateComponentTreeUI(this);
+            a=true;
+        }
     }//GEN-LAST:event_btn_SearchMouseClicked
 
     private void btn_SearchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SearchMouseEntered
@@ -2122,7 +2153,9 @@ public class Main extends javax.swing.JFrame {
 
     private void txt_searchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_searchMouseClicked
         // TODO add your handling code here:
-          clickmenu(hideMenu, home, 1);
+         Panel1.setVisible(false);
+        Panel3.setVisible(true);
+         clickmenu(hideMenu, home, 1);
         // create  void  for  methode hide and show panel menu
         //(tạo khoảng trống cho menu bảng điều khiển ẩn và hiện methode)
         if(a==true){
@@ -2133,8 +2166,8 @@ public class Main extends javax.swing.JFrame {
           a=false;
         }
         else{
-            hideshow(menu, a, btn_Hidemenu);
-            SwingUtilities.updateComponentTreeUI(this);
+//            hideshow(menu, a, btn_Hidemenu);
+//            SwingUtilities.updateComponentTreeUI(this);
             a=true;
         }
     }//GEN-LAST:event_txt_searchMouseClicked
@@ -2197,6 +2230,15 @@ public class Main extends javax.swing.JFrame {
         jTextField_search.setText("");
          showTable();
     }//GEN-LAST:event_jTextField_searchMouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        // TODO add your handling code here:
+         try {
+                    Desktop.getDesktop().browse(new URI("https://www.google.com/intl/vi/gmail/about/"));
+                } catch (IOException | URISyntaxException e1) {
+                    e1.printStackTrace();
+                }
+    }//GEN-LAST:event_jLabel7MouseClicked
     
     private void setColor(JLabel pane){
         pane.setBackground(new Color(204,0,0));

@@ -61,6 +61,7 @@ public class DieuChinhLuong extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -85,6 +86,9 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        chuaNhan312 = new javax.swing.JRadioButton();
+        daNhan312 = new javax.swing.JRadioButton();
         kGradientPanel1 = new com.k33ptoo.components.KGradientPanel();
         jLabel1 = new javax.swing.JLabel();
         btn_Exit = new com.k33ptoo.components.KButton();
@@ -136,8 +140,8 @@ public class DieuChinhLuong extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel7.setText("Lương thưởng:");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 75, -1, -1));
+        jLabel7.setText("Nhận Lương:");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, -1, -1));
 
         cbo_ChucVu.setBackground(new java.awt.Color(204, 255, 255));
         cbo_ChucVu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { ".", "Trưởng phòng", "Nhân Viên", "Giám đốc", "Chủ tịch", " ", " ", " ", " " }));
@@ -162,15 +166,23 @@ public class DieuChinhLuong extends javax.swing.JFrame {
 
         tb_Luong312.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Họ tên", "Chức vụ", "Email", "Lương cơ bản", "Lương thưởng", "Lương được nhận"
+                "ID", "Họ tên", "Chức vụ", "Email", "Lương cơ bản", "Lương thưởng", "Lương được nhận", "Đã Nhận"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         tb_Luong312.setIntercellSpacing(new java.awt.Dimension(0, 0));
         tb_Luong312.setRowHeight(25);
         tb_Luong312.setSelectionBackground(new java.awt.Color(102, 204, 255));
@@ -191,16 +203,32 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         jPanel2.add(cbo_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 30, 107, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Money Bag Pounds_100px.png"))); // NOI18N
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, -1, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, -1, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Money Bag Pounds_100px.png"))); // NOI18N
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, -1, -1));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 70, -1, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Money Bag Pounds_100px.png"))); // NOI18N
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 30, -1, -1));
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, -1, -1));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Money Bag Pounds_100px.png"))); // NOI18N
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 70, -1, -1));
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 70, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel13.setText("Lương thưởng:");
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 75, -1, -1));
+
+        chuaNhan312.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(chuaNhan312);
+        chuaNhan312.setText("Chưa Nhận");
+        jPanel2.add(chuaNhan312, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, -1, -1));
+
+        daNhan312.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(daNhan312);
+        daNhan312.setText("Đã Nhận");
+        daNhan312.setDoubleBuffered(true);
+        jPanel2.add(daNhan312, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 74, 750, 380));
 
@@ -266,6 +294,16 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         jTextField_tk.addCaretListener(new javax.swing.event.CaretListener() {
             public void caretUpdate(javax.swing.event.CaretEvent evt) {
                 jTextField_tkCaretUpdate(evt);
+            }
+        });
+        jTextField_tk.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField_tkMouseClicked(evt);
+            }
+        });
+        jTextField_tk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField_tkActionPerformed(evt);
             }
         });
 
@@ -369,7 +407,7 @@ public class DieuChinhLuong extends javax.swing.JFrame {
             bk.setEmail(txt_Email.getText());
             bk.setLuongcb(Double.parseDouble(txt_LuongCoBan.getText()));
             bk.setLuongthuong(Double.parseDouble(txt_LuongThuong.getText()));
-
+            bk.setTinhtrang(daNhan312.isSelected());
             qlbd.updateUser(bk);
             showTable();
             JOptionPane.showMessageDialog(this, "Bạn đã sửa thông tin thành công!");
@@ -391,12 +429,12 @@ public class DieuChinhLuong extends javax.swing.JFrame {
             model.setRowCount(0);
             for(nhanVien qly : ql){
             model.addRow(new Object[]{
-                qly.getID(), qly.getName(), qly.getPosition(), qly.getEmail(), qly.getLuongcb(), qly.getLuongthuong(), qly.getLuongnhan()
+                qly.getID(), qly.getName(), qly.getPosition(), qly.getEmail(), qly.getLuongcb(), qly.getLuongthuong(), qly.getLuongnhan(),qly.getTinhtrang()
                 });
             }
         }else{
             jTextField_tk.setText("");
-             showTable();
+            showTable();
         }
     }//GEN-LAST:event_btn_searchActionPerformed
 
@@ -408,6 +446,8 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         txt_LuongCoBan.setText("");
         txt_LuongThuong.setText("");
         jTextField_tk.setText("");
+        daNhan312.setSelected(false);
+        daNhan312.setSelected(false);
 //       showTable();  
     }//GEN-LAST:event_btn_refreshActionPerformed
 
@@ -420,6 +460,7 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         txt_Email.setText(nv.getEmail());
         txt_LuongCoBan.setText(String.valueOf(nv.getLuongcb()));
         txt_LuongThuong.setText(String.valueOf(nv.getLuongthuong()));
+        
     }//GEN-LAST:event_cbo_idActionPerformed
 
     private void jTextField_tkCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_jTextField_tkCaretUpdate
@@ -440,6 +481,16 @@ public class DieuChinhLuong extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_formWindowOpened
+
+    private void jTextField_tkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_tkActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jTextField_tkActionPerformed
+
+    private void jTextField_tkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_tkMouseClicked
+        // TODO add your handling code here:
+        jTextField_tk.setText("");
+    }//GEN-LAST:event_jTextField_tkMouseClicked
 
     /**
      * @param args the command line arguments
@@ -483,12 +534,16 @@ public class DieuChinhLuong extends javax.swing.JFrame {
     private com.k33ptoo.components.KButton btn_Exit;
     private com.k33ptoo.components.KButton btn_refresh;
     private com.k33ptoo.components.KButton btn_search;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cbo_ChucVu;
     private javax.swing.JComboBox<String> cbo_id;
+    private javax.swing.JRadioButton chuaNhan312;
+    private javax.swing.JRadioButton daNhan312;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -517,7 +572,7 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         model.setRowCount(0);
         for(nhanVien qly : ql){
             model.addRow(new Object[]{
-                qly.getID(), qly.getName(), qly.getPosition(), qly.getEmail(), qly.getLuongcb(), qly.getLuongthuong(), qly.getLuongnhan()
+                qly.getID(), qly.getName(), qly.getPosition(), qly.getEmail(), qly.getLuongcb(), qly.getLuongthuong(), qly.getLuongnhan(),qly.getTinhtrang()
             });
         }
     }
