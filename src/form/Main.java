@@ -96,7 +96,7 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Header = new javax.swing.JPanel();
+        Header_119 = new javax.swing.JPanel();
         iocnMinMaxClose_119 = new javax.swing.JPanel();
         btn_mini119 = new javax.swing.JLabel();
         btn_maximus119 = new javax.swing.JLabel();
@@ -148,7 +148,7 @@ public class Main extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         dashboardview_119 = new javax.swing.JPanel();
-        Panel3 = new keeptoo.KGradientPanel();
+        HomeForm119 = new keeptoo.KGradientPanel();
         kGradientPanel9 = new keeptoo.KGradientPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -242,10 +242,10 @@ public class Main extends javax.swing.JFrame {
         jPanel40 = new javax.swing.JPanel();
         jLabel54 = new javax.swing.JLabel();
         jLabel55 = new javax.swing.JLabel();
-        Panel1 = new javax.swing.JPanel();
+        ChartForm119 = new javax.swing.JPanel();
         form_11 = new com.raven.form.Form_1();
         formHome1 = new com.raven.form.FormHome();
-        jPanel1 = new javax.swing.JPanel();
+        headerForm119 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         Time = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
@@ -259,22 +259,22 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        Header.setBackground(new java.awt.Color(102, 102, 102));
-        Header.setPreferredSize(new java.awt.Dimension(800, 30));
-        Header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        Header_119.setBackground(new java.awt.Color(102, 102, 102));
+        Header_119.setPreferredSize(new java.awt.Dimension(800, 30));
+        Header_119.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
-                HeaderMouseDragged(evt);
+                Header_119MouseDragged(evt);
             }
         });
-        Header.addMouseListener(new java.awt.event.MouseAdapter() {
+        Header_119.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                HeaderMouseClicked(evt);
+                Header_119MouseClicked(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                HeaderMousePressed(evt);
+                Header_119MousePressed(evt);
             }
         });
-        Header.setLayout(new java.awt.BorderLayout());
+        Header_119.setLayout(new java.awt.BorderLayout());
 
         iocnMinMaxClose_119.setBackground(new java.awt.Color(102, 102, 102));
         iocnMinMaxClose_119.setPreferredSize(new java.awt.Dimension(80, 50));
@@ -303,7 +303,7 @@ public class Main extends javax.swing.JFrame {
         });
         iocnMinMaxClose_119.add(btn_close119);
 
-        Header.add(iocnMinMaxClose_119, java.awt.BorderLayout.LINE_END);
+        Header_119.add(iocnMinMaxClose_119, java.awt.BorderLayout.LINE_END);
 
         title_header119.setBackground(new java.awt.Color(102, 102, 102));
         title_header119.setPreferredSize(new java.awt.Dimension(150, 30));
@@ -316,9 +316,9 @@ public class Main extends javax.swing.JFrame {
         title119.setText("Quản lý Nhân viên");
         title_header119.add(title119);
 
-        Header.add(title_header119, java.awt.BorderLayout.LINE_START);
+        Header_119.add(title_header119, java.awt.BorderLayout.LINE_START);
 
-        getContentPane().add(Header, java.awt.BorderLayout.PAGE_START);
+        getContentPane().add(Header_119, java.awt.BorderLayout.PAGE_START);
 
         menu_119.setPreferredSize(new java.awt.Dimension(250, 450));
         menu_119.setLayout(new java.awt.BorderLayout());
@@ -880,10 +880,10 @@ public class Main extends javax.swing.JFrame {
         dashboardview_119.setBackground(new java.awt.Color(255, 102, 102));
         dashboardview_119.setLayout(new java.awt.BorderLayout());
 
-        Panel3.setToolTipText("");
-        Panel3.setkEndColor(new java.awt.Color(202, 240, 248));
-        Panel3.setkStartColor(new java.awt.Color(202, 240, 248));
-        Panel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        HomeForm119.setToolTipText("");
+        HomeForm119.setkEndColor(new java.awt.Color(202, 240, 248));
+        HomeForm119.setkStartColor(new java.awt.Color(202, 240, 248));
+        HomeForm119.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         kGradientPanel9.setkEndColor(new java.awt.Color(255, 204, 102));
         kGradientPanel9.setkGradientFocus(400);
@@ -937,7 +937,7 @@ public class Main extends javax.swing.JFrame {
         jLabel18.setText("52%");
         kGradientPanel9.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 30, 20));
 
-        Panel3.add(kGradientPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 50, 309, 143));
+        HomeForm119.add(kGradientPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 50, 309, 143));
 
         kGradientPanel10.setkEndColor(new java.awt.Color(255, 153, 255));
         kGradientPanel10.setkStartColor(new java.awt.Color(204, 51, 255));
@@ -990,7 +990,7 @@ public class Main extends javax.swing.JFrame {
         jLabel22.setText("20%");
         kGradientPanel10.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 30, 20));
 
-        Panel3.add(kGradientPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 310, 143));
+        HomeForm119.add(kGradientPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 310, 143));
 
         kGradientPanel15.setkEndColor(new java.awt.Color(153, 255, 153));
         kGradientPanel15.setkGradientFocus(400);
@@ -1044,7 +1044,7 @@ public class Main extends javax.swing.JFrame {
         jLabel26.setText("65%");
         kGradientPanel15.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 30, 20));
 
-        Panel3.add(kGradientPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, 309, 143));
+        HomeForm119.add(kGradientPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, 309, 143));
 
         qlthongtin.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1066,7 +1066,7 @@ public class Main extends javax.swing.JFrame {
         qlthongtin.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(qlthongtin);
 
-        Panel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 670, 380));
+        HomeForm119.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 670, 380));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1081,7 +1081,7 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Panel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 950, 5));
+        HomeForm119.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 950, 5));
 
         jPanel3.setBackground(new java.awt.Color(0, 102, 255));
 
@@ -1096,7 +1096,7 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Panel3.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 80, 5));
+        HomeForm119.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 80, 5));
 
         jPanel10.setBackground(new java.awt.Color(0, 102, 255));
 
@@ -1111,7 +1111,7 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Panel3.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 150, 5));
+        HomeForm119.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 150, 5));
 
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1126,15 +1126,15 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Panel3.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 550, 5));
+        HomeForm119.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 550, 5));
 
         jLabel3.setBackground(new java.awt.Color(0, 51, 204));
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel3.setText("Outstanding");
-        Panel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 200, -1, 20));
+        HomeForm119.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 200, -1, 20));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Capture.PNG"))); // NOI18N
-        Panel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 440, 240, 180));
+        HomeForm119.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 440, 240, 180));
 
         jPanel13.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1149,12 +1149,12 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Panel3.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 220, 250, 5));
+        HomeForm119.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 220, 250, 5));
 
         jLabel4.setBackground(new java.awt.Color(0, 51, 204));
         jLabel4.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel4.setText("Employees Information");
-        Panel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, 20));
+        HomeForm119.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, 20));
 
         jPanel14.setBackground(new java.awt.Color(255, 255, 255));
         jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1414,12 +1414,12 @@ public class Main extends javax.swing.JFrame {
 
         jPanel14.add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 110, 5));
 
-        Panel3.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 240, 310, 200));
+        HomeForm119.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 240, 310, 200));
 
         jLabel8.setBackground(new java.awt.Color(0, 51, 204));
         jLabel8.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel8.setText("Statistics");
-        Panel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 200, -1, 20));
+        HomeForm119.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 200, -1, 20));
 
         jPanel15.setBackground(new java.awt.Color(0, 102, 255));
 
@@ -1434,12 +1434,12 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Panel3.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 220, 60, 5));
+        HomeForm119.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 220, 60, 5));
 
         jLabel10.setBackground(new java.awt.Color(0, 51, 204));
         jLabel10.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel10.setText("Home/View");
-        Panel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 20));
+        HomeForm119.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 20));
 
         jPanel31.setBackground(new java.awt.Color(0, 102, 255));
 
@@ -1454,7 +1454,7 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Panel3.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 220, 60, 5));
+        HomeForm119.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 220, 60, 5));
 
         jPanel32.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1469,7 +1469,7 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Panel3.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 220, 100, 5));
+        HomeForm119.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 220, 100, 5));
 
         jTextField_search.addCaretListener(new javax.swing.event.CaretListener() {
             public void caretUpdate(javax.swing.event.CaretEvent evt) {
@@ -1486,7 +1486,7 @@ public class Main extends javax.swing.JFrame {
                 jTextField_searchActionPerformed(evt);
             }
         });
-        Panel3.add(jTextField_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 50, 170, 30));
+        HomeForm119.add(jTextField_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 50, 170, 30));
 
         kButton_search.setText("Search");
         kButton_search.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1501,12 +1501,12 @@ public class Main extends javax.swing.JFrame {
                 kButton_searchActionPerformed(evt);
             }
         });
-        Panel3.add(kButton_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 100, 150, 40));
+        HomeForm119.add(kButton_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 100, 150, 40));
 
         jLabel31.setBackground(new java.awt.Color(0, 51, 204));
         jLabel31.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel31.setText("Manage");
-        Panel3.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 10, -1, 20));
+        HomeForm119.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 10, -1, 20));
 
         jPanel33.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1521,7 +1521,7 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Panel3.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 30, 110, 5));
+        HomeForm119.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 30, 110, 5));
 
         jPanel34.setBackground(new java.awt.Color(0, 102, 255));
 
@@ -1536,7 +1536,7 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Panel3.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 30, 60, 5));
+        HomeForm119.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 30, 60, 5));
 
         kButton_remove.setText("Remove");
         kButton_remove.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1551,7 +1551,7 @@ public class Main extends javax.swing.JFrame {
                 kButton_removeActionPerformed(evt);
             }
         });
-        Panel3.add(kButton_remove, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 150, 150, 40));
+        HomeForm119.add(kButton_remove, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 150, 150, 40));
 
         jPanel35.setBackground(new java.awt.Color(237, 245, 251));
         jPanel35.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1580,7 +1580,7 @@ public class Main extends javax.swing.JFrame {
         jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/rain_35px.png"))); // NOI18N
         jPanel35.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 15, 40, 60));
 
-        Panel3.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 350, 100, 90));
+        HomeForm119.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 350, 100, 90));
 
         jPanel36.setBackground(new java.awt.Color(237, 245, 251));
 
@@ -1612,7 +1612,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(0, 6, Short.MAX_VALUE))
         );
 
-        Panel3.add(jPanel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 240, 200, 90));
+        HomeForm119.add(jPanel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 240, 200, 90));
 
         jPanel37.setBackground(new java.awt.Color(237, 245, 251));
         jPanel37.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1628,7 +1628,7 @@ public class Main extends javax.swing.JFrame {
         jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/mail_40px.png"))); // NOI18N
         jPanel37.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
-        Panel3.add(jPanel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 350, 90, 90));
+        HomeForm119.add(jPanel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 350, 90, 90));
 
         jPanel38.setBackground(new java.awt.Color(237, 245, 251));
 
@@ -1657,7 +1657,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(7, 7, 7))
         );
 
-        Panel3.add(jPanel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 450, 90, 90));
+        HomeForm119.add(jPanel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 450, 90, 90));
 
         jPanel39.setBackground(new java.awt.Color(237, 245, 251));
 
@@ -1717,7 +1717,7 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        Panel3.add(jPanel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 450, 100, 90));
+        HomeForm119.add(jPanel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 450, 100, 90));
 
         jPanel40.setBackground(new java.awt.Color(237, 245, 251));
         jPanel40.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1729,20 +1729,20 @@ public class Main extends javax.swing.JFrame {
         jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/chrome_35px.png"))); // NOI18N
         jPanel40.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 0, 46, 45));
 
-        Panel3.add(jPanel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 550, 80, 60));
+        HomeForm119.add(jPanel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 550, 80, 60));
 
-        dashboardview_119.add(Panel3, java.awt.BorderLayout.CENTER);
+        dashboardview_119.add(HomeForm119, java.awt.BorderLayout.CENTER);
 
-        Panel1.setBackground(new java.awt.Color(0, 0, 0));
-        Panel1.setPreferredSize(new java.awt.Dimension(1270, 635));
-        Panel1.setLayout(new java.awt.BorderLayout());
-        Panel1.add(form_11, java.awt.BorderLayout.CENTER);
-        Panel1.add(formHome1, java.awt.BorderLayout.PAGE_START);
+        ChartForm119.setBackground(new java.awt.Color(0, 0, 0));
+        ChartForm119.setPreferredSize(new java.awt.Dimension(1270, 635));
+        ChartForm119.setLayout(new java.awt.BorderLayout());
+        ChartForm119.add(form_11, java.awt.BorderLayout.CENTER);
+        ChartForm119.add(formHome1, java.awt.BorderLayout.PAGE_START);
 
-        dashboardview_119.add(Panel1, java.awt.BorderLayout.PAGE_END);
+        dashboardview_119.add(ChartForm119, java.awt.BorderLayout.PAGE_END);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(929, 40));
+        headerForm119.setBackground(new java.awt.Color(255, 255, 255));
+        headerForm119.setPreferredSize(new java.awt.Dimension(929, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/clock_30px.png"))); // NOI18N
 
@@ -1752,11 +1752,11 @@ public class Main extends javax.swing.JFrame {
         date.setFont(new java.awt.Font("Script MT Bold", 0, 14)); // NOI18N
         date.setText("Date");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout headerForm119Layout = new javax.swing.GroupLayout(headerForm119);
+        headerForm119.setLayout(headerForm119Layout);
+        headerForm119Layout.setHorizontalGroup(
+            headerForm119Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerForm119Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1767,26 +1767,26 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(323, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+        headerForm119Layout.setVerticalGroup(
+            headerForm119Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerForm119Layout.createSequentialGroup()
+                .addGroup(headerForm119Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, headerForm119Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(headerForm119Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(headerForm119Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(headerForm119Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(Time)
                                     .addComponent(date)))
                             .addComponent(jLabel32)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, headerForm119Layout.createSequentialGroup()
                         .addGap(4, 4, 4)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
-        dashboardview_119.add(jPanel1, java.awt.BorderLayout.PAGE_START);
+        dashboardview_119.add(headerForm119, java.awt.BorderLayout.PAGE_START);
 
         getContentPane().add(dashboardview_119, java.awt.BorderLayout.CENTER);
 
@@ -1872,20 +1872,20 @@ public class Main extends javax.swing.JFrame {
         Main.this.setState(JFrame.ICONIFIED);
     }//GEN-LAST:event_btn_mini119MousePressed
 
-    private void HeaderMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HeaderMousePressed
+    private void Header_119MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Header_119MousePressed
         // TODO add your handling code here:
         xx_119 = evt.getX();
         xy_119 = evt.getY();
-    }//GEN-LAST:event_HeaderMousePressed
+    }//GEN-LAST:event_Header_119MousePressed
 
-    private void HeaderMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HeaderMouseDragged
+    private void Header_119MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Header_119MouseDragged
         // TODO add your handling code here:
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
         this.setLocation(x-xx_119, y-xy_119);
-    }//GEN-LAST:event_HeaderMouseDragged
+    }//GEN-LAST:event_Header_119MouseDragged
 
-    private void HeaderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HeaderMouseClicked
+    private void Header_119MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Header_119MouseClicked
         // TODO add your handling code here:
         if(evt.getClickCount()==2 && !evt.isConsumed()){
             if(Main.this.getExtendedState() == MAXIMIZED_BOTH){
@@ -1895,7 +1895,7 @@ public class Main extends javax.swing.JFrame {
                 Main.this.setExtendedState(WIDTH);
             }
         }
-    }//GEN-LAST:event_HeaderMouseClicked
+    }//GEN-LAST:event_Header_119MouseClicked
 
     private void btn_addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_addMouseClicked
         AddForm fm = new AddForm();
@@ -1966,8 +1966,8 @@ public class Main extends javax.swing.JFrame {
     private void btn_SearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SearchMouseClicked
         // TODO add your handling code here:
 //        clickmenu(Search,add, 1);
-        Panel1.setVisible(false);
-        Panel3.setVisible(true);
+        ChartForm119.setVisible(false);
+        HomeForm119.setVisible(true);
          clickmenu(hideMenu, home, 1);
         // create  void  for  methode hide and show panel menu
         //(tạo khoảng trống cho menu bảng điều khiển ẩn và hiện methode)
@@ -2027,7 +2027,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_SalaryMouseExited
 
     private void btn_RemoveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RemoveMouseClicked
-        Panel1.setVisible(true);
+        ChartForm119.setVisible(true);
         
     }//GEN-LAST:event_btn_RemoveMouseClicked
 
@@ -2051,8 +2051,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_HomeMouseEntered
 
     private void btn_HomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HomeMouseClicked
-        Panel1.setVisible(false);
-        Panel3.setVisible(true);
+        ChartForm119.setVisible(false);
+        HomeForm119.setVisible(true);
     }//GEN-LAST:event_btn_HomeMouseClicked
 
     private void hideMenuMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hideMenuMouseMoved
@@ -2163,8 +2163,8 @@ public class Main extends javax.swing.JFrame {
 
     private void txt_searchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_searchMouseClicked
         // TODO add your handling code here:
-         Panel1.setVisible(false);
-        Panel3.setVisible(true);
+         ChartForm119.setVisible(false);
+        HomeForm119.setVisible(true);
          clickmenu(hideMenu, home, 1);
         // create  void  for  methode hide and show panel menu
         //(tạo khoảng trống cho menu bảng điều khiển ẩn và hiện methode)
@@ -2258,8 +2258,8 @@ public class Main extends javax.swing.JFrame {
 
     private void txt_homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_homeMouseClicked
         // TODO add your handling code here:
-        Panel1.setVisible(false);
-        Panel3.setVisible(true);
+        ChartForm119.setVisible(false);
+        HomeForm119.setVisible(true);
         
     }//GEN-LAST:event_txt_homeMouseClicked
     
@@ -2312,12 +2312,12 @@ public class Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Calender;
     private javax.swing.JPanel Chart;
+    private javax.swing.JPanel ChartForm119;
     private javax.swing.JPanel Edit;
     private javax.swing.JPanel Email;
-    private javax.swing.JPanel Header;
+    private javax.swing.JPanel Header_119;
+    private keeptoo.KGradientPanel HomeForm119;
     private javax.swing.JPanel MenuIcon;
-    private javax.swing.JPanel Panel1;
-    private keeptoo.KGradientPanel Panel3;
     private javax.swing.JPanel Salary;
     private javax.swing.JPanel Search;
     private javax.swing.JLabel Time;
@@ -2339,6 +2339,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel date;
     private com.raven.form.FormHome formHome1;
     private com.raven.form.Form_1 form_11;
+    private javax.swing.JPanel headerForm119;
     private javax.swing.JPanel hideMenu;
     private javax.swing.JPanel home;
     private javax.swing.JLabel icontitle119;
@@ -2397,7 +2398,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
