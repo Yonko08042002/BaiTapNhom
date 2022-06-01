@@ -8,7 +8,7 @@ package model;
  *
  * @author DELL
  */
-public class taiKhoan {
+public class taiKhoan_118_101 {
     private String Name;
     private String Username;
     private String Pass;
@@ -17,10 +17,10 @@ public class taiKhoan {
     private String Phone;
     private String Email;
 
-    public taiKhoan() {
+    public taiKhoan_118_101() {
     }
 
-    public taiKhoan(String Name, String Username, String Pass, String Confirmpassword, String Address, String Phone, String Email) {
+    public taiKhoan_118_101(String Name, String Username, String Pass, String Confirmpassword, String Address, String Phone, String Email) {
         this.Name = Name;
         this.Username = Username;
         this.Pass = Pass;

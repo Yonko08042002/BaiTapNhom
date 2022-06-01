@@ -4,9 +4,11 @@
  */
 package form;
 
-import Connect.NhanVienDAO;
+import Connect.NhanVienDAO_312;
+import java.util.List;
 import javax.swing.JOptionPane;
-import model.nhanVien;
+import javax.swing.table.DefaultTableModel;
+import model.nhanVien_312;
 
 /**
  *
@@ -17,6 +19,9 @@ public class AddForm extends javax.swing.JFrame {
     /**
      * Creates new form AddForm
      */
+    private List<nhanVien_312> ql;
+    private DefaultTableModel model;
+    
     public AddForm() {
         initComponents();
     }
@@ -31,9 +36,9 @@ public class AddForm extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        kGradientPanel2 = new com.k33ptoo.components.KGradientPanel();
+        formChinh_118 = new com.k33ptoo.components.KGradientPanel();
         jLabel2 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        formMin_118 = new javax.swing.JPanel();
         female118 = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -72,79 +77,77 @@ public class AddForm extends javax.swing.JFrame {
             }
         });
 
-        kGradientPanel2.setkEndColor(new java.awt.Color(153, 255, 255));
-        kGradientPanel2.setkStartColor(new java.awt.Color(105, 48, 195));
+        formChinh_118.setkEndColor(new java.awt.Color(153, 255, 255));
+        formChinh_118.setkStartColor(new java.awt.Color(105, 48, 195));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Add");
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        formMin_118.setBackground(new java.awt.Color(255, 255, 255));
+        formMin_118.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         female118.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(female118);
-        female118.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         female118.setForeground(new java.awt.Color(3, 37, 108));
         female118.setText("Female");
-        jPanel1.add(female118, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, -1));
+        formMin_118.add(female118, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(3, 37, 108));
         jLabel5.setText("Address :");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
+        formMin_118.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(3, 37, 108));
         jLabel6.setText("Phone :");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+        formMin_118.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(3, 37, 108));
         jLabel7.setText("Email :");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
+        formMin_118.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(3, 37, 108));
         jLabel8.setText("Date of Birth :");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, -1, -1));
+        formMin_118.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(3, 37, 108));
         jLabel9.setText("Position :");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, -1, -1));
+        formMin_118.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(3, 37, 108));
         jLabel1.setText("ID :");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 50, -1));
+        formMin_118.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 50, -1));
 
         txtid118.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtid118.setForeground(new java.awt.Color(0, 48, 73));
         txtid118.setBorder(null);
-        jPanel1.add(txtid118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 311, 30));
+        formMin_118.add(txtid118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 311, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(3, 37, 108));
         jLabel3.setText("Name :");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
+        formMin_118.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
 
         txtname118.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtname118.setForeground(new java.awt.Color(0, 48, 73));
         txtname118.setBorder(null);
-        jPanel1.add(txtname118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 310, 30));
+        formMin_118.add(txtname118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 310, 30));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(3, 37, 108));
         jLabel4.setText("Sex :");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 41, -1));
+        formMin_118.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 41, -1));
 
         male118.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(male118);
-        male118.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         male118.setForeground(new java.awt.Color(3, 37, 108));
         male118.setText("Male");
-        jPanel1.add(male118, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, -1, -1));
+        formMin_118.add(male118, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, -1, -1));
 
         btadd118.setText("ADD");
         btadd118.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -157,53 +160,53 @@ public class AddForm extends javax.swing.JFrame {
                 btadd118ActionPerformed(evt);
             }
         });
-        jPanel1.add(btadd118, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 560, 231, -1));
+        formMin_118.add(btadd118, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 560, 231, -1));
 
         jSeparator1.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 72, 310, 10));
+        formMin_118.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 72, 310, 10));
 
         jSeparator2.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 310, 10));
+        formMin_118.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 310, 10));
 
         jSeparator8.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 310, 10));
+        formMin_118.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 310, 10));
 
         txtaddress118.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtaddress118.setForeground(new java.awt.Color(0, 48, 73));
         txtaddress118.setBorder(null);
-        jPanel1.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 310, 25));
+        formMin_118.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 310, 25));
 
         jSeparator9.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 310, 10));
+        formMin_118.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 310, 10));
 
         txtphone118.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtphone118.setForeground(new java.awt.Color(0, 48, 73));
         txtphone118.setBorder(null);
-        jPanel1.add(txtphone118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 310, 30));
+        formMin_118.add(txtphone118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 310, 30));
 
         jSeparator10.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 310, 10));
+        formMin_118.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 310, 10));
 
         txtemaill118.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtemaill118.setForeground(new java.awt.Color(0, 48, 73));
         txtemaill118.setBorder(null);
-        jPanel1.add(txtemaill118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 310, 25));
+        formMin_118.add(txtemaill118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 310, 25));
 
         jSeparator11.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 310, 10));
+        formMin_118.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 310, 10));
 
         txtdate118.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtdate118.setForeground(new java.awt.Color(0, 48, 73));
         txtdate118.setBorder(null);
-        jPanel1.add(txtdate118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 310, 25));
+        formMin_118.add(txtdate118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 310, 25));
 
         jSeparator12.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, 310, 10));
+        formMin_118.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, 310, 10));
 
         txtposition118.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtposition118.setForeground(new java.awt.Color(0, 48, 73));
         txtposition118.setBorder(null);
-        jPanel1.add(txtposition118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 310, 25));
+        formMin_118.add(txtposition118, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 310, 25));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI Black", 1, 48)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
@@ -220,55 +223,55 @@ public class AddForm extends javax.swing.JFrame {
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Logo-fococlipping-standard (1).png"))); // NOI18N
 
-        javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
-        kGradientPanel2.setLayout(kGradientPanel2Layout);
-        kGradientPanel2Layout.setHorizontalGroup(
-            kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel2Layout.createSequentialGroup()
-                .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
-                        .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(kGradientPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout formChinh_118Layout = new javax.swing.GroupLayout(formChinh_118);
+        formChinh_118.setLayout(formChinh_118Layout);
+        formChinh_118Layout.setHorizontalGroup(
+            formChinh_118Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(formChinh_118Layout.createSequentialGroup()
+                .addGroup(formChinh_118Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(formChinh_118Layout.createSequentialGroup()
+                        .addGroup(formChinh_118Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(formChinh_118Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel12))
-                            .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                            .addGroup(formChinh_118Layout.createSequentialGroup()
                                 .addGap(39, 39, 39)
                                 .addComponent(jLabel11)))
                         .addGap(0, 22, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel2Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, formChinh_118Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(formMin_118, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16)
                 .addComponent(jLabel10)
                 .addContainerGap())
         );
-        kGradientPanel2Layout.setVerticalGroup(
-            kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel2Layout.createSequentialGroup()
-                .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+        formChinh_118Layout.setVerticalGroup(
+            formChinh_118Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(formChinh_118Layout.createSequentialGroup()
+                .addGroup(formChinh_118Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(formChinh_118Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(kGradientPanel2Layout.createSequentialGroup()
-                                .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(formChinh_118Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(formChinh_118Layout.createSequentialGroup()
+                                .addGroup(formChinh_118Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel11)
                                 .addGap(56, 56, 56)
                                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                            .addComponent(formMin_118, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(formChinh_118Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
-        getContentPane().add(kGradientPanel2, java.awt.BorderLayout.CENTER);
+        getContentPane().add(formChinh_118, java.awt.BorderLayout.CENTER);
 
         pack();
         setLocationRelativeTo(null);
@@ -276,7 +279,7 @@ public class AddForm extends javax.swing.JFrame {
 
     private void btadd118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btadd118ActionPerformed
         // TODO add your handling code here:
-        nhanVien ql = new nhanVien();
+        nhanVien_312 ql = new nhanVien_312();
         ql.setID(txtid118.getText());
         ql.setName(txtname118.getText());
         ql.setAddress(txtaddress118.getText());
@@ -294,9 +297,9 @@ public class AddForm extends javax.swing.JFrame {
         ql.setSex(gt);
         boolean isOk=true;
             if(isOk){
-                new NhanVienDAO().add(ql);
+                new NhanVienDAO_312().add(ql);
                 JOptionPane.showMessageDialog(this, "Bạn đã thêm thông tin thành công!");
-                Main fm = new Main();
+                Main fm = new Main();                
                 this.dispose();
                 fm.setVisible(true);
             } 
@@ -360,6 +363,8 @@ public class AddForm extends javax.swing.JFrame {
     private com.k33ptoo.components.KButton btadd118;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JRadioButton female118;
+    private com.k33ptoo.components.KGradientPanel formChinh_118;
+    private javax.swing.JPanel formMin_118;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -373,7 +378,6 @@ public class AddForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -381,7 +385,6 @@ public class AddForm extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel2;
     private javax.swing.JRadioButton male118;
     private javax.swing.JTextField txtaddress118;
     private javax.swing.JTextField txtdate118;
@@ -391,4 +394,14 @@ public class AddForm extends javax.swing.JFrame {
     private javax.swing.JTextField txtphone118;
     private javax.swing.JTextField txtposition118;
     // End of variables declaration//GEN-END:variables
+    
+    private void showTable() {
+        ql =new NhanVienDAO_312().getAllUsers();
+        model.setRowCount(0);
+        for(nhanVien_312 qly : ql){
+            model.addRow(new Object[]{
+                qly.getID(), qly.getName(), qly.getSex(), qly.getAddress(), qly.getPhone(), qly.getEmail(), qly.getDateOfBirth(), qly.getPosition()
+            });
+        }
+    }
 }

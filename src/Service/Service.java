@@ -4,35 +4,35 @@
  */
 package Service;
 
-import Connect.NhanVienDAO;
-import Connect.TaiKhoanDAO;
-import model.nhanVien;
+import Connect.NhanVienDAO_312;
+import Connect.TaiKhoanDAO_101;
+import model.nhanVien_312;
 import java.util.List;
-import model.taiKhoan;
+import model.taiKhoan_118_101;
 /**
  *
  * @author ASUS
  */
 public class Service {
-    private NhanVienDAO qlnv;
-    private TaiKhoanDAO qltk;
+    private NhanVienDAO_312 qlnv;
+    private TaiKhoanDAO_101 qltk;
     public Service() {
-        qlnv = new NhanVienDAO();
+        qlnv = new NhanVienDAO_312();
         
     }
     
-    public List<nhanVien> getAllUsers(){
+    public List<nhanVien_312> getAllUsers(){
         return qlnv.getAllUsers();
     }
     
-    public void add(nhanVien tl){
+    public void add(nhanVien_312 tl){
         qlnv.add(tl);
     }
     
     public void delete(String id){
         qlnv.delete(id);
     }
-    public void addTaiKhoan(taiKhoan tk){
+    public void addTaiKhoan(taiKhoan_118_101 tk){
         qltk.addTaiKhoan(tk);
     }
     /*public users getUserByID(int id){

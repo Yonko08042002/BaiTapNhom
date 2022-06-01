@@ -4,7 +4,7 @@
  */
 package form;
 
-import Connect.NhanVienDAO;
+import Connect.NhanVienDAO_312;
 import Service.Service;
 import java.awt.Color;
 import java.awt.Desktop;
@@ -27,7 +27,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
-import model.nhanVien;
+import model.nhanVien_312;
 
 /**
  *
@@ -37,7 +37,7 @@ public class Main extends javax.swing.JFrame {
     int selectedIndex;
     Service qlService;
     DefaultTableModel defaultTableModel;
-    private List<nhanVien> ql;
+    private List<nhanVien_312> ql;
     private DefaultTableModel model;
      boolean a; 
    
@@ -60,8 +60,8 @@ public class Main extends javax.swing.JFrame {
         //icontitle119.setText(this.getTitle());
         //title119.setText(this.getTitle());
     }
-    private void setTableData(List<nhanVien> ql){
-        for (nhanVien qly : ql){
+    private void setTableData(List<nhanVien_312> ql){
+        for (nhanVien_312 qly : ql){
             defaultTableModel.addRow(new Object[]{qly.getID(), qly.getName(), qly.getSex(), qly.getAddress(), qly.getPhone(), qly.getEmail(), qly.getDateOfBirth(), qly.getPosition()});
             
         }
@@ -97,14 +97,14 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         Header = new javax.swing.JPanel();
-        iocnMinMaxClose = new javax.swing.JPanel();
+        iocnMinMaxClose_119 = new javax.swing.JPanel();
         btn_mini119 = new javax.swing.JLabel();
         btn_maximus119 = new javax.swing.JLabel();
         btn_close119 = new javax.swing.JLabel();
         title_header119 = new javax.swing.JPanel();
         icontitle119 = new javax.swing.JLabel();
         title119 = new javax.swing.JLabel();
-        menu = new javax.swing.JPanel();
+        menu_119 = new javax.swing.JPanel();
         MenuIcon = new javax.swing.JPanel();
         lineHidemenu = new javax.swing.JPanel();
         hideMenu = new javax.swing.JPanel();
@@ -147,12 +147,7 @@ public class Main extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        dashboardview = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        Time = new javax.swing.JLabel();
-        date = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
+        dashboardview_119 = new javax.swing.JPanel();
         Panel3 = new keeptoo.KGradientPanel();
         kGradientPanel9 = new keeptoo.KGradientPanel();
         jLabel9 = new javax.swing.JLabel();
@@ -250,6 +245,11 @@ public class Main extends javax.swing.JFrame {
         Panel1 = new javax.swing.JPanel();
         form_11 = new com.raven.form.Form_1();
         formHome1 = new com.raven.form.FormHome();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        Time = new javax.swing.JLabel();
+        date = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -276,8 +276,8 @@ public class Main extends javax.swing.JFrame {
         });
         Header.setLayout(new java.awt.BorderLayout());
 
-        iocnMinMaxClose.setBackground(new java.awt.Color(102, 102, 102));
-        iocnMinMaxClose.setPreferredSize(new java.awt.Dimension(80, 50));
+        iocnMinMaxClose_119.setBackground(new java.awt.Color(102, 102, 102));
+        iocnMinMaxClose_119.setPreferredSize(new java.awt.Dimension(80, 50));
 
         btn_mini119.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/subtract_18px.png"))); // NOI18N
         btn_mini119.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -285,7 +285,7 @@ public class Main extends javax.swing.JFrame {
                 btn_mini119MousePressed(evt);
             }
         });
-        iocnMinMaxClose.add(btn_mini119);
+        iocnMinMaxClose_119.add(btn_mini119);
 
         btn_maximus119.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/rectangular_18px111.png"))); // NOI18N
         btn_maximus119.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -293,7 +293,7 @@ public class Main extends javax.swing.JFrame {
                 btn_maximus119MousePressed(evt);
             }
         });
-        iocnMinMaxClose.add(btn_maximus119);
+        iocnMinMaxClose_119.add(btn_maximus119);
 
         btn_close119.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/multiply_18px111.png"))); // NOI18N
         btn_close119.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -301,9 +301,9 @@ public class Main extends javax.swing.JFrame {
                 btn_close119MousePressed(evt);
             }
         });
-        iocnMinMaxClose.add(btn_close119);
+        iocnMinMaxClose_119.add(btn_close119);
 
-        Header.add(iocnMinMaxClose, java.awt.BorderLayout.LINE_END);
+        Header.add(iocnMinMaxClose_119, java.awt.BorderLayout.LINE_END);
 
         title_header119.setBackground(new java.awt.Color(102, 102, 102));
         title_header119.setPreferredSize(new java.awt.Dimension(150, 30));
@@ -320,8 +320,8 @@ public class Main extends javax.swing.JFrame {
 
         getContentPane().add(Header, java.awt.BorderLayout.PAGE_START);
 
-        menu.setPreferredSize(new java.awt.Dimension(250, 450));
-        menu.setLayout(new java.awt.BorderLayout());
+        menu_119.setPreferredSize(new java.awt.Dimension(250, 450));
+        menu_119.setLayout(new java.awt.BorderLayout());
 
         MenuIcon.setBackground(new java.awt.Color(0, 145, 255));
         MenuIcon.setPreferredSize(new java.awt.Dimension(50, 450));
@@ -771,7 +771,7 @@ public class Main extends javax.swing.JFrame {
 
         MenuIcon.add(Chart, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 335, 50, 50));
 
-        menu.add(MenuIcon, java.awt.BorderLayout.LINE_START);
+        menu_119.add(MenuIcon, java.awt.BorderLayout.LINE_START);
 
         menuhide.setBackground(new java.awt.Color(0, 145, 255));
         menuhide.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -873,59 +873,12 @@ public class Main extends javax.swing.JFrame {
 
         menuhide.add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 700));
 
-        menu.add(menuhide, java.awt.BorderLayout.CENTER);
+        menu_119.add(menuhide, java.awt.BorderLayout.CENTER);
 
-        getContentPane().add(menu, java.awt.BorderLayout.LINE_START);
+        getContentPane().add(menu_119, java.awt.BorderLayout.LINE_START);
 
-        dashboardview.setBackground(new java.awt.Color(255, 102, 102));
-        dashboardview.setLayout(new java.awt.BorderLayout());
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(929, 40));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/clock_30px.png"))); // NOI18N
-
-        Time.setFont(new java.awt.Font("Script MT Bold", 0, 14)); // NOI18N
-        Time.setText("Time");
-
-        date.setFont(new java.awt.Font("Script MT Bold", 0, 14)); // NOI18N
-        date.setText("Date");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Time)
-                .addGap(53, 53, 53)
-                .addComponent(date)
-                .addGap(540, 540, 540)
-                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(323, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Time)
-                                    .addComponent(date)))
-                            .addComponent(jLabel32)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-
-        dashboardview.add(jPanel1, java.awt.BorderLayout.PAGE_START);
+        dashboardview_119.setBackground(new java.awt.Color(255, 102, 102));
+        dashboardview_119.setLayout(new java.awt.BorderLayout());
 
         Panel3.setToolTipText("");
         Panel3.setkEndColor(new java.awt.Color(202, 240, 248));
@@ -1733,7 +1686,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jLabel45)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel46)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                         .addComponent(jLabel47))
                     .addGroup(jPanel39Layout.createSequentialGroup()
                         .addComponent(jLabel48)
@@ -1778,7 +1731,7 @@ public class Main extends javax.swing.JFrame {
 
         Panel3.add(jPanel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 550, 80, 60));
 
-        dashboardview.add(Panel3, java.awt.BorderLayout.CENTER);
+        dashboardview_119.add(Panel3, java.awt.BorderLayout.CENTER);
 
         Panel1.setBackground(new java.awt.Color(0, 0, 0));
         Panel1.setPreferredSize(new java.awt.Dimension(1270, 635));
@@ -1786,9 +1739,56 @@ public class Main extends javax.swing.JFrame {
         Panel1.add(form_11, java.awt.BorderLayout.CENTER);
         Panel1.add(formHome1, java.awt.BorderLayout.PAGE_START);
 
-        dashboardview.add(Panel1, java.awt.BorderLayout.PAGE_END);
+        dashboardview_119.add(Panel1, java.awt.BorderLayout.PAGE_END);
 
-        getContentPane().add(dashboardview, java.awt.BorderLayout.CENTER);
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(929, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/clock_30px.png"))); // NOI18N
+
+        Time.setFont(new java.awt.Font("Script MT Bold", 0, 14)); // NOI18N
+        Time.setText("Time");
+
+        date.setFont(new java.awt.Font("Script MT Bold", 0, 14)); // NOI18N
+        date.setText("Date");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Time)
+                .addGap(53, 53, 53)
+                .addComponent(date)
+                .addGap(540, 540, 540)
+                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(323, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(Time)
+                                    .addComponent(date)))
+                            .addComponent(jLabel32)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+
+        dashboardview_119.add(jPanel1, java.awt.BorderLayout.PAGE_START);
+
+        getContentPane().add(dashboardview_119, java.awt.BorderLayout.CENTER);
 
         setSize(new java.awt.Dimension(1321, 705));
         setLocationRelativeTo(null);
@@ -1828,14 +1828,14 @@ public class Main extends javax.swing.JFrame {
         // create  void  for  methode hide and show panel menu
         //(tạo khoảng trống cho menu bảng điều khiển ẩn và hiện methode)
         if(a==true){
-          hideshow(menu, a, btn_Hidemenu);
+          hideshow(menu_119, a, btn_Hidemenu);
           SwingUtilities.updateComponentTreeUI(this);
           //create methode change image
           
           a=false;
         }
         else{
-            hideshow(menu, a, btn_Hidemenu);
+            hideshow(menu_119, a, btn_Hidemenu);
             SwingUtilities.updateComponentTreeUI(this);
             a=true;
         }
@@ -1972,7 +1972,7 @@ public class Main extends javax.swing.JFrame {
         // create  void  for  methode hide and show panel menu
         //(tạo khoảng trống cho menu bảng điều khiển ẩn và hiện methode)
         if(a==true){
-          hideshow(menu, a, btn_Hidemenu);
+          hideshow(menu_119, a, btn_Hidemenu);
           SwingUtilities.updateComponentTreeUI(this);
           //create methode change image
           
@@ -2028,7 +2028,7 @@ public class Main extends javax.swing.JFrame {
 
     private void btn_RemoveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RemoveMouseClicked
         Panel1.setVisible(true);
-        Panel3.setVisible(false);
+        
     }//GEN-LAST:event_btn_RemoveMouseClicked
 
     private void btn_RemoveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RemoveMouseEntered
@@ -2134,9 +2134,9 @@ public class Main extends javax.swing.JFrame {
     private void kButton_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton_searchActionPerformed
         String name = jTextField_search.getText();
         if(name.length()>0){
-            ql = new NhanVienDAO().findTaiLieu(name);
+            ql = new NhanVienDAO_312().findTaiLieu(name);
             model.setRowCount(0);
-            for(nhanVien qly : ql){
+            for(nhanVien_312 qly : ql){
             model.addRow(new Object[]{
                  qly.getID(), qly.getName(), qly.getSex(), qly.getAddress(), qly.getPhone(), qly.getEmail(), qly.getDateOfBirth(), qly.getPosition()
                 });
@@ -2149,9 +2149,9 @@ public class Main extends javax.swing.JFrame {
 
     private void kButton_removeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton_removeActionPerformed
         selectedIndex = qlthongtin.getSelectedRow();
-        nhanVien qltv = ql.get(selectedIndex);
+        nhanVien_312 qltv = ql.get(selectedIndex);
         JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn xóa không?");
-        new NhanVienDAO().delete(qltv.getID());
+        new NhanVienDAO_312().delete(qltv.getID());
         showTable();
     }//GEN-LAST:event_kButton_removeActionPerformed
 
@@ -2169,7 +2169,7 @@ public class Main extends javax.swing.JFrame {
         // create  void  for  methode hide and show panel menu
         //(tạo khoảng trống cho menu bảng điều khiển ẩn và hiện methode)
         if(a==true){
-          hideshow(menu, a, btn_Hidemenu);
+          hideshow(menu_119, a, btn_Hidemenu);
           SwingUtilities.updateComponentTreeUI(this);
           //create methode change image
           
@@ -2202,14 +2202,14 @@ public class Main extends javax.swing.JFrame {
         // create  void  for  methode hide and show panel menu
         //(tạo khoảng trống cho menu bảng điều khiển ẩn và hiện methode)
         if(a==true){
-          hideshow(menu, a, btn_Hidemenu);
+          hideshow(menu_119, a, btn_Hidemenu);
           SwingUtilities.updateComponentTreeUI(this);
           //create methode change image
           
           a=false;
         }
         else{
-            hideshow(menu, a, btn_Hidemenu);
+            hideshow(menu_119, a, btn_Hidemenu);
             SwingUtilities.updateComponentTreeUI(this);
             a=true;
         }
@@ -2335,14 +2335,14 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel btn_close119;
     private javax.swing.JLabel btn_maximus119;
     private javax.swing.JLabel btn_mini119;
-    private javax.swing.JPanel dashboardview;
+    private javax.swing.JPanel dashboardview_119;
     private javax.swing.JLabel date;
     private com.raven.form.FormHome formHome1;
     private com.raven.form.Form_1 form_11;
     private javax.swing.JPanel hideMenu;
     private javax.swing.JPanel home;
     private javax.swing.JLabel icontitle119;
-    private javax.swing.JPanel iocnMinMaxClose;
+    private javax.swing.JPanel iocnMinMaxClose_119;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2455,7 +2455,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel lineadd;
     private javax.swing.JPanel linehome;
     private javax.swing.JPanel linerSalary;
-    private javax.swing.JPanel menu;
+    private javax.swing.JPanel menu_119;
     private javax.swing.JPanel menuhide;
     private javax.swing.JTable qlthongtin;
     private javax.swing.JPanel setting;
@@ -2466,9 +2466,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel txt_search;
     // End of variables declaration//GEN-END:variables
     private void showTable() {
-        ql =new NhanVienDAO().getAllUsers();
+        ql =new NhanVienDAO_312().getAllUsers();
         model.setRowCount(0);
-        for(nhanVien qly : ql){
+        for(nhanVien_312 qly : ql){
             model.addRow(new Object[]{
                 qly.getID(), qly.getName(), qly.getSex(), qly.getAddress(), qly.getPhone(), qly.getEmail(), qly.getDateOfBirth(), qly.getPosition()
             });

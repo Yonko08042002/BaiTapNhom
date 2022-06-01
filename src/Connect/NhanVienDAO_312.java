@@ -3,29 +3,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Connect;
-import model.nhanVien;
+import model.nhanVien_312;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import model.taiKhoan;
+import model.taiKhoan_118_101;
 /**
  *
  * @author ASUS
  */
-public class NhanVienDAO {
-    public List<nhanVien> getAllUsers() {
-        List<nhanVien> ltl = new ArrayList<nhanVien>();
+public class NhanVienDAO_312 {
+    public List<nhanVien_312> getAllUsers() {
+        List<nhanVien_312> ltl = new ArrayList<nhanVien_312>();
 
-        Connection connection = JDBCConnection.JDBCConnection();
+        Connection connection = JDBCConnection_101.JDBCConnection();
         String sql = "select * from AddNhanVien";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                nhanVien tl = new nhanVien();
+                nhanVien_312 tl = new nhanVien_312();
                 tl.setID(rs.getString("id"));
                 tl.setName(rs.getString("ten"));
                 tl.setSex(rs.getString("gioitinh"));
@@ -44,7 +44,7 @@ public class NhanVienDAO {
     public List<String> getAllId() {
         List<String> ltl = new ArrayList<String>();
 
-        Connection connection = JDBCConnection.JDBCConnection();
+        Connection connection = JDBCConnection_101.JDBCConnection();
         String sql = "select * from AddNhanVien";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -57,8 +57,8 @@ public class NhanVienDAO {
         }
         return ltl;
     }
-    public void add(nhanVien tl){
-     Connection connection = JDBCConnection.JDBCConnection();          
+    public void add(nhanVien_312 tl){
+     Connection connection = JDBCConnection_101.JDBCConnection();          
             String sql = "INSERT INTO AddNhanVien (id, ten, gioitinh, diachi, sdt,email, ngaysinh, chucvu) "
                     + "values (?,?,?,?,?,?,?,?) ";            
             try {
@@ -81,8 +81,8 @@ public class NhanVienDAO {
     }
     //
     //
-    public int updateUser(nhanVien tl){
-        Connection connection = JDBCConnection.JDBCConnection();
+    public int updateUser(nhanVien_312 tl){
+        Connection connection = JDBCConnection_101.JDBCConnection();
         String sql = "Update AddNhanVien set ten = ? , gioitinh = ? , diachi = ? , sdt = ? , email = ? ,ngaysinh=?,chucvu=? where id = ? ";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -105,7 +105,7 @@ public class NhanVienDAO {
         return -1;
     }
     public void delete(String id){
-       Connection connection = JDBCConnection.JDBCConnection();
+       Connection connection = JDBCConnection_101.JDBCConnection();
         String sql = "delete from AddNhanVien where id = ?";
         
         try{
@@ -117,16 +117,16 @@ public class NhanVienDAO {
             e.printStackTrace();
         }
     }
-    public ArrayList<nhanVien> findTaiLieu(String name){
-        ArrayList<nhanVien> ql = new ArrayList<nhanVien>();
-        Connection connection = JDBCConnection.JDBCConnection();
+    public ArrayList<nhanVien_312> findTaiLieu(String name){
+        ArrayList<nhanVien_312> ql = new ArrayList<nhanVien_312>();
+        Connection connection = JDBCConnection_101.JDBCConnection();
         String sql = "select * from AddNhanVien where ten like ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1,"%"+name+"%");
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                nhanVien tl = new nhanVien();
+                nhanVien_312 tl = new nhanVien_312();
                 tl.setID(rs.getString("id"));
                 tl.setName(rs.getString("ten"));
                 tl.setSex(rs.getString("gioitinh"));
@@ -142,9 +142,9 @@ public class NhanVienDAO {
         }
         return ql;
     }
-    public nhanVien find1TaiLieu(String id){
-        nhanVien tl = new nhanVien();
-        Connection connection = JDBCConnection.JDBCConnection();
+    public nhanVien_312 find1TaiLieu(String id){
+        nhanVien_312 tl = new nhanVien_312();
+        Connection connection = JDBCConnection_101.JDBCConnection();
         String sql = "select * from AddNhanVien where id like ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);

@@ -3,26 +3,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Connect;
-import model.nhanVien;
+import model.nhanVien_312;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import model.taiKhoan;
+import model.taiKhoan_118_101;
 
-public class TaiKhoanDAO {
-    public List<taiKhoan> getAllUsers() {
-        List<taiKhoan> ltl = new ArrayList<taiKhoan>();
+public class TaiKhoanDAO_101 {
+    public List<taiKhoan_118_101> getAllUsers() {
+        List<taiKhoan_118_101> ltl = new ArrayList<taiKhoan_118_101>();
 
-        Connection connection = JDBCConnection.JDBCConnection();
+        Connection connection = JDBCConnection_101.JDBCConnection();
         String sql = "select * from TaiKhoan";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                taiKhoan tl = new taiKhoan();
+                taiKhoan_118_101 tl = new taiKhoan_118_101();
                 tl.setName(rs.getString("ten"));
                 tl.setUsername(rs.getString("username"));
                 tl.setPassword(rs.getString("pass"));
@@ -40,8 +40,8 @@ public class TaiKhoanDAO {
     }
 
     //
-    public void addTaiKhoan(taiKhoan tk){
-     Connection connection = JDBCConnection.JDBCConnection();          
+    public void addTaiKhoan(taiKhoan_118_101 tk){
+     Connection connection = JDBCConnection_101.JDBCConnection();          
             String sql = "INSERT INTO TaiKhoan (ten, username, pass, confirmpassword, diachi, sdt,email) "
                     + "values (?,?,?,?,?,?,?) ";            
             try {

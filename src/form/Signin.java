@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package form;
-import Connect.JDBCConnection;
-import Connect.TaiKhoanDAO;
+import Connect.JDBCConnection_101;
+import Connect.TaiKhoanDAO_101;
 import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -37,7 +37,7 @@ public class Signin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        formChinh_101 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel_Signin101 = new javax.swing.JPanel();
@@ -69,18 +69,18 @@ public class Signin extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        formChinh_101.setBackground(new java.awt.Color(153, 204, 255));
+        formChinh_101.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        formChinh_101.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Created By  Error Sever Team");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 360, 150));
+        formChinh_101.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 360, 150));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/—Pngtree—business staff talking and working_7256294.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 380, 360));
+        formChinh_101.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 380, 360));
 
         jPanel_Signin101.setBackground(new java.awt.Color(255, 255, 255));
         jPanel_Signin101.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -198,7 +198,7 @@ public class Signin extends javax.swing.JFrame {
         jLabel14.setText("Don't have an account?");
         jPanel_Signin101.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 170, -1));
 
-        jPanel1.add(jPanel_Signin101, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 420, 460));
+        formChinh_101.add(jPanel_Signin101, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 420, 460));
 
         jLabel_back_312.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel_back_312.setForeground(new java.awt.Color(255, 255, 255));
@@ -210,9 +210,9 @@ public class Signin extends javax.swing.JFrame {
                 jLabel_back_312MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel_back_312, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 0, 50, 50));
+        formChinh_101.add(jLabel_back_312, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 0, 50, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 570));
+        getContentPane().add(formChinh_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 570));
 
         setSize(new java.awt.Dimension(916, 571));
         setLocationRelativeTo(null);
@@ -257,7 +257,7 @@ public class Signin extends javax.swing.JFrame {
             Statement st;
             ResultSet rs;
         try {
-            Connection con = JDBCConnection.JDBCConnection();
+            Connection con = JDBCConnection_101.JDBCConnection();
             String sql = "select* from TaiKhoan where username = ? and pass =?";//truy vấn đến sql
             PreparedStatement ps = con.prepareCall(sql);
             ps.setString(1, txtUsername_101.getText());
@@ -329,6 +329,7 @@ public class Signin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSignin_101;
     private javax.swing.JLabel disable_101;
+    private javax.swing.JPanel formChinh_101;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -341,7 +342,6 @@ public class Signin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel_back_312;
     private javax.swing.JLabel jLabel_iconUser_101;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel_Signin101;
     private javax.swing.JLabel jlbLogin_312;
     private javax.swing.JLabel jlb_SignUp;

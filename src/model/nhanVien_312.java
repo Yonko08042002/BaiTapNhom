@@ -11,7 +11,7 @@ import javax.swing.text.StyledEditorKit;
  *
  * @author ASUS
  */
-public class nhanVien {
+public class nhanVien_312 {
     private String ID;
     private String Name;
     private String Sex;
@@ -25,10 +25,10 @@ public class nhanVien {
     private double luongnhan;
     private Boolean tinhtrang ;
 
-    public nhanVien() {
+    public nhanVien_312() {
     }
 
-    public nhanVien(String ID, String Name, String Sex, String Address, String Phone, String Email, String DateOfBirth, String Position, double luongthuong, double luongcb, double luongnhan,Boolean tinhtrang) {
+    public nhanVien_312(String ID, String Name, String Sex, String Address, String Phone, String Email, String DateOfBirth, String Position, double luongthuong, double luongcb, double luongnhan,Boolean tinhtrang) {
         this.ID = ID;
         this.Name = Name;
         this.Sex = Sex;

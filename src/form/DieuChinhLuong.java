@@ -4,14 +4,14 @@
  */
 package form;
 
-import Connect.luongNhanVienDao;
+import Connect.luongNhanVienDao_119;
 import Service.Service;
 import java.awt.Color;
 import java.awt.Font;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import model.nhanVien;
+import model.nhanVien_312;
 
 /**
  *
@@ -21,10 +21,10 @@ public class DieuChinhLuong extends javax.swing.JFrame {
     int selectedIndex;
     Service qlService;
     DefaultTableModel defaultTableModel;
-    private List<nhanVien> ql;
+    private List<nhanVien_312> ql;
     private DefaultTableModel model;
-    nhanVien nv;
-    luongNhanVienDao qlbd;
+    nhanVien_312 nv;
+    luongNhanVienDao_119 qlbd;
     /**
      * Creates new form DieuChỉnhLuong
      */
@@ -37,11 +37,11 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         tb_Luong312.setRowHeight(25);
         model = (DefaultTableModel)tb_Luong312.getModel();
         showTable();
-        qlbd = new luongNhanVienDao();
+        qlbd = new luongNhanVienDao_119();
         getDataComboBox();
     }
-    private void setTableData(List<nhanVien> ql){
-        for (nhanVien qly : ql){
+    private void setTableData(List<nhanVien_312> ql){
+        for (nhanVien_312 qly : ql){
             defaultTableModel.addRow(new Object[]{qly.getID(), qly.getName(), qly.getPosition(), qly.getEmail(), qly.getLuongcb(), qly.getLuongthuong(), qly.getLuongnhan()});
             
         }
@@ -62,8 +62,8 @@ public class DieuChinhLuong extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        formChinh_312 = new javax.swing.JPanel();
+        formMin_312 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -89,7 +89,7 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         chuaNhan312 = new javax.swing.JRadioButton();
         daNhan312 = new javax.swing.JRadioButton();
-        kGradientPanel1 = new com.k33ptoo.components.KGradientPanel();
+        Color_form312 = new com.k33ptoo.components.KGradientPanel();
         jLabel1 = new javax.swing.JLabel();
         btn_Exit = new com.k33ptoo.components.KButton();
         btn_Del = new com.k33ptoo.components.KButton();
@@ -107,62 +107,62 @@ public class DieuChinhLuong extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(51, 204, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        formChinh_312.setBackground(new java.awt.Color(51, 204, 255));
+        formChinh_312.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        formMin_312.setBackground(new java.awt.Color(255, 255, 255));
+        formMin_312.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("ID:");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 35, -1, -1));
+        formMin_312.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 35, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
         jLabel3.setText("Họ tên:");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 72, -1, -1));
+        formMin_312.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 72, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
         jLabel4.setText("Chức vụ:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 119, -1, -1));
+        formMin_312.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 119, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 102, 102));
         jLabel5.setText("Lương cơ bản:");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 40, -1, -1));
+        formMin_312.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 40, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 102, 102));
         jLabel6.setText("Email:");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 160, -1, -1));
+        formMin_312.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 160, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(102, 102, 102));
         jLabel7.setText("Nhận Lương:");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, -1, -1));
+        formMin_312.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, -1, -1));
 
         cbo_ChucVu.setBackground(new java.awt.Color(204, 255, 255));
         cbo_ChucVu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { ".", "Trưởng phòng", "Nhân Viên", "Giám đốc", "Chủ tịch", " ", " ", " ", " " }));
         cbo_ChucVu.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel2.add(cbo_ChucVu, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 114, 107, -1));
+        formMin_312.add(cbo_ChucVu, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 114, 107, -1));
 
         txt_LuongCoBan.setBorder(null);
-        jPanel2.add(txt_LuongCoBan, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 25, 130, 29));
+        formMin_312.add(txt_LuongCoBan, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 25, 130, 29));
 
         txt_LuongThuong.setBorder(null);
-        jPanel2.add(txt_LuongThuong, new org.netbeans.lib.awtextra.AbsoluteConstraints(374, 72, 130, 20));
-        jPanel2.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 191, 181, -1));
+        formMin_312.add(txt_LuongThuong, new org.netbeans.lib.awtextra.AbsoluteConstraints(374, 72, 130, 20));
+        formMin_312.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 191, 181, -1));
 
         txt_Email.setBorder(null);
-        jPanel2.add(txt_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 156, 171, 24));
-        jPanel2.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 56, 130, 10));
-        jPanel2.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(374, 94, 130, 10));
+        formMin_312.add(txt_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 156, 171, 24));
+        formMin_312.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 56, 130, 10));
+        formMin_312.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(374, 94, 130, 10));
 
         txt_Name.setBorder(null);
-        jPanel2.add(txt_Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 72, 146, 20));
-        jPanel2.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 94, 146, 10));
+        formMin_312.add(txt_Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 72, 146, 20));
+        formMin_312.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 94, 146, 10));
 
         tb_Luong312.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -190,7 +190,7 @@ public class DieuChinhLuong extends javax.swing.JFrame {
         tb_Luong312.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tb_Luong312);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 211, 695, 153));
+        formMin_312.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 211, 695, 153));
 
         cbo_id.setBackground(new java.awt.Color(204, 255, 255));
         cbo_id.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
@@ -200,40 +200,40 @@ public class DieuChinhLuong extends javax.swing.JFrame {
                 cbo_idActionPerformed(evt);
             }
         });
-        jPanel2.add(cbo_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 30, 107, -1));
+        formMin_312.add(cbo_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 30, 107, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Money Bag Pounds_100px.png"))); // NOI18N
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, -1, -1));
+        formMin_312.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, -1, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Money Bag Pounds_100px.png"))); // NOI18N
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 70, -1, -1));
+        formMin_312.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 70, -1, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Money Bag Pounds_100px.png"))); // NOI18N
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, -1, -1));
+        formMin_312.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, -1, -1));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Money Bag Pounds_100px.png"))); // NOI18N
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 70, -1, -1));
+        formMin_312.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 70, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(102, 102, 102));
         jLabel13.setText("Lương thưởng:");
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 75, -1, -1));
+        formMin_312.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 75, -1, -1));
 
         chuaNhan312.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(chuaNhan312);
         chuaNhan312.setText("Chưa Nhận");
-        jPanel2.add(chuaNhan312, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, -1, -1));
+        formMin_312.add(chuaNhan312, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, -1, -1));
 
         daNhan312.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(daNhan312);
         daNhan312.setText("Đã Nhận");
         daNhan312.setDoubleBuffered(true);
-        jPanel2.add(daNhan312, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, -1, -1));
+        formMin_312.add(daNhan312, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 74, 750, 380));
+        formChinh_312.add(formMin_312, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 74, 750, 380));
 
-        kGradientPanel1.setkEndColor(new java.awt.Color(153, 255, 255));
-        kGradientPanel1.setkStartColor(new java.awt.Color(105, 48, 195));
+        Color_form312.setkEndColor(new java.awt.Color(153, 255, 255));
+        Color_form312.setkStartColor(new java.awt.Color(105, 48, 195));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -322,44 +322,44 @@ public class DieuChinhLuong extends javax.swing.JFrame {
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/salary_female_100px.png"))); // NOI18N
 
-        javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
-        kGradientPanel1.setLayout(kGradientPanel1Layout);
-        kGradientPanel1Layout.setHorizontalGroup(
-            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
-                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(kGradientPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout Color_form312Layout = new javax.swing.GroupLayout(Color_form312);
+        Color_form312.setLayout(Color_form312Layout);
+        Color_form312Layout.setHorizontalGroup(
+            Color_form312Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Color_form312Layout.createSequentialGroup()
+                .addGroup(Color_form312Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(Color_form312Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btn_Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                    .addGroup(Color_form312Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(Color_form312Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btn_Edit, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn_Del, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                            .addGroup(Color_form312Layout.createSequentialGroup()
                                 .addComponent(jLabel10)
                                 .addGap(18, 18, 18)
-                                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                                .addGroup(Color_form312Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(Color_form312Layout.createSequentialGroup()
                                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextField_tk, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(btn_search, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Color_form312Layout.createSequentialGroup()
                                         .addGap(676, 676, 676)
                                         .addComponent(btn_refresh, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addGap(23, 23, 23))
         );
-        kGradientPanel1Layout.setVerticalGroup(
-            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel1Layout.createSequentialGroup()
-                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(kGradientPanel1Layout.createSequentialGroup()
+        Color_form312Layout.setVerticalGroup(
+            Color_form312Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Color_form312Layout.createSequentialGroup()
+                .addGroup(Color_form312Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Color_form312Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(Color_form312Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1)
-                            .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addGroup(Color_form312Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jTextField_tk, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(btn_search, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(37, 37, 37)
@@ -374,19 +374,19 @@ public class DieuChinhLuong extends javax.swing.JFrame {
                 .addContainerGap(160, Short.MAX_VALUE))
         );
 
-        jPanel1.add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 490));
+        formChinh_312.add(Color_form312, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 490));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 974, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(formChinh_312, javax.swing.GroupLayout.PREFERRED_SIZE, 974, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(formChinh_312, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -400,7 +400,7 @@ public class DieuChinhLuong extends javax.swing.JFrame {
     private void btn_EditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EditActionPerformed
        int otp = JOptionPane.showConfirmDialog(this, "Bạn có muốn sửa hay không?", "Confirm", JOptionPane.YES_OPTION);
         if(otp == JOptionPane.YES_OPTION){
-            nhanVien bk = new nhanVien();
+            nhanVien_312 bk = new nhanVien_312();
             bk.setID(cbo_id.getSelectedItem().toString());
             bk.setName(txt_Name.getText());
             bk.setPosition(cbo_ChucVu.getSelectedItem().toString());
@@ -416,18 +416,18 @@ public class DieuChinhLuong extends javax.swing.JFrame {
 
     private void btn_DelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_DelActionPerformed
         selectedIndex = tb_Luong312.getSelectedRow();
-        nhanVien qltv = ql.get(selectedIndex);
+        nhanVien_312 qltv = ql.get(selectedIndex);
         JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn xóa không?");
-        new luongNhanVienDao().delete(qltv.getID());
+        new luongNhanVienDao_119().delete(qltv.getID());
         showTable();
     }//GEN-LAST:event_btn_DelActionPerformed
 
     private void btn_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_searchActionPerformed
         String name = jTextField_tk.getText();
         if(name.length()>0){
-            ql = new luongNhanVienDao().findTaiLieu(name);
+            ql = new luongNhanVienDao_119().findTaiLieu(name);
             model.setRowCount(0);
-            for(nhanVien qly : ql){
+            for(nhanVien_312 qly : ql){
             model.addRow(new Object[]{
                 qly.getID(), qly.getName(), qly.getPosition(), qly.getEmail(), qly.getLuongcb(), qly.getLuongthuong(), qly.getLuongnhan(),qly.getTinhtrang()
                 });
@@ -529,6 +529,7 @@ public class DieuChinhLuong extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.k33ptoo.components.KGradientPanel Color_form312;
     private com.k33ptoo.components.KButton btn_Del;
     private com.k33ptoo.components.KButton btn_Edit;
     private com.k33ptoo.components.KButton btn_Exit;
@@ -539,6 +540,8 @@ public class DieuChinhLuong extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbo_id;
     private javax.swing.JRadioButton chuaNhan312;
     private javax.swing.JRadioButton daNhan312;
+    private javax.swing.JPanel formChinh_312;
+    private javax.swing.JPanel formMin_312;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -552,15 +555,12 @@ public class DieuChinhLuong extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JTextField jTextField_tk;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel1;
     private javax.swing.JTable tb_Luong312;
     private javax.swing.JTextField txt_Email;
     private javax.swing.JTextField txt_LuongCoBan;
@@ -568,9 +568,9 @@ public class DieuChinhLuong extends javax.swing.JFrame {
     private javax.swing.JTextField txt_Name;
     // End of variables declaration//GEN-END:variables
     private void showTable() {
-        ql =new luongNhanVienDao().getAllUsers();
+        ql =new luongNhanVienDao_119().getAllUsers();
         model.setRowCount(0);
-        for(nhanVien qly : ql){
+        for(nhanVien_312 qly : ql){
             model.addRow(new Object[]{
                 qly.getID(), qly.getName(), qly.getPosition(), qly.getEmail(), qly.getLuongcb(), qly.getLuongthuong(), qly.getLuongnhan(),qly.getTinhtrang()
             });

@@ -4,8 +4,8 @@
  */
 package form;
 
-import Connect.JDBCConnection;
-import Connect.TaiKhoanDAO;
+import Connect.JDBCConnection_101;
+import Connect.TaiKhoanDAO_101;
 import java.awt.Color;
 import java.awt.Font;
 import java.beans.Statement;
@@ -16,7 +16,7 @@ import java.sql.ResultSet;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import model.taiKhoan;
+import model.taiKhoan_118_101;
 
 public class Signup extends javax.swing.JFrame {
 
@@ -56,10 +56,10 @@ public class Signup extends javax.swing.JFrame {
     private void initComponents() {
 
         bttgroup1 = new javax.swing.ButtonGroup();
-        jPanel2 = new javax.swing.JPanel();
+        formChinh_118 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        formMin_118 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         bttdangki118 = new javax.swing.JButton();
@@ -91,28 +91,28 @@ public class Signup extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
-        jPanel2.setBackground(new java.awt.Color(200, 230, 250));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        formChinh_118.setBackground(new java.awt.Color(200, 230, 250));
+        formChinh_118.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/—Pngtree—business staff talking and working_7256294.png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 135, 361, 342));
+        formChinh_118.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 135, 361, 342));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Created By  Error Sever Team");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 538, 245, 53));
+        formChinh_118.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 538, 245, 53));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        formMin_118.setBackground(new java.awt.Color(255, 255, 255));
+        formMin_118.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         jLabel2.setText("Sign Up");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 11, -1, -1));
+        formMin_118.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 11, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Emoji", 3, 14)); // NOI18N
         jLabel3.setText("Hello ! Let's get started");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 50, 190, -1));
+        formMin_118.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 50, 190, -1));
 
         bttdangki118.setBackground(new java.awt.Color(255, 255, 255));
         bttdangki118.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -125,7 +125,7 @@ public class Signup extends javax.swing.JFrame {
                 bttdangki118ActionPerformed(evt);
             }
         });
-        jPanel3.add(bttdangki118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 342, 280, 40));
+        formMin_118.add(bttdangki118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 342, 280, 40));
 
         txtname118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtname118.setText("Name");
@@ -143,7 +143,7 @@ public class Signup extends javax.swing.JFrame {
                 txtname118ActionPerformed(evt);
             }
         });
-        jPanel3.add(txtname118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 72, 290, 23));
+        formMin_118.add(txtname118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 72, 290, 23));
 
         txtaddress118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtaddress118.setText("Address");
@@ -161,7 +161,7 @@ public class Signup extends javax.swing.JFrame {
                 txtaddress118ActionPerformed(evt);
             }
         });
-        jPanel3.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 260, 20));
+        formMin_118.add(txtaddress118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 260, 20));
 
         txtphone118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtphone118.setText("Phone");
@@ -174,7 +174,7 @@ public class Signup extends javax.swing.JFrame {
                 txtphone118FocusLost(evt);
             }
         });
-        jPanel3.add(txtphone118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 290, 23));
+        formMin_118.add(txtphone118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 290, 23));
 
         txtemail118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtemail118.setText("Email");
@@ -187,7 +187,7 @@ public class Signup extends javax.swing.JFrame {
                 txtemail118FocusLost(evt);
             }
         });
-        jPanel3.add(txtemail118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 290, 23));
+        formMin_118.add(txtemail118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 290, 23));
 
         txtusername118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtusername118.setText("Username");
@@ -200,7 +200,7 @@ public class Signup extends javax.swing.JFrame {
                 txtusername118FocusLost(evt);
             }
         });
-        jPanel3.add(txtusername118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 112, 290, 23));
+        formMin_118.add(txtusername118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 112, 290, 23));
 
         txtpass118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtpass118.setText("Password");
@@ -214,7 +214,7 @@ public class Signup extends javax.swing.JFrame {
                 txtpass118FocusLost(evt);
             }
         });
-        jPanel3.add(txtpass118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 148, 290, 23));
+        formMin_118.add(txtpass118, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 148, 290, 23));
 
         txtconfirmpass118.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtconfirmpass118.setText("ConfirmPassword");
@@ -229,33 +229,33 @@ public class Signup extends javax.swing.JFrame {
                 txtconfirmpass118FocusLost(evt);
             }
         });
-        jPanel3.add(txtconfirmpass118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 290, 23));
+        formMin_118.add(txtconfirmpass118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 290, 23));
 
         jSeparator1.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel3.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 280, -1));
+        formMin_118.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 280, -1));
 
         jSeparator2.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel3.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 280, -1));
+        formMin_118.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 280, -1));
 
         jSeparator3.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel3.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 172, 280, 10));
+        formMin_118.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 172, 280, 10));
 
         jSeparator4.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel3.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 280, -1));
+        formMin_118.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 280, -1));
 
         jSeparator5.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel3.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
+        formMin_118.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
 
         jSeparator6.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel3.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 280, -1));
+        formMin_118.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 280, -1));
 
         jSeparator7.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel3.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 272, 280, 10));
+        formMin_118.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 272, 280, 10));
 
         jSeparator8.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel3.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 280, 10));
+        formMin_118.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 280, 10));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 340, 420));
+        formChinh_118.add(formMin_118, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 340, 420));
 
         btn_Back118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Logout_w_30px.png"))); // NOI18N
         btn_Back118.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -263,9 +263,9 @@ public class Signup extends javax.swing.JFrame {
                 btn_Back118MouseClicked(evt);
             }
         });
-        jPanel2.add(btn_Back118, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, -1, -1));
+        formChinh_118.add(btn_Back118, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, -1, -1));
 
-        getContentPane().add(jPanel2);
+        getContentPane().add(formChinh_118);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -417,14 +417,14 @@ public class Signup extends javax.swing.JFrame {
        String passwork  = new String(txtpass118.getPassword());
        String confirmpass = new String(txtconfirmpass118.getPassword());
        
-            JDBCConnection  con =  new JDBCConnection();
+            JDBCConnection_101  con =  new JDBCConnection_101();
             
             if(txtname118.equals("")|| txtusername118.equals("")||txtpass118.equals("")||txtconfirmpass118.equals("")||txtaddress118.equals("")||txtphone118.equals("")||txtemail118.equals("")){
                 JOptionPane.showMessageDialog(this, "Please fill in all the information");
             }else{
                 if(passwork.equals(confirmpass)){
                     JOptionPane.showMessageDialog(this, "User Successfull Registered", "Success", JOptionPane.INFORMATION_MESSAGE);
-                    taiKhoan tk = new taiKhoan();
+                    taiKhoan_118_101 tk = new taiKhoan_118_101();
                     tk.setName(txtname118.getText());
                     tk.setUsername(txtusername118.getText());
                     tk.setPassword(txtpass118.getText());
@@ -434,7 +434,7 @@ public class Signup extends javax.swing.JFrame {
                     tk.setEmail(txtemail118.getText());
                     boolean isOk=true;
                     if(isOk){
-                        new TaiKhoanDAO().addTaiKhoan(tk);
+                        new TaiKhoanDAO_101().addTaiKhoan(tk);
                         this.setVisible(isOk);
                         Signin ql = new Signin();
                         ql.setVisible(true);
@@ -500,12 +500,12 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JLabel btn_Back118;
     private javax.swing.JButton bttdangki118;
     private javax.swing.ButtonGroup bttgroup1;
+    private javax.swing.JPanel formChinh_118;
+    private javax.swing.JPanel formMin_118;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;

@@ -31,7 +31,7 @@
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
   <SubComponents>
-    <Container class="com.k33ptoo.components.KGradientPanel" name="kGradientPanel2">
+    <Container class="com.k33ptoo.components.KGradientPanel" name="formChinh_101">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -95,7 +95,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <Component id="jPanel1" min="-2" pref="402" max="-2" attributes="0"/>
+                  <Component id="formMin_101" min="-2" pref="402" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -140,7 +140,7 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jPanel1" min="-2" pref="640" max="-2" attributes="0"/>
+                          <Component id="formMin_101" min="-2" pref="640" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -182,7 +182,7 @@
             <Property name="text" type="java.lang.String" value="Update"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JPanel" name="jPanel1">
+        <Container class="javax.swing.JPanel" name="formMin_101">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>

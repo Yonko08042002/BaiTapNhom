@@ -1,27 +1,27 @@
 
 package form;
 
-import Connect.NhanVienDAO;
+import Connect.NhanVienDAO_312;
 import Service.Service;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import model.nhanVien;
+import model.nhanVien_312;
 
 public class UpdateForm extends javax.swing.JFrame {
     int selectedIndex;
     Service qlService;
-    NhanVienDAO qlbd;
+    NhanVienDAO_312 qlbd;
     DefaultTableModel defaultTableModel;
-    private List<nhanVien> ql;
+    private List<nhanVien_312> ql;
     private DefaultTableModel model;
-    nhanVien nv;
+    nhanVien_312 nv;
     /**
      * Creates new form AddForm
      */
     public UpdateForm() {
         initComponents();
-        qlbd = new NhanVienDAO();
+        qlbd = new NhanVienDAO_312();
         getDataComboBox();
     }
     private void getDataComboBox(){
@@ -35,11 +35,11 @@ public class UpdateForm extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        kGradientPanel2 = new com.k33ptoo.components.KGradientPanel();
+        formChinh_101 = new com.k33ptoo.components.KGradientPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        formMin_101 = new javax.swing.JPanel();
         female118 = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -84,9 +84,9 @@ public class UpdateForm extends javax.swing.JFrame {
             }
         });
 
-        kGradientPanel2.setForeground(new java.awt.Color(255, 255, 255));
-        kGradientPanel2.setkEndColor(new java.awt.Color(153, 255, 255));
-        kGradientPanel2.setkStartColor(new java.awt.Color(105, 48, 195));
+        formChinh_101.setForeground(new java.awt.Color(255, 255, 255));
+        formChinh_101.setkEndColor(new java.awt.Color(153, 255, 255));
+        formChinh_101.setkStartColor(new java.awt.Color(105, 48, 195));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -104,67 +104,65 @@ public class UpdateForm extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Update");
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        formMin_101.setBackground(new java.awt.Color(255, 255, 255));
+        formMin_101.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         female118.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(female118);
-        female118.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         female118.setForeground(new java.awt.Color(3, 37, 108));
         female118.setText("Female");
-        jPanel1.add(female118, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, -1));
+        formMin_101.add(female118, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(3, 37, 108));
         jLabel5.setText("Address :");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
+        formMin_101.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(3, 37, 108));
         jLabel6.setText("Phone :");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+        formMin_101.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(3, 37, 108));
         jLabel7.setText("Email :");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
+        formMin_101.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(3, 37, 108));
         jLabel8.setText("Date of Birth :");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, -1, -1));
+        formMin_101.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(3, 37, 108));
         jLabel9.setText("Position :");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, -1, -1));
+        formMin_101.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(3, 37, 108));
         jLabel1.setText("ID :");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 50, -1));
+        formMin_101.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 50, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(3, 37, 108));
         jLabel3.setText("Name :");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
+        formMin_101.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
 
         txtname101.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtname101.setForeground(new java.awt.Color(0, 48, 73));
         txtname101.setBorder(null);
-        jPanel1.add(txtname101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 310, 30));
+        formMin_101.add(txtname101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 310, 30));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(3, 37, 108));
         jLabel4.setText("Sex :");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 41, -1));
+        formMin_101.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 41, -1));
 
         male118.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(male118);
-        male118.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         male118.setForeground(new java.awt.Color(3, 37, 108));
         male118.setText("Male");
-        jPanel1.add(male118, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, -1, -1));
+        formMin_101.add(male118, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, -1, -1));
 
         btnupdate101.setText("UPDATE");
         btnupdate101.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -177,57 +175,57 @@ public class UpdateForm extends javax.swing.JFrame {
                 btnupdate101ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnupdate101, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 560, 110, -1));
+        formMin_101.add(btnupdate101, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 560, 110, -1));
 
         jSeparator2.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 310, 10));
+        formMin_101.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 310, 10));
 
         jSeparator8.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 310, 10));
+        formMin_101.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 310, 10));
 
         txtaddress101.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtaddress101.setForeground(new java.awt.Color(0, 48, 73));
         txtaddress101.setBorder(null);
-        jPanel1.add(txtaddress101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 310, 25));
+        formMin_101.add(txtaddress101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 310, 25));
 
         jSeparator9.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 310, 10));
+        formMin_101.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 310, 10));
 
         txtphone101.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtphone101.setForeground(new java.awt.Color(0, 48, 73));
         txtphone101.setBorder(null);
-        jPanel1.add(txtphone101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 310, 30));
+        formMin_101.add(txtphone101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 310, 30));
 
         jSeparator10.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 310, 10));
+        formMin_101.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 310, 10));
 
         txtemail101.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtemail101.setForeground(new java.awt.Color(0, 48, 73));
         txtemail101.setBorder(null);
-        jPanel1.add(txtemail101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 310, 25));
+        formMin_101.add(txtemail101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 310, 25));
 
         jSeparator11.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 310, 10));
+        formMin_101.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 310, 10));
 
         txtdate101.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtdate101.setForeground(new java.awt.Color(0, 48, 73));
         txtdate101.setBorder(null);
-        jPanel1.add(txtdate101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 310, 25));
+        formMin_101.add(txtdate101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 310, 25));
 
         jSeparator12.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, 310, 10));
+        formMin_101.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, 310, 10));
 
         txtposition101.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txtposition101.setForeground(new java.awt.Color(0, 48, 73));
         txtposition101.setBorder(null);
-        jPanel1.add(txtposition101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 310, 25));
+        formMin_101.add(txtposition101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 310, 25));
 
         jComboBox_id101.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox_id101ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox_id101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 320, 30));
+        formMin_101.add(jComboBox_id101, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 320, 30));
 
         btnrefresh101.setText("REFRESH");
         btnrefresh101.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -240,19 +238,19 @@ public class UpdateForm extends javax.swing.JFrame {
                 btnrefresh101ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnrefresh101, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 560, 120, -1));
+        formMin_101.add(btnrefresh101, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 560, 120, -1));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/set_100px.png"))); // NOI18N
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 460, -1, -1));
+        formMin_101.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 460, -1, -1));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/setting_100px.png"))); // NOI18N
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, -1, -1));
+        formMin_101.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, -1, -1));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/settings_100px.png"))); // NOI18N
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 450, -1, -1));
+        formMin_101.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 450, -1, -1));
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/set_100px.png"))); // NOI18N
-        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, 80, -1, -1));
+        formMin_101.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, 80, -1, -1));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/setting_100px.png"))); // NOI18N
 
@@ -266,83 +264,83 @@ public class UpdateForm extends javax.swing.JFrame {
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/set_100px.png"))); // NOI18N
 
-        javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
-        kGradientPanel2.setLayout(kGradientPanel2Layout);
-        kGradientPanel2Layout.setHorizontalGroup(
-            kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout formChinh_101Layout = new javax.swing.GroupLayout(formChinh_101);
+        formChinh_101.setLayout(formChinh_101Layout);
+        formChinh_101Layout.setHorizontalGroup(
+            formChinh_101Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, formChinh_101Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel10)
                 .addContainerGap())
-            .addGroup(kGradientPanel2Layout.createSequentialGroup()
-                .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel2Layout.createSequentialGroup()
+            .addGroup(formChinh_101Layout.createSequentialGroup()
+                .addGroup(formChinh_101Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, formChinh_101Layout.createSequentialGroup()
                         .addGap(57, 57, 57)
                         .addComponent(jLabel17)
                         .addGap(58, 58, 58)
                         .addComponent(jLabel12)
                         .addGap(27, 27, 27))
-                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                    .addGroup(formChinh_101Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(kGradientPanel2Layout.createSequentialGroup()
-                                .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                        .addGroup(formChinh_101Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(formChinh_101Layout.createSequentialGroup()
+                                .addGroup(formChinh_101Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(formChinh_101Layout.createSequentialGroup()
                                         .addComponent(jLabel11)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jLabel20))
-                                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                                    .addGroup(formChinh_101Layout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
                                         .addComponent(jLabel2))
-                                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                                    .addGroup(formChinh_101Layout.createSequentialGroup()
                                         .addComponent(jLabel13)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jLabel18)))
                                 .addGap(55, 55, 55))
-                            .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                            .addGroup(formChinh_101Layout.createSequentialGroup()
                                 .addComponent(jLabel15)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(formMin_101, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33))
         );
-        kGradientPanel2Layout.setVerticalGroup(
-            kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel2Layout.createSequentialGroup()
+        formChinh_101Layout.setVerticalGroup(
+            formChinh_101Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, formChinh_101Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
-                        .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                .addGroup(formChinh_101Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(formChinh_101Layout.createSequentialGroup()
+                        .addGroup(formChinh_101Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(formChinh_101Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel18)
                                 .addGap(33, 33, 33)
                                 .addComponent(jLabel20)
                                 .addGap(64, 64, 64))
-                            .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                            .addGroup(formChinh_101Layout.createSequentialGroup()
                                 .addGap(24, 24, 24)
                                 .addComponent(jLabel13)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel11)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel2)
-                        .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                        .addGroup(formChinh_101Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(formChinh_101Layout.createSequentialGroup()
                                 .addGap(59, 59, 59)
                                 .addComponent(jLabel15))
-                            .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                            .addGroup(formChinh_101Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel12)))
                         .addGap(44, 44, 44)
                         .addComponent(jLabel17)
                         .addContainerGap())
-                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                    .addGroup(formChinh_101Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(formMin_101, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(23, 23, 23))))
         );
 
-        getContentPane().add(kGradientPanel2, java.awt.BorderLayout.PAGE_START);
+        getContentPane().add(formChinh_101, java.awt.BorderLayout.PAGE_START);
 
         pack();
         setLocationRelativeTo(null);
@@ -351,7 +349,7 @@ public class UpdateForm extends javax.swing.JFrame {
     private void btnupdate101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnupdate101ActionPerformed
         int otp = JOptionPane.showConfirmDialog(this, "Bạn có muốn sửa hay không?", "Confirm", JOptionPane.YES_OPTION);
         if(otp == JOptionPane.YES_OPTION){
-            nhanVien bk = new nhanVien();
+            nhanVien_312 bk = new nhanVien_312();
             bk.setID(jComboBox_id101.getSelectedItem().toString());
             bk.setName(txtname101.getText());
             bk.setAddress(txtaddress101.getText());
@@ -371,7 +369,7 @@ public class UpdateForm extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Bạn đã sửa thông tin thành công!");
             Main fm = new Main();
             this.dispose();
-            fm.setVisible(false);
+            fm.setVisible(true);
         }
     }//GEN-LAST:event_btnupdate101ActionPerformed
 
@@ -461,6 +459,8 @@ public class UpdateForm extends javax.swing.JFrame {
     private com.k33ptoo.components.KButton btnupdate101;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JRadioButton female118;
+    private com.k33ptoo.components.KGradientPanel formChinh_101;
+    private javax.swing.JPanel formMin_101;
     private javax.swing.JComboBox<String> jComboBox_id101;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -483,14 +483,12 @@ public class UpdateForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private com.k33ptoo.components.KGradientPanel kGradientPanel2;
     private javax.swing.JRadioButton male118;
     private javax.swing.JTextField txtaddress101;
     private javax.swing.JTextField txtdate101;
