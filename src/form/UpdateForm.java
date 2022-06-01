@@ -354,7 +354,7 @@ public class UpdateForm extends javax.swing.JFrame {
             nhanVien bk = new nhanVien();
             bk.setID(jComboBox_id101.getSelectedItem().toString());
             bk.setName(txtname101.getText());
-            bk.setAddress(txtname101.getText());
+            bk.setAddress(txtaddress101.getText());
             bk.setPhone(txtphone101.getText());
             bk.setDateOfBirth(txtdate101.getText());
             bk.setEmail(txtemail101.getText());
