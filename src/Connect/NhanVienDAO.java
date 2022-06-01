@@ -131,7 +131,7 @@ public class NhanVienDAO {
                 tl.setName(rs.getString("ten"));
                 tl.setSex(rs.getString("gioitinh"));
                 tl.setAddress(rs.getString("diachi"));
-                tl.setEmail(rs.getString("sdt"));
+                tl.setPhone(rs.getString("sdt"));
                 tl.setEmail(rs.getString("email"));
                 tl.setDateOfBirth(rs.getString("ngaysinh"));
                 tl.setPosition(rs.getString("chucvu"));
@@ -155,7 +155,7 @@ public class NhanVienDAO {
                 tl.setName(rs.getString("ten"));
                 tl.setSex(rs.getString("gioitinh"));
                 tl.setAddress(rs.getString("diachi"));
-                tl.setEmail(rs.getString("sdt"));
+                tl.setPhone(rs.getString("sdt"));
                 tl.setEmail(rs.getString("email"));
                 tl.setDateOfBirth(rs.getString("ngaysinh"));
                 tl.setPosition(rs.getString("chucvu"));

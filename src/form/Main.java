@@ -785,12 +785,22 @@ public class Main extends javax.swing.JFrame {
         txt_home.setForeground(new java.awt.Color(255, 255, 255));
         txt_home.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt_home.setText("Home");
+        txt_home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_homeMouseClicked(evt);
+            }
+        });
         kGradientPanel1.add(txt_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 55, 200, 55));
 
         txt_add.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         txt_add.setForeground(new java.awt.Color(255, 255, 255));
         txt_add.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt_add.setText("Add Employees");
+        txt_add.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_addMouseClicked(evt);
+            }
+        });
         kGradientPanel1.add(txt_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 200, 55));
 
         txt_search.setBackground(new java.awt.Color(204, 0, 0));
@@ -1723,7 +1733,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jLabel45)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel46)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel47))
                     .addGroup(jPanel39Layout.createSequentialGroup()
                         .addComponent(jLabel48)
@@ -2213,7 +2223,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
         // TODO add your handling code here:
-        AddForm add = new AddForm();
+        UpdateForm add = new UpdateForm();
         add.setVisible(true);
     }//GEN-LAST:event_jLabel12MouseClicked
 
@@ -2239,6 +2249,19 @@ public class Main extends javax.swing.JFrame {
                     e1.printStackTrace();
                 }
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void txt_addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_addMouseClicked
+        // TODO add your handling code here:
+        AddForm add = new AddForm();
+        add.setVisible(true);
+    }//GEN-LAST:event_txt_addMouseClicked
+
+    private void txt_homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_homeMouseClicked
+        // TODO add your handling code here:
+        Panel1.setVisible(false);
+        Panel3.setVisible(true);
+        
+    }//GEN-LAST:event_txt_homeMouseClicked
     
     private void setColor(JLabel pane){
         pane.setBackground(new Color(204,0,0));
